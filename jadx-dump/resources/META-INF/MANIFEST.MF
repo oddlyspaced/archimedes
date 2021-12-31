@@ -1,0 +1,1126 @@
+Manifest-Version: 1.0
+Built-By: 1.1.0
+Created-By: Android Gradle 1.1.0
+
+Name: res/drawable-xhdpi-v4/button_minus.png
+SHA1-Digest: J2CAv/nbXjThJWWtVj6ZfLMLrAA=
+
+Name: res/drawable-xhdpi-v4/tutorial_2.png
+SHA1-Digest: aSA1OEX49jxdMyXrCorQU2Oh8os=
+
+Name: res/drawable-xxhdpi-v4/button_ans.png
+SHA1-Digest: F5sBlNc6R9d3Pjt7S3XuPLloRg0=
+
+Name: res/drawable-xxxhdpi-v4/button_nth_root.png
+SHA1-Digest: uu6jKuENHHTEC6x66I72yNya1Rc=
+
+Name: res/drawable-hdpi-v4/button_sine.png
+SHA1-Digest: 2Bpk1H0mKrjzmBoh3HgfFFgMAZM=
+
+Name: res/drawable-xxxhdpi-v4/button_ans.png
+SHA1-Digest: Yt5yPl3kVFBsf8oU+IVFDEV8MHQ=
+
+Name: res/drawable-sw600dp-v13/logo_archimedes.png
+SHA1-Digest: feEscRXTzDrsZonGR7Uc+3LHJGU=
+
+Name: res/drawable/button_options_menu_right.xml
+SHA1-Digest: 4+P7HeKU1ZNQ4Uj7JQQiqgjmLlw=
+
+Name: res/animator/cursor_animation.xml
+SHA1-Digest: wbBiGtItkl/1I96ljuAnB1UZhKs=
+
+Name: res/drawable-hdpi-v4/button_variable_x.png
+SHA1-Digest: bgWDrt0TUK69M7ZyhWh+mnv7BWE=
+
+Name: res/drawable-hdpi-v4/button_cosine.png
+SHA1-Digest: uX6VeNxK2bJptGX9xao8k6WDHpo=
+
+Name: res/drawable-xhdpi-v4/button_clear_all.png
+SHA1-Digest: DcoeVDKrT/+iQbaI47YAUwxaqeA=
+
+Name: res/drawable-hdpi-v4/button_clear_all.png
+SHA1-Digest: TRAfKd4LXCWjzli8CN6Kr6AhHJg=
+
+Name: res/drawable-sw720dp-v13/button_settings.png
+SHA1-Digest: 2auaiQDOtqHSFCdSAdPBfqMW028=
+
+Name: res/drawable-sw600dp-v13/button_pad_fader.9.png
+SHA1-Digest: JKxxMsxu5c83MlQa6+P0+UWsv1U=
+
+Name: res/drawable-xhdpi-v4/button_two.png
+SHA1-Digest: UDI67tSId//q4o2R4nncl7XuKPo=
+
+Name: res/drawable-xxhdpi-v4/button_nth_logarithm.png
+SHA1-Digest: 7pQRJarlTMxvBmvK2cGjI+siVXw=
+
+Name: res/drawable-xxxhdpi-v4/button_square.png
+SHA1-Digest: F0T3WNIsxpyxaXFc5H7E6Z6NhDQ=
+
+Name: res/drawable-xhdpi-v4/button_pad_background_image.png
+SHA1-Digest: 1V1+kjsEWjp+HcnaLkFXSIjN9jo=
+
+Name: res/drawable-xxxhdpi-v4/ic_launcher.png
+SHA1-Digest: 6i73swuNGbvH9WfUICWPskJzKYA=
+
+Name: res/drawable-xxxhdpi-v4/button_enter.png
+SHA1-Digest: sAPEukCjf7ScPtDsyvRhskFjSiQ=
+
+Name: res/drawable-xxxhdpi-v4/button_square_root.png
+SHA1-Digest: pOYjSuGlihDCp8Pli2RBew0AIIk=
+
+Name: res/drawable-sw720dp-v13/background_image.png
+SHA1-Digest: pZHSlIS7xbfav7iPUEZfCWi3ZI8=
+
+Name: res/drawable-hdpi-v4/button_help.png
+SHA1-Digest: 5k8jfWi2HR9v3cP4UU0/KUqJJS8=
+
+Name: res/drawable-sw600dp-v13/button_three.png
+SHA1-Digest: TBsLo49FgIjUB0J969FoC7WsMaU=
+
+Name: res/drawable-sw600dp-v13/button_two.png
+SHA1-Digest: 4Pls0O/nWLh2T0Gbka0oRPGyRyw=
+
+Name: res/drawable-sw720dp-v13/tutorial_3.png
+SHA1-Digest: nPQRpH9kaj56LAYWw5C14lVPLb8=
+
+Name: res/drawable-xhdpi-v4/button_divide.png
+SHA1-Digest: uJ0Gxi/tRrneCnI/SDwjxf1qR0E=
+
+Name: resources.arsc
+SHA1-Digest: UK0mdy+g+BJDl2YnpBxfFV8sdTY=
+
+Name: res/drawable-sw600dp-v13/button_clear_line.png
+SHA1-Digest: Djq90T4y9uimihaTEX+NSEe0iA0=
+
+Name: assets/myriad_pro_bold.otf
+SHA1-Digest: Zr4/PEZkRgnXjnubR506FM17Knw=
+
+Name: res/drawable-hdpi-v4/tutorial_1.png
+SHA1-Digest: VD21cUuJYO27RCqpi3m9hcFIH90=
+
+Name: res/drawable-sw600dp-v13/button_arc_sine.png
+SHA1-Digest: uObAanofiowVQ2xb6GciqnHPeaU=
+
+Name: assets/myriad_pro_light.otf
+SHA1-Digest: GHtWz1KzKYNxjGBI+PedVy0dnsw=
+
+Name: res/drawable-sw600dp-v13/tutorial_2.png
+SHA1-Digest: 4OSSxD69a7VhIMviGCpUdGPPuSc=
+
+Name: res/drawable-sw720dp-v13/button_pad_fader.9.png
+SHA1-Digest: Otgq3zjFv/S4TAZzQ30sJv70Wls=
+
+Name: res/drawable/button_options_menu_single_up.xml
+SHA1-Digest: gb6kS9PCkb7DC1VHzsP91yO/BZc=
+
+Name: AndroidManifest.xml
+SHA1-Digest: WuZAN+pkAsuPz/Mdp3RV7jEgjXg=
+
+Name: res/drawable-sw600dp-v13/button_front_down_image.9.png
+SHA1-Digest: 7yZJpa/0FJ8v4OrhvXDTb4Z3ldo=
+
+Name: res/drawable-xxhdpi-v4/button_minus.png
+SHA1-Digest: /oWNiew9xz9UuLzXLBxRDiAdZxg=
+
+Name: res/drawable-sw600dp-v13/button_five.png
+SHA1-Digest: jlqc9g8IJfxQEkGx75PXoHL+YFI=
+
+Name: res/drawable-sw720dp-v13/button_decimal_point.png
+SHA1-Digest: H+vq5OhughEXq0sv3qfK9RAN4B8=
+
+Name: res/drawable-xxhdpi-v4/button_nth_root.png
+SHA1-Digest: GQrvbgodC3I1j050G4hkwMzF8XE=
+
+Name: res/drawable-sw600dp-v13/button_natural_logarithm.png
+SHA1-Digest: mjo69B2sBdhM3Ytm3q4Jrh02BTk=
+
+Name: res/drawable-sw600dp-v13/button_equals.png
+SHA1-Digest: BzBeCi2aMQUqugOKYuY5/h3P1gY=
+
+Name: res/drawable-xxhdpi-v4/button_settings.png
+SHA1-Digest: CIBYFa+h6ugCi0BVUqQDnVYjBnI=
+
+Name: res/drawable-sw720dp-v13/button_equals.png
+SHA1-Digest: P2m4WFK79cCP2QzXCl3UVB3rDsU=
+
+Name: res/drawable-xhdpi-v4/button_nine.png
+SHA1-Digest: ZR0J+A5/3QGDLAhzHBbOzYbyif0=
+
+Name: res/drawable-xxhdpi-v4/button_equals.png
+SHA1-Digest: BzBeCi2aMQUqugOKYuY5/h3P1gY=
+
+Name: res/drawable-xhdpi-v4/button_degree.png
+SHA1-Digest: WnM8myPe5rijCqdkIdMiEEDS3kc=
+
+Name: res/drawable-sw600dp-v13/button_parentheses.png
+SHA1-Digest: xHqsgwglnAsDrbWS5iHiLAQpzDw=
+
+Name: res/drawable-hdpi-v4/button_nth_logarithm.png
+SHA1-Digest: dt6Owotyi43Wr5Kj7k/epZKCgo0=
+
+Name: res/drawable-sw720dp-v13/button_backspace.png
+SHA1-Digest: qWKdIS4gazlWjnCOcAnITLdajqY=
+
+Name: res/drawable-xxxhdpi-v4/button_eight.png
+SHA1-Digest: SoAl61SNe6DuOKzfF1Zy2B4Alyo=
+
+Name: res/layout/tutorial.xml
+SHA1-Digest: VZbw90MZuV2qS6RGFz6165zGOaY=
+
+Name: res/drawable-hdpi-v4/button_decimal_point.png
+SHA1-Digest: a2sGxiTRwsNaKm665d3SdLn/YVI=
+
+Name: res/drawable-hdpi-v4/button_divide.png
+SHA1-Digest: /JwR7+XOHtfzl2H2haNJfyj3COE=
+
+Name: res/drawable-xxxhdpi-v4/button_radians.png
+SHA1-Digest: 9wd8zD+UtqXbKHAp//88EOdLhV8=
+
+Name: res/drawable-sw720dp-v13/button_sine.png
+SHA1-Digest: caRV4ZFiujwoUz1MVNQ1n5ZdslE=
+
+Name: res/drawable-xhdpi-v4/button_variable_x.png
+SHA1-Digest: BijOsjduuJUzXXmeB9fgdeR0iW0=
+
+Name: res/drawable-hdpi-v4/tutorial_4.png
+SHA1-Digest: GzLUtDS+wZVofhiVDXYusiImiSI=
+
+Name: res/drawable-xhdpi-v4/power_tips.png
+SHA1-Digest: 92geLCqyq5FXl7CZp/mdjzE3O7c=
+
+Name: res/drawable-xxhdpi-v4/button_decimal_point.png
+SHA1-Digest: TTZY++iYySSyDzwtG1CFgIr2ukU=
+
+Name: res/drawable-xxxhdpi-v4/button_variable_x.png
+SHA1-Digest: lMefkC5UJ4bfqm42395At1hHQwU=
+
+Name: res/drawable-xhdpi-v4/button_natural_logarithm.png
+SHA1-Digest: +FFJEwFZzCFec7vS7HubzRYTaUw=
+
+Name: res/drawable-xhdpi-v4/button_arc_tangent.png
+SHA1-Digest: AWO083ZXERsILSVpC7DSXR+aC/k=
+
+Name: res/drawable-sw720dp-v13/button_minus.png
+SHA1-Digest: XviVCgJp+n5O+K8Vj9YjxPGkMuQ=
+
+Name: res/drawable-xxxhdpi-v4/button_settings.png
+SHA1-Digest: 2auaiQDOtqHSFCdSAdPBfqMW028=
+
+Name: res/drawable-xhdpi-v4/button_e.png
+SHA1-Digest: 2piZC+mMwn8dfGh2FA2G8hiz58M=
+
+Name: res/drawable-xxxhdpi-v4/button_power.png
+SHA1-Digest: Oz8IzN6yGrrtdnwNn/WYGEf7+Yk=
+
+Name: res/drawable-xxhdpi-v4/button_tangent.png
+SHA1-Digest: CSD0Ry32W6JPeBfWfvQ/DbBm+zI=
+
+Name: res/drawable-sw600dp-v13/button_sine.png
+SHA1-Digest: MVfgIaN+B6OVXgNCmQyJvO30BuQ=
+
+Name: res/drawable-xhdpi-v4/button_plus.png
+SHA1-Digest: BwkS9zUmAOI+44zO84lUZcRKc34=
+
+Name: res/drawable-xhdpi-v4/button_cosine.png
+SHA1-Digest: OkzgqhqVioOYdYgTmzBF510NJug=
+
+Name: res/drawable-xxxhdpi-v4/tutorial_3.png
+SHA1-Digest: nPQRpH9kaj56LAYWw5C14lVPLb8=
+
+Name: res/drawable-xxhdpi-v4/tutorial_4.png
+SHA1-Digest: vBFrgH9cUyN/p6Lh9Ovi0D9PTPM=
+
+Name: res/drawable/button_pad_background.xml
+SHA1-Digest: T7FKnhQR35nsKIhEGpiEaA9rQfI=
+
+Name: res/drawable-xhdpi-v4/button_six.png
+SHA1-Digest: wHJfU5NsmnqIGE9LGuBThcZpLTs=
+
+Name: res/drawable-sw720dp-v13/button_seven.png
+SHA1-Digest: rP39g6zeqnl6yhvkVRWJ692UqhU=
+
+Name: res/drawable-sw600dp-v13/button_zero.png
+SHA1-Digest: ov8sKWGOm3tOl+xNxy6qCTH/25s=
+
+Name: res/drawable-xhdpi-v4/tutorial_3.png
+SHA1-Digest: befc++TOdtYAYUvzAgRYJ5+021M=
+
+Name: res/drawable-sw720dp-v13/button_variable_z.png
+SHA1-Digest: mIg2xw82WAjsES+X5KVXWj5ZEb4=
+
+Name: res/drawable-xhdpi-v4/button_front_down_image.9.png
+SHA1-Digest: 7yZJpa/0FJ8v4OrhvXDTb4Z3ldo=
+
+Name: res/drawable-xxxhdpi-v4/button_cosine.png
+SHA1-Digest: o6Y7oLjxZTcVBy799iLVXAjY14c=
+
+Name: res/drawable-xxhdpi-v4/button_front_image.9.png
+SHA1-Digest: eUraWru9hiSmnz79zrNl8oB9mFA=
+
+Name: res/drawable-sw720dp-v13/button_square_root.png
+SHA1-Digest: pOYjSuGlihDCp8Pli2RBew0AIIk=
+
+Name: res/drawable-xxhdpi-v4/button_four.png
+SHA1-Digest: dv+zD2qaSI3yOM3XHwZQDoXXiQc=
+
+Name: res/drawable-xxxhdpi-v4/button_help.png
+SHA1-Digest: OYb8cQuHRA5FKpofgc4qg49pqMY=
+
+Name: res/drawable-sw720dp-v13/button_arc_sine.png
+SHA1-Digest: n6pp5gWI+Z1BXns9Xp8l7hFUjLQ=
+
+Name: res/drawable-hdpi-v4/button_radians.png
+SHA1-Digest: YOFayZkd1qUaPgH8v7RevUMQhLA=
+
+Name: res/drawable-xxhdpi-v4/button_five.png
+SHA1-Digest: jlqc9g8IJfxQEkGx75PXoHL+YFI=
+
+Name: res/drawable-hdpi-v4/button_front_down_image.9.png
+SHA1-Digest: 7yZJpa/0FJ8v4OrhvXDTb4Z3ldo=
+
+Name: res/drawable-xxxhdpi-v4/tutorial_1.png
+SHA1-Digest: Oc4JIDG1/wWFjeUaOsdzUAT9dMY=
+
+Name: res/drawable-hdpi-v4/button_power.png
+SHA1-Digest: 5q6BzrIOSB38jGBOx2bh1eXvge8=
+
+Name: res/drawable-sw720dp-v13/button_radians.png
+SHA1-Digest: 9wd8zD+UtqXbKHAp//88EOdLhV8=
+
+Name: res/drawable-xxxhdpi-v4/button_arc_tangent.png
+SHA1-Digest: /C0eoWuaRniTLpcakPdvxn2MKYg=
+
+Name: res/drawable-xhdpi-v4/button_seven.png
+SHA1-Digest: I7zQ2b25LfCLyBxDVcCA0pQCCdI=
+
+Name: res/drawable-hdpi-v4/button_tangent.png
+SHA1-Digest: 1Yv9PWrSHF40p1S5nr5bHo0zYMw=
+
+Name: res/drawable-sw720dp-v13/tutorial_4.png
+SHA1-Digest: mNoBj3rPaCVKSBrIg9acNwwm4W4=
+
+Name: res/drawable-xhdpi-v4/button_four.png
+SHA1-Digest: Bz5S3GQ6IJpLPrOG2NJyHn4zGJM=
+
+Name: res/drawable-sw600dp-v13/button_help.png
+SHA1-Digest: rUYLsgHXJc0dcSFwcUfIZOZY2s4=
+
+Name: res/drawable-sw720dp-v13/button_power.png
+SHA1-Digest: Oz8IzN6yGrrtdnwNn/WYGEf7+Yk=
+
+Name: res/drawable-xhdpi-v4/button_nth_logarithm.png
+SHA1-Digest: oNCoRUdfOSt8wPJu6Rnv1HJefb0=
+
+Name: res/drawable-xxxhdpi-v4/background_image.png
+SHA1-Digest: pZHSlIS7xbfav7iPUEZfCWi3ZI8=
+
+Name: res/drawable-sw600dp-v13/button_eight.png
+SHA1-Digest: ynNGzQdjL6olH0oInOJuaDKRzV4=
+
+Name: res/drawable-hdpi-v4/button_pi.png
+SHA1-Digest: CAmffDhUOsL2pgTyAucJjBAapgE=
+
+Name: res/drawable-hdpi-v4/button_front_image.9.png
+SHA1-Digest: eUraWru9hiSmnz79zrNl8oB9mFA=
+
+Name: res/drawable-sw720dp-v13/button_ans.png
+SHA1-Digest: Yt5yPl3kVFBsf8oU+IVFDEV8MHQ=
+
+Name: res/drawable-hdpi-v4/button_seven.png
+SHA1-Digest: ChyqMkt5kLahycF0Lu0gvxTqrGE=
+
+Name: res/drawable-sw600dp-v13/button_four.png
+SHA1-Digest: dv+zD2qaSI3yOM3XHwZQDoXXiQc=
+
+Name: res/drawable-sw600dp-v13/button_front_image.9.png
+SHA1-Digest: eUraWru9hiSmnz79zrNl8oB9mFA=
+
+Name: res/drawable-sw720dp-v13/logo_archimedes.png
+SHA1-Digest: d8gDFxqqudvrFaaZDCvB2SGN+sc=
+
+Name: res/drawable-xxxhdpi-v4/button_three.png
+SHA1-Digest: VsBW6x6eeGFTifcb5PrztMGfs3w=
+
+Name: res/drawable-sw600dp-v13/button_clear_all.png
+SHA1-Digest: 9Y8E8iGC0qIiU319/ueAiKxUrEk=
+
+Name: res/drawable-xxhdpi-v4/button_square.png
+SHA1-Digest: vXKjmZHit2diFUIlq7fZedzseA0=
+
+Name: res/drawable-xxhdpi-v4/button_degree.png
+SHA1-Digest: 7Yo9oxyaqAoY4O8wdgwiCO2qNEI=
+
+Name: res/drawable/button_options_menu_left_down.xml
+SHA1-Digest: GqICrzPgGjgK60O+gAvHhsDrdTQ=
+
+Name: res/drawable-sw720dp-v13/button_nine.png
+SHA1-Digest: wXvfvgP4JPfHnInuHXFmooKlpjs=
+
+Name: res/drawable-xxhdpi-v4/button_zero.png
+SHA1-Digest: ov8sKWGOm3tOl+xNxy6qCTH/25s=
+
+Name: res/drawable-xhdpi-v4/background_image.png
+SHA1-Digest: VQMROd9qKzVgwKu4QTjbUTikji0=
+
+Name: res/drawable-hdpi-v4/button_multiply.png
+SHA1-Digest: gZgM5lgAXGWGmhx3feZMy5SGaSY=
+
+Name: res/drawable-sw600dp-v13/ic_exit.png
+SHA1-Digest: rknDHbw6nJxQlmDlw23JfWpIuNg=
+
+Name: res/drawable-xhdpi-v4/button_multiply.png
+SHA1-Digest: xCvE/5i3kKAIzzo4P7d1WITmRvQ=
+
+Name: res/drawable-hdpi-v4/button_settings.png
+SHA1-Digest: oyiHTWiRIl+PF8pv2+l5/HTNs1Q=
+
+Name: res/drawable-xxhdpi-v4/power_tips.png
+SHA1-Digest: aThdXNZ5vD2Uv46I0vbWA+CSifY=
+
+Name: res/drawable-sw600dp-v13/button_nth_root.png
+SHA1-Digest: GQrvbgodC3I1j050G4hkwMzF8XE=
+
+Name: res/drawable-sw600dp-v13/button_enter.png
+SHA1-Digest: 0kXXCthRTLQD+1R27AesiRalIvE=
+
+Name: res/drawable-xxxhdpi-v4/button_tangent.png
+SHA1-Digest: 9c5Pjb1tJwu6E1LVePcKwpt4bVk=
+
+Name: res/drawable-xhdpi-v4/button_settings.png
+SHA1-Digest: N1r+PdGhZ4i/f3RXSbTNZPdKE6M=
+
+Name: res/drawable-xxhdpi-v4/button_square_root.png
+SHA1-Digest: GWOYuvSQB95YeIU6+Ntd8VPp6ok=
+
+Name: res/drawable-xxhdpi-v4/tutorial_1.png
+SHA1-Digest: ZXZoyx4ksWScNaclo4BFEratVWM=
+
+Name: res/drawable-sw600dp-v13/button_minus.png
+SHA1-Digest: /oWNiew9xz9UuLzXLBxRDiAdZxg=
+
+Name: res/drawable-hdpi-v4/button_square_root.png
+SHA1-Digest: tyrGVxtkifX+36z7V/2SbxUKiXo=
+
+Name: res/drawable-sw720dp-v13/button_one.png
+SHA1-Digest: ZkR4Hb2EqRHaqPfPQP6glipK6Cs=
+
+Name: res/drawable-sw600dp-v13/tutorial_1.png
+SHA1-Digest: ZXZoyx4ksWScNaclo4BFEratVWM=
+
+Name: res/drawable-sw720dp-v13/power_tips.png
+SHA1-Digest: ++mAuFvCa4xzylfT/z17a7kJQkc=
+
+Name: res/drawable-sw720dp-v13/button_e.png
+SHA1-Digest: GZFBefWl4z35gWGw0KeQy5+IaEM=
+
+Name: res/drawable-xhdpi-v4/button_sine.png
+SHA1-Digest: lVmrnPHN3lnUnSB/2Q5WOGqVOX0=
+
+Name: res/drawable-xxxhdpi-v4/button_nth_logarithm.png
+SHA1-Digest: unRtUDf4XqtdeSVY6ZLRkBMw2hM=
+
+Name: res/drawable-xxhdpi-v4/ic_launcher.png
+SHA1-Digest: 7O/xWSH5YwoAwrC3jTTHqosjIjw=
+
+Name: res/drawable-xhdpi-v4/button_square_root.png
+SHA1-Digest: hy1X3GgG/GwDhrTIcPHpbM1delo=
+
+Name: res/drawable-xxxhdpi-v4/button_zero.png
+SHA1-Digest: Q6plgzA4CT1n4FochPDRY0M8tcA=
+
+Name: lib/mips/libtommath.so
+SHA1-Digest: iac8E4ZB2ARCxo5Fl6EEvOsXA8E=
+
+Name: res/drawable-xhdpi-v4/button_one.png
+SHA1-Digest: pgGZj1jpqfirjE/TBycs0B8SWsY=
+
+Name: lib/armeabi/libtommath.so
+SHA1-Digest: UNS+jtmaCQ7Mes8vnaJ3JkzAegQ=
+
+Name: res/drawable-sw600dp-v13/button_ans.png
+SHA1-Digest: F5sBlNc6R9d3Pjt7S3XuPLloRg0=
+
+Name: res/drawable/button_options_menu_right_down.xml
+SHA1-Digest: +BI5VoEXRjDGRNPtZD0ZzO7z7wM=
+
+Name: res/drawable-hdpi-v4/button_nine.png
+SHA1-Digest: YUACmpJ0zXeMgMe0lORfFkROTsQ=
+
+Name: res/drawable-hdpi-v4/button_ans.png
+SHA1-Digest: coJVsLBXRZAgYu13C1wZRKuvcPk=
+
+Name: res/layout/power_tips.xml
+SHA1-Digest: LnfgK4A4pRHuILoy3yO+ZUT1npw=
+
+Name: res/drawable-sw720dp-v13/ic_exit.png
+SHA1-Digest: nEs6M8zkrwUZSwPtM1DNs65eCdc=
+
+Name: res/drawable-sw600dp-v13/power_tips.png
+SHA1-Digest: aThdXNZ5vD2Uv46I0vbWA+CSifY=
+
+Name: res/drawable-xhdpi-v4/tutorial_4.png
+SHA1-Digest: 7e5aa0wmzI21+byUfz1Wj76RLA4=
+
+Name: res/drawable-hdpi-v4/power_tips.png
+SHA1-Digest: qhF8lj8Us0LNq7+CXNl3blCVy2I=
+
+Name: res/drawable-xxhdpi-v4/background_image.png
+SHA1-Digest: kuIAFt3PhHfi7af/76tRyHJGytw=
+
+Name: res/drawable-hdpi-v4/button_tenth_logarithm.png
+SHA1-Digest: bTHdlR0ypZwPJpecvKeflQAiSgU=
+
+Name: res/drawable-hdpi-v4/button_plus.png
+SHA1-Digest: KWuvwqTPnhBducAxz35qoX+p0+s=
+
+Name: res/drawable-xxhdpi-v4/button_front_down_image.9.png
+SHA1-Digest: 7yZJpa/0FJ8v4OrhvXDTb4Z3ldo=
+
+Name: res/drawable-xxxhdpi-v4/button_engineering_exponent.png
+SHA1-Digest: nyzvgqgkcmxInyEBDFBoe1IR0tA=
+
+Name: res/drawable-sw720dp-v13/button_nth_logarithm.png
+SHA1-Digest: unRtUDf4XqtdeSVY6ZLRkBMw2hM=
+
+Name: res/drawable-sw720dp-v13/button_nth_root.png
+SHA1-Digest: uu6jKuENHHTEC6x66I72yNya1Rc=
+
+Name: res/drawable-xxxhdpi-v4/tutorial_2.png
+SHA1-Digest: 9XV8CJUEeS8NWkg5qtbgXbMNcuE=
+
+Name: res/drawable-sw600dp-v13/ic_launcher.png
+SHA1-Digest: 7O/xWSH5YwoAwrC3jTTHqosjIjw=
+
+Name: res/drawable-sw600dp-v13/button_tangent.png
+SHA1-Digest: CSD0Ry32W6JPeBfWfvQ/DbBm+zI=
+
+Name: res/drawable-sw720dp-v13/button_tenth_logarithm.png
+SHA1-Digest: kN9f4LSKIn3lt1xonb4VH3tgQ7A=
+
+Name: res/drawable-xxhdpi-v4/button_sine.png
+SHA1-Digest: MVfgIaN+B6OVXgNCmQyJvO30BuQ=
+
+Name: res/drawable-hdpi-v4/button_arc_cosine.png
+SHA1-Digest: Er9PU3vMKMBiPYNdZ4F6jgI0d3A=
+
+Name: res/drawable-sw720dp-v13/button_pad_background_image.png
+SHA1-Digest: 1C4S2frgxxWRnlK5KDz+PfgCrxM=
+
+Name: res/drawable-xxhdpi-v4/button_power.png
+SHA1-Digest: rgnAH6LDQsAJ1Bi9SxdmY8ItYCM=
+
+Name: res/drawable-xhdpi-v4/button_front_image.9.png
+SHA1-Digest: eUraWru9hiSmnz79zrNl8oB9mFA=
+
+Name: res/drawable-xxxhdpi-v4/button_minus.png
+SHA1-Digest: XviVCgJp+n5O+K8Vj9YjxPGkMuQ=
+
+Name: res/drawable-xxxhdpi-v4/button_six.png
+SHA1-Digest: gZwXg2XQrA54LoIvyXOAhXpxnl0=
+
+Name: res/drawable-xhdpi-v4/button_pi.png
+SHA1-Digest: VNhTsj0lMweFtSodHjOEsEJIZiM=
+
+Name: res/drawable/button_options_menu_left_up.xml
+SHA1-Digest: 66RGQ9fQ9BRGD2PZnIEO7tvVRBM=
+
+Name: res/drawable-sw720dp-v13/button_arc_tangent.png
+SHA1-Digest: /C0eoWuaRniTLpcakPdvxn2MKYg=
+
+Name: res/drawable-xhdpi-v4/button_ans.png
+SHA1-Digest: 5mXYrnn7Bfuj0X1lwqxDkT2QftU=
+
+Name: res/drawable-xxxhdpi-v4/button_clear_line.png
+SHA1-Digest: q5LonPeu8v5HXG76RI0AN6xLK90=
+
+Name: res/drawable-xxxhdpi-v4/button_tenth_logarithm.png
+SHA1-Digest: kN9f4LSKIn3lt1xonb4VH3tgQ7A=
+
+Name: res/drawable-sw600dp-v13/button_pad_background_image.png
+SHA1-Digest: l/4WPQNApn6MlHMjlmhqWPgaTJQ=
+
+Name: res/drawable-sw720dp-v13/button_variable_y.png
+SHA1-Digest: JhpBzibGfjQQDiO0LEGz+1BWQRU=
+
+Name: res/drawable-xhdpi-v4/button_clear_line.png
+SHA1-Digest: Ea9Xuw/96nE+odMYI7nCcvMiioU=
+
+Name: res/drawable-sw720dp-v13/button_multiply.png
+SHA1-Digest: n4nlzNaCnv7nBuQQ+cmd1IKn8Pg=
+
+Name: res/drawable-xxhdpi-v4/ic_exit.png
+SHA1-Digest: rknDHbw6nJxQlmDlw23JfWpIuNg=
+
+Name: lib/armeabi-v7a/libtommath.so
+SHA1-Digest: hbipbHj56VgMWQrQBbZO2xzKzPk=
+
+Name: res/drawable-xxhdpi-v4/button_cosine.png
+SHA1-Digest: mILm8Rb+iRMX0N3TKKLtWRxcfQY=
+
+Name: res/drawable-sw600dp-v13/button_nine.png
+SHA1-Digest: +T/D1VxFoFH0DiJ0j7ef6oPDa/g=
+
+Name: res/drawable-sw600dp-v13/button_square_root.png
+SHA1-Digest: GWOYuvSQB95YeIU6+Ntd8VPp6ok=
+
+Name: res/drawable-sw720dp-v13/button_clear_all.png
+SHA1-Digest: 4oLPdBXOKrr94MH4AVs0GqFK7UE=
+
+Name: res/drawable-xxxhdpi-v4/button_pi.png
+SHA1-Digest: MYCLVbvRd+Y9j6XYWh7VmX3aFZQ=
+
+Name: res/drawable-hdpi-v4/logo_archimedes.png
+SHA1-Digest: ezhs5iimxPYN7r/xfY1gI4Hu1dU=
+
+Name: res/drawable-xxhdpi-v4/button_arc_tangent.png
+SHA1-Digest: ao4qgQmKdixhLGoxgiVkCXV95b0=
+
+Name: res/drawable-hdpi-v4/button_arc_tangent.png
+SHA1-Digest: GxKQJDVUr+QCog/zvt4FjUkmSZM=
+
+Name: res/drawable-hdpi-v4/button_three.png
+SHA1-Digest: d0YZikbyhjhwtypioRjYQpdhqL0=
+
+Name: res/drawable-sw720dp-v13/button_four.png
+SHA1-Digest: jCpf2A5yKkZ2uEgAf+M3bPe5QXc=
+
+Name: res/drawable/button_options_menu_single_down.xml
+SHA1-Digest: NUWBug6oPFIndqEMEskDos0WBHw=
+
+Name: res/drawable-sw720dp-v13/button_plus.png
+SHA1-Digest: Jc1XPDfSJMURPl+7nBZJAccqqxw=
+
+Name: res/drawable-hdpi-v4/button_variable_z.png
+SHA1-Digest: jw7bCdbdpBVXvUPGxJBKibIn1aE=
+
+Name: res/drawable-sw720dp-v13/button_cosine.png
+SHA1-Digest: o6Y7oLjxZTcVBy799iLVXAjY14c=
+
+Name: res/drawable-xhdpi-v4/button_help.png
+SHA1-Digest: HmoHESc0fTokgAYyML5eS2mDQTw=
+
+Name: res/drawable-sw600dp-v13/background_image.png
+SHA1-Digest: kuIAFt3PhHfi7af/76tRyHJGytw=
+
+Name: res/drawable-xxhdpi-v4/button_seven.png
+SHA1-Digest: l3DixFj03h46Wmm/jLO1xgcuhic=
+
+Name: res/drawable-hdpi-v4/button_one.png
+SHA1-Digest: 3bRRyMbCxlfA/Z5LtRKfd0rTUdk=
+
+Name: res/drawable-xxhdpi-v4/button_backspace.png
+SHA1-Digest: 9j/el5rW4gKSZyYcryoqXS6OEuo=
+
+Name: res/drawable-xxxhdpi-v4/button_four.png
+SHA1-Digest: jCpf2A5yKkZ2uEgAf+M3bPe5QXc=
+
+Name: res/drawable-sw600dp-v13/button_tenth_logarithm.png
+SHA1-Digest: nMxJyrxGwm5WXfq/1v+7WG2HxPI=
+
+Name: res/drawable-hdpi-v4/button_parentheses.png
+SHA1-Digest: ukDw1DbAcnvPP9TaHkxmT9JmrZs=
+
+Name: res/drawable-xhdpi-v4/button_enter.png
+SHA1-Digest: jHJHvnJ8OwFM5fsm8gWYMimSO7w=
+
+Name: res/drawable-xxxhdpi-v4/button_parentheses.png
+SHA1-Digest: wV0oAts7aOqr8uSg3PPv7gxEzcI=
+
+Name: res/drawable-sw600dp-v13/button_decimal_point.png
+SHA1-Digest: TTZY++iYySSyDzwtG1CFgIr2ukU=
+
+Name: res/drawable-sw600dp-v13/button_radians.png
+SHA1-Digest: uMgzugT6q3iLJkueM7qXJt3JhN0=
+
+Name: res/drawable-xhdpi-v4/button_pad_fader.9.png
+SHA1-Digest: TrYSleebRkxAkGCFkshoyk/H4Co=
+
+Name: res/drawable-xxhdpi-v4/button_parentheses.png
+SHA1-Digest: xHqsgwglnAsDrbWS5iHiLAQpzDw=
+
+Name: res/drawable-hdpi-v4/button_e.png
+SHA1-Digest: AW3NK2vuiXXIJhmtcr23yG8kG5A=
+
+Name: res/drawable-xxxhdpi-v4/button_degree.png
+SHA1-Digest: qW8sQgNLKAxXZ1z8drw0nZXC/Uc=
+
+Name: res/drawable-xxxhdpi-v4/button_two.png
+SHA1-Digest: J0LWKFpl8IseZ4m3DrCMFjVi+jw=
+
+Name: res/drawable-sw600dp-v13/button_cosine.png
+SHA1-Digest: mILm8Rb+iRMX0N3TKKLtWRxcfQY=
+
+Name: res/drawable-sw600dp-v13/button_variable_z.png
+SHA1-Digest: bMlxYWJHrpBjRNQTEOIja7ofGd0=
+
+Name: res/drawable-xhdpi-v4/button_tangent.png
+SHA1-Digest: DqBmVG88RAwI1ZuyiiM5fYEj0yk=
+
+Name: res/drawable-xxxhdpi-v4/button_divide.png
+SHA1-Digest: NF/sLqAZQ8dEc2UZwRhZEWsFVEw=
+
+Name: res/drawable-xhdpi-v4/button_tenth_logarithm.png
+SHA1-Digest: AP8LssNYLijNfsTzNlNQrOCVah0=
+
+Name: res/drawable-xxhdpi-v4/button_two.png
+SHA1-Digest: 4Pls0O/nWLh2T0Gbka0oRPGyRyw=
+
+Name: res/drawable-hdpi-v4/button_enter.png
+SHA1-Digest: C7q0/W06/STcSMGuv8Sksvf6tNU=
+
+Name: res/drawable-hdpi-v4/tutorial_2.png
+SHA1-Digest: yhjQPHv74uuGmcZKxK/8AuLC/7w=
+
+Name: res/drawable-hdpi-v4/ic_exit.png
+SHA1-Digest: 7KI5UQiIybM9VCxYN4LPJ8/o4ZU=
+
+Name: res/drawable-xxhdpi-v4/button_multiply.png
+SHA1-Digest: JTUEMoRJPBpDm+WzpovYvxOvkJE=
+
+Name: res/drawable-xxxhdpi-v4/button_equals.png
+SHA1-Digest: P2m4WFK79cCP2QzXCl3UVB3rDsU=
+
+Name: res/drawable-sw720dp-v13/button_natural_logarithm.png
+SHA1-Digest: rWumQUAS21isY/uMgiFToZFtn/I=
+
+Name: res/drawable-xxxhdpi-v4/button_sine.png
+SHA1-Digest: caRV4ZFiujwoUz1MVNQ1n5ZdslE=
+
+Name: res/drawable-xxhdpi-v4/button_divide.png
+SHA1-Digest: PmeM8D6Ho4GwnT345yUV6NNJbu8=
+
+Name: res/drawable-xhdpi-v4/button_zero.png
+SHA1-Digest: 2bp+MBf+R8QuUNQSJ6J8pNLdsh0=
+
+Name: res/drawable-hdpi-v4/button_two.png
+SHA1-Digest: lXuFSSo9PSTnQelUCrrB69MAdVg=
+
+Name: res/drawable-xxhdpi-v4/button_pad_background_image.png
+SHA1-Digest: l/4WPQNApn6MlHMjlmhqWPgaTJQ=
+
+Name: res/drawable-hdpi-v4/button_equals.png
+SHA1-Digest: mSlxnbtm9wwfIWNad+B+IW7Y+vw=
+
+Name: res/drawable-hdpi-v4/background_image.png
+SHA1-Digest: cKS2LmnUevyBBPXNQURch2UpBXc=
+
+Name: res/drawable-sw720dp-v13/button_five.png
+SHA1-Digest: T5EK8qpKkSJkwGEcI6bfd73Vnpg=
+
+Name: res/drawable-xxhdpi-v4/button_help.png
+SHA1-Digest: rUYLsgHXJc0dcSFwcUfIZOZY2s4=
+
+Name: res/drawable-xxhdpi-v4/button_variable_z.png
+SHA1-Digest: bMlxYWJHrpBjRNQTEOIja7ofGd0=
+
+Name: res/drawable-sw720dp-v13/tutorial_1.png
+SHA1-Digest: Oc4JIDG1/wWFjeUaOsdzUAT9dMY=
+
+Name: res/drawable-xhdpi-v4/button_eight.png
+SHA1-Digest: klC8WvspcW9UF0OHDDvmTeZ03PM=
+
+Name: res/drawable-sw600dp-v13/button_one.png
+SHA1-Digest: 6In2/MjoBIxV9MEMLFKg3Ih240s=
+
+Name: res/drawable-xxhdpi-v4/button_one.png
+SHA1-Digest: 6In2/MjoBIxV9MEMLFKg3Ih240s=
+
+Name: res/drawable-xhdpi-v4/button_decimal_point.png
+SHA1-Digest: tIirc3VJTP0+hN06ef450SXW/wY=
+
+Name: res/drawable-hdpi-v4/button_clear_line.png
+SHA1-Digest: VaXT3ECDEB3i/BEhqP1qlwxd2fY=
+
+Name: res/drawable-xxhdpi-v4/button_e.png
+SHA1-Digest: USdzSjhd9O+trYCG5lMtHMJBa7I=
+
+Name: res/drawable-xxhdpi-v4/button_tenth_logarithm.png
+SHA1-Digest: nMxJyrxGwm5WXfq/1v+7WG2HxPI=
+
+Name: res/xml/settings.xml
+SHA1-Digest: TZeblp/N6rx+5juBpqFfSOLMDOk=
+
+Name: res/drawable-xxhdpi-v4/tutorial_2.png
+SHA1-Digest: 4OSSxD69a7VhIMviGCpUdGPPuSc=
+
+Name: res/drawable-xxxhdpi-v4/button_five.png
+SHA1-Digest: T5EK8qpKkSJkwGEcI6bfd73Vnpg=
+
+Name: res/drawable-xxxhdpi-v4/button_multiply.png
+SHA1-Digest: n4nlzNaCnv7nBuQQ+cmd1IKn8Pg=
+
+Name: res/drawable/button_options_menu_left.xml
+SHA1-Digest: SRdQJ2yscwLocVC3P6OYMLkzisA=
+
+Name: res/drawable-hdpi-v4/button_engineering_exponent.png
+SHA1-Digest: bocuChsL8Aii6Vzr3qlCCPpe4CE=
+
+Name: res/drawable-sw600dp-v13/button_arc_cosine.png
+SHA1-Digest: /Xtt7Q3/4ju7ngLtAgxxLXqabSk=
+
+Name: res/drawable-xxxhdpi-v4/button_arc_cosine.png
+SHA1-Digest: e9MeYX84JHiBoynatuz71Cdfl8g=
+
+Name: res/drawable-sw720dp-v13/button_front_down_image.9.png
+SHA1-Digest: 7yZJpa/0FJ8v4OrhvXDTb4Z3ldo=
+
+Name: res/drawable-xxxhdpi-v4/button_pad_background_image.png
+SHA1-Digest: 1C4S2frgxxWRnlK5KDz+PfgCrxM=
+
+Name: res/drawable-xhdpi-v4/button_arc_cosine.png
+SHA1-Digest: MEsbrMI6Y/HEO+xK5LshFcn2NAI=
+
+Name: res/drawable-sw720dp-v13/button_two.png
+SHA1-Digest: J0LWKFpl8IseZ4m3DrCMFjVi+jw=
+
+Name: res/drawable-xhdpi-v4/button_power.png
+SHA1-Digest: b9C6G13U8rWpAMpvIv0+G9O0NgQ=
+
+Name: res/drawable-sw600dp-v13/button_backspace.png
+SHA1-Digest: 9j/el5rW4gKSZyYcryoqXS6OEuo=
+
+Name: res/drawable-sw720dp-v13/button_divide.png
+SHA1-Digest: NF/sLqAZQ8dEc2UZwRhZEWsFVEw=
+
+Name: res/drawable-xxhdpi-v4/button_arc_sine.png
+SHA1-Digest: uObAanofiowVQ2xb6GciqnHPeaU=
+
+Name: res/drawable-xxhdpi-v4/button_eight.png
+SHA1-Digest: ynNGzQdjL6olH0oInOJuaDKRzV4=
+
+Name: res/drawable-sw720dp-v13/button_eight.png
+SHA1-Digest: SoAl61SNe6DuOKzfF1Zy2B4Alyo=
+
+Name: res/drawable-sw600dp-v13/tutorial_4.png
+SHA1-Digest: vBFrgH9cUyN/p6Lh9Ovi0D9PTPM=
+
+Name: res/drawable-sw600dp-v13/button_divide.png
+SHA1-Digest: PmeM8D6Ho4GwnT345yUV6NNJbu8=
+
+Name: res/drawable/main_background.xml
+SHA1-Digest: I1NexXTKyXFcthwZcvush9Um0gI=
+
+Name: res/drawable/button_options_menu_single.xml
+SHA1-Digest: 5aPT1ZFpTOgq5QvkU6iBiIzhmfg=
+
+Name: res/drawable-hdpi-v4/button_natural_logarithm.png
+SHA1-Digest: BtNzVOFbupe6n7NqYiLKSg4ESEQ=
+
+Name: res/drawable-sw600dp-v13/button_degree.png
+SHA1-Digest: 7Yo9oxyaqAoY4O8wdgwiCO2qNEI=
+
+Name: res/drawable-xxxhdpi-v4/button_plus.png
+SHA1-Digest: Jc1XPDfSJMURPl+7nBZJAccqqxw=
+
+Name: res/drawable-xxxhdpi-v4/button_variable_z.png
+SHA1-Digest: mIg2xw82WAjsES+X5KVXWj5ZEb4=
+
+Name: res/drawable-hdpi-v4/button_five.png
+SHA1-Digest: 2ucuYL/eXNjp+eoQ8OzFi94/tRc=
+
+Name: res/drawable-xhdpi-v4/button_parentheses.png
+SHA1-Digest: pr+30YuF9glOuRyyATTgLg7pW+g=
+
+Name: res/drawable-xhdpi-v4/button_variable_z.png
+SHA1-Digest: 4xUxvC4kQ+g/h0FsooLEuJNsEhc=
+
+Name: res/layout/help.xml
+SHA1-Digest: KVgPB5wz/iFcgti4KS5mYQYlfCE=
+
+Name: res/drawable-sw600dp-v13/button_pi.png
+SHA1-Digest: 7Q+1MyeAxFFCBtONEsVRZmA2WNY=
+
+Name: res/drawable-xxhdpi-v4/button_three.png
+SHA1-Digest: TBsLo49FgIjUB0J969FoC7WsMaU=
+
+Name: res/drawable-hdpi-v4/button_backspace.png
+SHA1-Digest: 7X37KcXm4U4I8BmLBuIkSdyMVKU=
+
+Name: res/drawable-xxxhdpi-v4/button_seven.png
+SHA1-Digest: rP39g6zeqnl6yhvkVRWJ692UqhU=
+
+Name: res/drawable-sw720dp-v13/button_square.png
+SHA1-Digest: F0T3WNIsxpyxaXFc5H7E6Z6NhDQ=
+
+Name: res/drawable-xxxhdpi-v4/button_e.png
+SHA1-Digest: GZFBefWl4z35gWGw0KeQy5+IaEM=
+
+Name: res/drawable-sw720dp-v13/ic_launcher.png
+SHA1-Digest: 6i73swuNGbvH9WfUICWPskJzKYA=
+
+Name: res/drawable-xxhdpi-v4/button_engineering_exponent.png
+SHA1-Digest: e31ZumQVGG5ZU5j8bu9EKlQubZM=
+
+Name: res/drawable/button_options_menu_right_up.xml
+SHA1-Digest: s5OHhWy301kLez6B8vLtqlAFyY8=
+
+Name: res/drawable-sw600dp-v13/button_square.png
+SHA1-Digest: vXKjmZHit2diFUIlq7fZedzseA0=
+
+Name: res/drawable-hdpi-v4/button_four.png
+SHA1-Digest: gWYdKAXmol9Ckg/UIKnmaXh+Itg=
+
+Name: res/drawable-xxxhdpi-v4/ic_exit.png
+SHA1-Digest: nEs6M8zkrwUZSwPtM1DNs65eCdc=
+
+Name: res/drawable-xxxhdpi-v4/power_tips.png
+SHA1-Digest: ++mAuFvCa4xzylfT/z17a7kJQkc=
+
+Name: res/drawable-sw600dp-v13/button_plus.png
+SHA1-Digest: Hxe+052+Dqk4J+sLgMsiq09Ssg8=
+
+Name: res/drawable-sw720dp-v13/button_degree.png
+SHA1-Digest: qW8sQgNLKAxXZ1z8drw0nZXC/Uc=
+
+Name: res/drawable-xxxhdpi-v4/button_arc_sine.png
+SHA1-Digest: n6pp5gWI+Z1BXns9Xp8l7hFUjLQ=
+
+Name: res/drawable-xhdpi-v4/tutorial_1.png
+SHA1-Digest: 8dCXvVU/b4MNgKugQXjD4pIy5Y4=
+
+Name: res/drawable-xxhdpi-v4/logo_archimedes.png
+SHA1-Digest: feEscRXTzDrsZonGR7Uc+3LHJGU=
+
+Name: res/drawable-hdpi-v4/button_variable_y.png
+SHA1-Digest: qwH4PPhYa3KytcMjjWFHTZ2wkLY=
+
+Name: res/drawable-sw720dp-v13/button_front_image.9.png
+SHA1-Digest: eUraWru9hiSmnz79zrNl8oB9mFA=
+
+Name: res/drawable-xhdpi-v4/button_backspace.png
+SHA1-Digest: T1AD4TdO4OE2qEtCdPdUBbykRec=
+
+Name: res/drawable-sw720dp-v13/button_arc_cosine.png
+SHA1-Digest: e9MeYX84JHiBoynatuz71Cdfl8g=
+
+Name: res/drawable-xxxhdpi-v4/button_front_down_image.9.png
+SHA1-Digest: 7yZJpa/0FJ8v4OrhvXDTb4Z3ldo=
+
+Name: res/drawable-sw600dp-v13/button_variable_x.png
+SHA1-Digest: TqAQimTzKo6tp0Vj3EDM5rg+jV4=
+
+Name: res/drawable-xxhdpi-v4/button_arc_cosine.png
+SHA1-Digest: /Xtt7Q3/4ju7ngLtAgxxLXqabSk=
+
+Name: res/drawable-xhdpi-v4/ic_launcher.png
+SHA1-Digest: XqdMRzx6ouMKseyEu4pEEuYH6hU=
+
+Name: res/drawable-sw600dp-v13/button_e.png
+SHA1-Digest: USdzSjhd9O+trYCG5lMtHMJBa7I=
+
+Name: res/drawable-xxhdpi-v4/button_variable_x.png
+SHA1-Digest: TqAQimTzKo6tp0Vj3EDM5rg+jV4=
+
+Name: res/drawable-xxxhdpi-v4/button_front_image.9.png
+SHA1-Digest: eUraWru9hiSmnz79zrNl8oB9mFA=
+
+Name: res/drawable-sw720dp-v13/button_six.png
+SHA1-Digest: gZwXg2XQrA54LoIvyXOAhXpxnl0=
+
+Name: res/drawable-sw720dp-v13/button_parentheses.png
+SHA1-Digest: wV0oAts7aOqr8uSg3PPv7gxEzcI=
+
+Name: res/drawable-xxxhdpi-v4/logo_archimedes.png
+SHA1-Digest: d8gDFxqqudvrFaaZDCvB2SGN+sc=
+
+Name: res/drawable-hdpi-v4/button_square.png
+SHA1-Digest: CeCAOxNNjYQ/TlGgmBz5+/CGhdI=
+
+Name: res/drawable-sw720dp-v13/button_tangent.png
+SHA1-Digest: 9c5Pjb1tJwu6E1LVePcKwpt4bVk=
+
+Name: res/drawable-sw720dp-v13/button_engineering_exponent.png
+SHA1-Digest: nyzvgqgkcmxInyEBDFBoe1IR0tA=
+
+Name: res/drawable-hdpi-v4/button_degree.png
+SHA1-Digest: gQX9SeiibIB2FzRL+F/gdZxAZnQ=
+
+Name: res/drawable-xhdpi-v4/button_three.png
+SHA1-Digest: 2M0qGocvVOtryPo+cpWDGD5juzk=
+
+Name: res/drawable-xhdpi-v4/button_equals.png
+SHA1-Digest: QFSOtEqSNhO3BUCJCdRsbdwUxUQ=
+
+Name: res/drawable-xhdpi-v4/button_engineering_exponent.png
+SHA1-Digest: wcZJYXtdPg3obGuFBaJ5UmNmctg=
+
+Name: res/drawable-xxxhdpi-v4/button_clear_all.png
+SHA1-Digest: 4oLPdBXOKrr94MH4AVs0GqFK7UE=
+
+Name: res/drawable-sw720dp-v13/button_three.png
+SHA1-Digest: VsBW6x6eeGFTifcb5PrztMGfs3w=
+
+Name: res/drawable-xxxhdpi-v4/button_backspace.png
+SHA1-Digest: qWKdIS4gazlWjnCOcAnITLdajqY=
+
+Name: lib/x86/libtommath.so
+SHA1-Digest: rXvuw4uW2nrWRHGbMgJlq6+i4tY=
+
+Name: res/drawable-xxhdpi-v4/button_variable_y.png
+SHA1-Digest: 1hGuPd97ouigLradf3K4zfQTS+o=
+
+Name: res/drawable-hdpi-v4/ic_launcher.png
+SHA1-Digest: WwMNu5xOzVFKj1Zx1eelEegO4xo=
+
+Name: res/drawable-hdpi-v4/button_zero.png
+SHA1-Digest: 2mNr5qe1DL/ipk1oo1z+OTlCWvY=
+
+Name: res/drawable-sw720dp-v13/button_pi.png
+SHA1-Digest: MYCLVbvRd+Y9j6XYWh7VmX3aFZQ=
+
+Name: res/drawable-xxhdpi-v4/button_plus.png
+SHA1-Digest: Hxe+052+Dqk4J+sLgMsiq09Ssg8=
+
+Name: res/drawable-sw720dp-v13/tutorial_2.png
+SHA1-Digest: 9XV8CJUEeS8NWkg5qtbgXbMNcuE=
+
+Name: res/drawable-xxxhdpi-v4/button_nine.png
+SHA1-Digest: wXvfvgP4JPfHnInuHXFmooKlpjs=
+
+Name: res/drawable-xxhdpi-v4/button_pi.png
+SHA1-Digest: 7Q+1MyeAxFFCBtONEsVRZmA2WNY=
+
+Name: res/drawable-hdpi-v4/tutorial_3.png
+SHA1-Digest: bsFs+vOtcvESgteCC8n0bVIxN60=
+
+Name: res/drawable-sw600dp-v13/button_variable_y.png
+SHA1-Digest: 1hGuPd97ouigLradf3K4zfQTS+o=
+
+Name: res/drawable-xhdpi-v4/ic_exit.png
+SHA1-Digest: KovbSnvHqaVPL8a2xwRO4xz4wm4=
+
+Name: res/drawable-xhdpi-v4/logo_archimedes.png
+SHA1-Digest: VioE9+7MI3hzk3TwXu+vWzO5GiA=
+
+Name: res/drawable-sw600dp-v13/button_engineering_exponent.png
+SHA1-Digest: e31ZumQVGG5ZU5j8bu9EKlQubZM=
+
+Name: res/drawable-sw720dp-v13/button_enter.png
+SHA1-Digest: sAPEukCjf7ScPtDsyvRhskFjSiQ=
+
+Name: res/drawable-xhdpi-v4/button_radians.png
+SHA1-Digest: DRWnS64bSVg+gbdQvPJrjuApWs8=
+
+Name: res/drawable-xxxhdpi-v4/button_decimal_point.png
+SHA1-Digest: H+vq5OhughEXq0sv3qfK9RAN4B8=
+
+Name: res/drawable-hdpi-v4/button_pad_background_image.png
+SHA1-Digest: DqNFaGqF94XtDpx8go4Gaihb3l8=
+
+Name: res/drawable-sw720dp-v13/button_help.png
+SHA1-Digest: OYb8cQuHRA5FKpofgc4qg49pqMY=
+
+Name: res/drawable-xxhdpi-v4/button_radians.png
+SHA1-Digest: uMgzugT6q3iLJkueM7qXJt3JhN0=
+
+Name: res/drawable-xxhdpi-v4/button_clear_line.png
+SHA1-Digest: Djq90T4y9uimihaTEX+NSEe0iA0=
+
+Name: res/drawable-xhdpi-v4/button_square.png
+SHA1-Digest: hNxM2d5B5td6y8UkssX37XZhQ8k=
+
+Name: res/drawable-hdpi-v4/button_six.png
+SHA1-Digest: qBB9NGJqURvYLbsqqhzJ29vvJGc=
+
+Name: res/drawable-xxhdpi-v4/button_enter.png
+SHA1-Digest: 0kXXCthRTLQD+1R27AesiRalIvE=
+
+Name: res/drawable-sw600dp-v13/button_multiply.png
+SHA1-Digest: JTUEMoRJPBpDm+WzpovYvxOvkJE=
+
+Name: res/drawable-xxxhdpi-v4/button_pad_fader.9.png
+SHA1-Digest: Otgq3zjFv/S4TAZzQ30sJv70Wls=
+
+Name: res/drawable-xxhdpi-v4/button_six.png
+SHA1-Digest: MS73ecR0aZxiykwRjzTIb8aEjko=
+
+Name: res/drawable-xxxhdpi-v4/tutorial_4.png
+SHA1-Digest: mNoBj3rPaCVKSBrIg9acNwwm4W4=
+
+Name: res/drawable-sw720dp-v13/button_variable_x.png
+SHA1-Digest: lMefkC5UJ4bfqm42395At1hHQwU=
+
+Name: res/drawable-sw600dp-v13/button_seven.png
+SHA1-Digest: l3DixFj03h46Wmm/jLO1xgcuhic=
+
+Name: res/drawable-xxxhdpi-v4/button_one.png
+SHA1-Digest: ZkR4Hb2EqRHaqPfPQP6glipK6Cs=
+
+Name: res/drawable-sw600dp-v13/button_settings.png
+SHA1-Digest: CIBYFa+h6ugCi0BVUqQDnVYjBnI=
+
+Name: res/drawable-hdpi-v4/button_eight.png
+SHA1-Digest: cccwdT+f0CDewTuQ4ukmuCsz54A=
+
+Name: res/drawable-sw600dp-v13/button_nth_logarithm.png
+SHA1-Digest: 7pQRJarlTMxvBmvK2cGjI+siVXw=
+
+Name: res/drawable-xhdpi-v4/button_nth_root.png
+SHA1-Digest: NFYaPmP5exKfyuSDuLCaFzcXMRE=
+
+Name: res/drawable-sw720dp-v13/button_clear_line.png
+SHA1-Digest: q5LonPeu8v5HXG76RI0AN6xLK90=
+
+Name: res/drawable-xxxhdpi-v4/button_variable_y.png
+SHA1-Digest: JhpBzibGfjQQDiO0LEGz+1BWQRU=
+
+Name: res/drawable-xxxhdpi-v4/button_natural_logarithm.png
+SHA1-Digest: rWumQUAS21isY/uMgiFToZFtn/I=
+
+Name: res/drawable-sw600dp-v13/tutorial_3.png
+SHA1-Digest: 2G7gQV4SriXT9XdFdiIBJueaKCk=
+
+Name: res/drawable-hdpi-v4/button_nth_root.png
+SHA1-Digest: SFLvhml1j+2rvIr7LE8EFff3Sn8=
+
+Name: res/drawable-xxhdpi-v4/button_nine.png
+SHA1-Digest: +T/D1VxFoFH0DiJ0j7ef6oPDa/g=
+
+Name: res/drawable-sw600dp-v13/button_arc_tangent.png
+SHA1-Digest: ao4qgQmKdixhLGoxgiVkCXV95b0=
+
+Name: res/drawable-xhdpi-v4/button_variable_y.png
+SHA1-Digest: U3ptehKHBm+Dn5010Kaz5RvyK9E=
+
+Name: res/drawable-xxhdpi-v4/button_natural_logarithm.png
+SHA1-Digest: mjo69B2sBdhM3Ytm3q4Jrh02BTk=
+
+Name: res/drawable-xxhdpi-v4/tutorial_3.png
+SHA1-Digest: 2G7gQV4SriXT9XdFdiIBJueaKCk=
+
+Name: res/drawable-sw600dp-v13/button_six.png
+SHA1-Digest: MS73ecR0aZxiykwRjzTIb8aEjko=
+
+Name: res/drawable-sw720dp-v13/button_zero.png
+SHA1-Digest: Q6plgzA4CT1n4FochPDRY0M8tcA=
+
+Name: res/drawable-hdpi-v4/button_pad_fader.9.png
+SHA1-Digest: mJf22Cfjxht3kDHROHzJQcYijzY=
+
+Name: res/drawable-hdpi-v4/button_arc_sine.png
+SHA1-Digest: 04h9tNklLh7rHTK4pLFnc4v+Ak0=
+
+Name: res/drawable-xxhdpi-v4/button_pad_fader.9.png
+SHA1-Digest: JKxxMsxu5c83MlQa6+P0+UWsv1U=
+
+Name: res/drawable-sw600dp-v13/button_power.png
+SHA1-Digest: rgnAH6LDQsAJ1Bi9SxdmY8ItYCM=
+
+Name: res/layout/tutorial_page.xml
+SHA1-Digest: GvrpbUhvprg8P7nkC9Fk37+TyLs=
+
+Name: classes.dex
+SHA1-Digest: CNi8QUyQVSgeeJEFgxKu27GZFrs=
+
+Name: res/drawable-xhdpi-v4/button_arc_sine.png
+SHA1-Digest: ECddHrQ9zkBpGJA9oe857fI/ziw=
+
+Name: res/drawable-xxhdpi-v4/button_clear_all.png
+SHA1-Digest: 9Y8E8iGC0qIiU319/ueAiKxUrEk=
+
+Name: res/drawable-hdpi-v4/button_minus.png
+SHA1-Digest: XzufjbJQbLnGvuI5DOc/wjgyWuI=
+
+Name: res/drawable-xhdpi-v4/button_five.png
+SHA1-Digest: gMCQGwkIA5OdaZkccwsJXNyUdyU=
+

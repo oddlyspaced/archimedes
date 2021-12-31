@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android" android:insetLeft="0dp" android:insetRight="1px" android:insetTop="0dp" android:insetBottom="0dp">
+    <shape android:shape="rectangle">
+        <corners android:topLeftRadius="@dimen/floating_options_menu_corner_radius" android:topRightRadius="0dp" android:bottomLeftRadius="@dimen/floating_options_menu_corner_radius" android:bottomRightRadius="0dp"/>
+        <solid android:color="#e9e9e9"/>
+        <padding android:left="@dimen/floating_options_menu_horizontal_padding" android:top="@dimen/floating_options_menu_vertical_padding" android:right="@dimen/floating_options_menu_horizontal_padding" android:bottom="@dimen/floating_options_menu_vertical_padding"/>
+    </shape>
+</inset>

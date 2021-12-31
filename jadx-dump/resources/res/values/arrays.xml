@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="basic_format_entries">
+        <item>Automatic</item>
+        <item>Scientific</item>
+        <item>Engineering</item>
+        <item>Plain</item>
+    </array>
+    <array name="basic_format_values">
+        <item>automatic</item>
+        <item>scientific</item>
+        <item>engineering</item>
+        <item>plain</item>
+    </array>
+    <array name="decimal_places_entries">
+        <item>None</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>6</item>
+        <item>9</item>
+        <item>12</item>
+    </array>
+    <array name="decimal_places_values">
+        <item>@null</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>6</item>
+        <item>9</item>
+        <item>12</item>
+    </array>
+    <array name="default_angle_unit_entries">
+        <item>Radians</item>
+        <item>Degrees</item>
+    </array>
+    <array name="default_angle_unit_values">
+        <item>radians</item>
+        <item>degrees</item>
+    </array>
+    <array name="exponent_format_entries">
+        <item>E-Notation</item>
+        <item>Power of Ten</item>
+    </array>
+    <array name="exponent_format_values">
+        <item>e_notation</item>
+        <item>power_of_ten</item>
+    </array>
+    <array name="tablet_portrait_keypad_entries">
+        <item>Simple/Split</item>
+        <item>Full</item>
+    </array>
+    <array name="tablet_portrait_keypad_values">
+        <item>simple_split</item>
+        <item>full</item>
+    </array>
+</resources>

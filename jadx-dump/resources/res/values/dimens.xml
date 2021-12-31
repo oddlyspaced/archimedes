@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="answer_title_margin">11dp</dimen>
+    <dimen name="auto_scroll_margin">40dp</dimen>
+    <dimen name="auto_scroll_max_speed">0.67dp</dimen>
+    <dimen name="calculation_border_thickness">1dp</dimen>
+    <dimen name="calculation_spacing">12dp</dimen>
+    <dimen name="cardview_compat_inset_shadow">1dp</dimen>
+    <dimen name="cardview_default_elevation">2dp</dimen>
+    <dimen name="cardview_default_radius">2dp</dimen>
+    <dimen name="cursor_width">2dp</dimen>
+    <dimen name="editing_font_size">34dp</dimen>
+    <dimen name="error_font_size">13dp</dimen>
+    <dimen name="finger_movement_margin">3dp</dimen>
+    <dimen name="floating_options_menu_corner_radius">4dp</dimen>
+    <dimen name="floating_options_menu_font_size">13dp</dimen>
+    <dimen name="floating_options_menu_horizontal_padding">8dp</dimen>
+    <dimen name="floating_options_menu_vertical_padding">4dp</dimen>
+    <dimen name="handle_grab_margin">20dp</dimen>
+    <dimen name="handle_radius">10dp</dimen>
+    <dimen name="hint_font_size">10dp</dimen>
+    <dimen name="hint_margin">3dp</dimen>
+    <dimen name="hint_tap_margin">25dp</dimen>
+    <dimen name="math_type_additional_padding">8dp</dimen>
+    <dimen name="math_type_horizontal_padding">20dp</dimen>
+    <dimen name="math_type_vertical_padding">2.5dp</dimen>
+    <dimen name="max_distance_between_taps">20dp</dimen>
+    <dimen name="options_menu_margin">5dp</dimen>
+    <dimen name="paused_font_size">13dp</dimen>
+    <dimen name="regular_font_size">24dp</dimen>
+    <dimen name="separator_line_thickness">1dp</dimen>
+    <dimen name="spin_wheel_size">30dp</dimen>
+</resources>

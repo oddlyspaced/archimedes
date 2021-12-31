@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Archimedes</string>
+    <string name="decimal_places_summary">Decimal places sets the amount of digits after the decimal point that is shown in the answer (unless they are zero, or the accuracy is not sufficient).</string>
+    <string name="digit_grouping_summary">Digit grouping separates groups of three digits in answers by a space, e.g. 100 000.</string>
+    <string name="help_legal_subtitle_part_1">For information about libraries used by this</string>
+    <string name="help_legal_subtitle_part_2">app, their licenses and other legal information:</string>
+    <string name="help_share_subtitle">Like the app and want to support it?</string>
+    <string name="help_subtitle_part_1">By Niels Andriesse</string>
+    <string name="help_subtitle_part_2">Spark App Design</string>
+    <string name="help_support_subtitle_part_1">For your thoughts, questions or</string>
+    <string name="help_support_subtitle_part_2">suggestions, send us an email at:</string>
+    <string name="rounding_summary">If switched on, will round numbers to their last digit when not all digits can be displayed.</string>
+</resources>
