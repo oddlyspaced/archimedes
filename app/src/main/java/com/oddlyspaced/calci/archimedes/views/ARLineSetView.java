@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.archimedes.views;
+package com.oddlyspaced.calci.archimedes.views;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -12,38 +12,38 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
-import com.sparkappdesign.archimedes.R;
-import com.sparkappdesign.archimedes.archimedes.enums.ARLineSetMode;
-import com.sparkappdesign.archimedes.archimedes.model.ARIssue;
-import com.sparkappdesign.archimedes.archimedes.model.ARLineSet;
-import com.sparkappdesign.archimedes.archimedes.model.ARSettings;
-import com.sparkappdesign.archimedes.mathexpression.enums.MEExpressionForm;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTElement;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTString;
-import com.sparkappdesign.archimedes.mathtype.parsers.MTParser;
-import com.sparkappdesign.archimedes.mathtype.views.MTMathTypeView;
-import com.sparkappdesign.archimedes.mathtype.views.MTMathTypeViewDelegate;
-import com.sparkappdesign.archimedes.mathtype.views.input.MTMessageType;
-import com.sparkappdesign.archimedes.mathtype.views.selection.MTSelection;
-import com.sparkappdesign.archimedes.mathtype.writers.MTWriter;
-import com.sparkappdesign.archimedes.utilities.GeneralUtil;
-import com.sparkappdesign.archimedes.utilities.RectUtil;
-import com.sparkappdesign.archimedes.utilities.Timer;
-import com.sparkappdesign.archimedes.utilities.events.Observer;
-import com.sparkappdesign.archimedes.utilities.events.ObserverType;
-import com.sparkappdesign.archimedes.utilities.observables.ImmutableList;
-import com.sparkappdesign.archimedes.utilities.observables.ListObserver;
-import com.sparkappdesign.archimedes.utilities.observables.MutableObservable;
-import com.sparkappdesign.archimedes.utilities.observables.Observable;
-import com.sparkappdesign.archimedes.utilities.observables.ObservableChainLink;
-import com.sparkappdesign.archimedes.utilities.observables.ObservableChange;
-import com.sparkappdesign.archimedes.utilities.observables.ObservableChangeGroup;
-import com.sparkappdesign.archimedes.utilities.observables.ObservableList;
-import com.sparkappdesign.archimedes.utilities.observables.ValueObserver;
-import com.sparkappdesign.archimedes.utilities.responder.Responder;
-import com.sparkappdesign.archimedes.utilities.responder.ResponderManager;
-import com.sparkappdesign.archimedes.utilities.responder.ResponderMessage;
+import com.oddlyspaced.calci.R;
+import com.oddlyspaced.calci.archimedes.enums.ARLineSetMode;
+import com.oddlyspaced.calci.archimedes.model.ARIssue;
+import com.oddlyspaced.calci.archimedes.model.ARLineSet;
+import com.oddlyspaced.calci.archimedes.model.ARSettings;
+import com.oddlyspaced.calci.mathexpression.enums.MEExpressionForm;
+import com.oddlyspaced.calci.mathexpression.expressions.MEExpression;
+import com.oddlyspaced.calci.mathtype.nodes.MTElement;
+import com.oddlyspaced.calci.mathtype.nodes.MTString;
+import com.oddlyspaced.calci.mathtype.parsers.MTParser;
+import com.oddlyspaced.calci.mathtype.views.MTMathTypeView;
+import com.oddlyspaced.calci.mathtype.views.MTMathTypeViewDelegate;
+import com.oddlyspaced.calci.mathtype.views.input.MTMessageType;
+import com.oddlyspaced.calci.mathtype.views.selection.MTSelection;
+import com.oddlyspaced.calci.mathtype.writers.MTWriter;
+import com.oddlyspaced.calci.utilities.GeneralUtil;
+import com.oddlyspaced.calci.utilities.RectUtil;
+import com.oddlyspaced.calci.utilities.Timer;
+import com.oddlyspaced.calci.utilities.events.Observer;
+import com.oddlyspaced.calci.utilities.events.ObserverType;
+import com.oddlyspaced.calci.utilities.observables.ImmutableList;
+import com.oddlyspaced.calci.utilities.observables.ListObserver;
+import com.oddlyspaced.calci.utilities.observables.MutableObservable;
+import com.oddlyspaced.calci.utilities.observables.Observable;
+import com.oddlyspaced.calci.utilities.observables.ObservableChainLink;
+import com.oddlyspaced.calci.utilities.observables.ObservableChange;
+import com.oddlyspaced.calci.utilities.observables.ObservableChangeGroup;
+import com.oddlyspaced.calci.utilities.observables.ObservableList;
+import com.oddlyspaced.calci.utilities.observables.ValueObserver;
+import com.oddlyspaced.calci.utilities.responder.Responder;
+import com.oddlyspaced.calci.utilities.responder.ResponderManager;
+import com.oddlyspaced.calci.utilities.responder.ResponderMessage;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -67,7 +67,7 @@ public class ARLineSetView extends ViewGroup implements Responder, MTMathTypeVie
     private boolean mAllowAddRemoveLines = true;
     private ObservableList<ARIssue> mExtraIssues = new ObservableList<>();
     private int mMathTypeColor = getContext().getResources().getColor(R.color.foreground);
-    private BroadcastReceiver mSettingsChangedListener = new BroadcastReceiver() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARLineSetView.1
+    private BroadcastReceiver mSettingsChangedListener = new BroadcastReceiver() { // from class: com.oddlyspaced.calci.archimedes.views.ARLineSetView.1
         @Override // android.content.BroadcastReceiver
         public void onReceive(Context context, Intent intent) {
             if (((ARLineSet) ARLineSetView.this.mLineSet.getValue()).getMode().getValue() == ARLineSetMode.StringBased) {
@@ -78,7 +78,7 @@ public class ARLineSetView extends ViewGroup implements Responder, MTMathTypeVie
             }
         }
     };
-    private Runnable mParseRunnable = new Runnable() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARLineSetView.2
+    private Runnable mParseRunnable = new Runnable() { // from class: com.oddlyspaced.calci.archimedes.views.ARLineSetView.2
         @Override // java.lang.Runnable
         public void run() {
             ARLineSetView.this.parseStrings();
@@ -86,7 +86,7 @@ public class ARLineSetView extends ViewGroup implements Responder, MTMathTypeVie
             ARLineSetView.this.mParseWriteTimer.purge();
         }
     };
-    private Runnable mWriteRunnable = new Runnable() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARLineSetView.3
+    private Runnable mWriteRunnable = new Runnable() { // from class: com.oddlyspaced.calci.archimedes.views.ARLineSetView.3
         @Override // java.lang.Runnable
         public void run() {
             ARLineSetView.this.writeExpressions();
@@ -108,7 +108,7 @@ public class ARLineSetView extends ViewGroup implements Responder, MTMathTypeVie
         if (this.mStringEditedObserver != null) {
             this.mStringEditedObserver.remove();
         }
-        this.mStringEditedObserver = lineSet.getStringEditedEvent().add(new Observer<MTString>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARLineSetView.4
+        this.mStringEditedObserver = lineSet.getStringEditedEvent().add(new Observer<MTString>() { // from class: com.oddlyspaced.calci.archimedes.views.ARLineSetView.4
             public void handle(MTString args) {
                 ARLineSetView.this.handleStringsChanged();
             }
@@ -202,7 +202,7 @@ public class ARLineSetView extends ViewGroup implements Responder, MTMathTypeVie
         errorView.setVisibility(4);
         addView(errorView);
         this.mErrorView = errorView;
-        Observable<C> chain = this.mLineSet.chain(new ObservableChainLink<ARLineSet, ImmutableList<MTString>>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARLineSetView.5
+        Observable<C> chain = this.mLineSet.chain(new ObservableChainLink<ARLineSet, ImmutableList<MTString>>() { // from class: com.oddlyspaced.calci.archimedes.views.ARLineSetView.5
             public Observable<ImmutableList<MTString>> get(ARLineSet lineSet) {
                 if (lineSet != null) {
                     return lineSet.getStrings();
@@ -210,7 +210,7 @@ public class ARLineSetView extends ViewGroup implements Responder, MTMathTypeVie
                 return null;
             }
         });
-        this.mObservers.add(chain.addObserver(new ListObserver<MTString>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARLineSetView.6
+        this.mObservers.add(chain.addObserver(new ListObserver<MTString>() { // from class: com.oddlyspaced.calci.archimedes.views.ARLineSetView.6
             public void handleAdd(MTString string, int index) {
                 ARLineSetView.this.handleAddedLine(string, index);
             }
@@ -219,29 +219,29 @@ public class ARLineSetView extends ViewGroup implements Responder, MTMathTypeVie
                 ARLineSetView.this.handleRemovedLine(string, index);
             }
         }));
-        this.mObservers.add(chain.addObserver(new ValueObserver<ImmutableList<MTString>>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARLineSetView.7
+        this.mObservers.add(chain.addObserver(new ValueObserver<ImmutableList<MTString>>() { // from class: com.oddlyspaced.calci.archimedes.views.ARLineSetView.7
             public void handle(ImmutableList<MTString> strings) {
                 ARLineSetView.this.handleStringsChanged();
             }
         }));
-        this.mObservers.add(this.mLineSet.chain(new ObservableChainLink<ARLineSet, ImmutableList<MEExpression>>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARLineSetView.9
+        this.mObservers.add(this.mLineSet.chain(new ObservableChainLink<ARLineSet, ImmutableList<MEExpression>>() { // from class: com.oddlyspaced.calci.archimedes.views.ARLineSetView.9
             public Observable<ImmutableList<MEExpression>> get(ARLineSet lineSet) {
                 if (lineSet != null) {
                     return lineSet.getExpressions();
                 }
                 return null;
             }
-        }).addObserver(new ValueObserver<ImmutableList<MEExpression>>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARLineSetView.8
+        }).addObserver(new ValueObserver<ImmutableList<MEExpression>>() { // from class: com.oddlyspaced.calci.archimedes.views.ARLineSetView.8
             public void handle(ImmutableList<MEExpression> expressions) {
                 ARLineSetView.this.handleExpressionsChanged();
             }
         }));
-        this.mObservers.add(this.mExtraIssues.addObserver(new ValueObserver<ImmutableList<ARIssue>>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARLineSetView.10
+        this.mObservers.add(this.mExtraIssues.addObserver(new ValueObserver<ImmutableList<ARIssue>>() { // from class: com.oddlyspaced.calci.archimedes.views.ARLineSetView.10
             public void handle(ImmutableList<ARIssue> issue) {
                 ARLineSetView.this.handleExtraIssuesChanged();
             }
         }));
-        this.mObservers.add(ResponderManager.getFirstResponder().addObserver(new Observer<ObservableChange<Responder>>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARLineSetView.11
+        this.mObservers.add(ResponderManager.getFirstResponder().addObserver(new Observer<ObservableChange<Responder>>() { // from class: com.oddlyspaced.calci.archimedes.views.ARLineSetView.11
             public void handle(ObservableChange<Responder> change) {
                 ARLineSetView.this.handleFirstResponderChanged(change.getOldValue(), change.getNewValue());
             }
@@ -443,7 +443,7 @@ public class ARLineSetView extends ViewGroup implements Responder, MTMathTypeVie
         long delay2 = GeneralUtil.constrainMin(delay - (SystemClock.uptimeMillis() - this.mLastEditTime), 0);
         if (delay2 > 0) {
             this.mParseWriteTimer = new Timer();
-            this.mParseWriteTimer.schedule(new TimerTask() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARLineSetView.12
+            this.mParseWriteTimer.schedule(new TimerTask() { // from class: com.oddlyspaced.calci.archimedes.views.ARLineSetView.12
                 @Override // java.util.TimerTask, java.lang.Runnable
                 public void run() {
                     ARLineSetView.this.post(ARLineSetView.this.mParseRunnable);
@@ -468,7 +468,7 @@ public class ARLineSetView extends ViewGroup implements Responder, MTMathTypeVie
         long delay2 = GeneralUtil.constrainMin(delay - (SystemClock.uptimeMillis() - this.mLastEditTime), 0);
         if (delay2 > 0) {
             this.mParseWriteTimer = new Timer();
-            this.mParseWriteTimer.schedule(new TimerTask() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARLineSetView.13
+            this.mParseWriteTimer.schedule(new TimerTask() { // from class: com.oddlyspaced.calci.archimedes.views.ARLineSetView.13
                 @Override // java.util.TimerTask, java.lang.Runnable
                 public void run() {
                     ARLineSetView.this.post(ARLineSetView.this.mWriteRunnable);
@@ -615,12 +615,12 @@ public class ARLineSetView extends ViewGroup implements Responder, MTMathTypeVie
         return false;
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public boolean canHandleMessageType(String type) {
         return type.equals(MTMessageType.INSERT_ELEMENT) || type.equals(MTMessageType.BACKSPACE) || type.equals(MTMessageType.CLEAR_ALL) || type.equals(MTMessageType.ENTER);
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public Responder getAncestor() {
         ViewParent parent = getParent();
         if (parent instanceof Responder) {
@@ -629,12 +629,12 @@ public class ARLineSetView extends ViewGroup implements Responder, MTMathTypeVie
         return null;
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public boolean isChildAllowedToHandleMessage(Responder child, ResponderMessage message) {
         return (message.getType().equals(MTMessageType.INSERT_ELEMENT) && this.mActiveMathTypeView != null) || message.getType().equals(MTMessageType.CLEAR_LINE) || message.getType().equals(MTMessageType.COPY) || message.getType().equals(MTMessageType.PASTE);
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public void handleMessage(String type, HashMap<String, Object> contents) {
         if (type.equals(MTMessageType.INSERT_ELEMENT)) {
             insertElement((MTElement) contents.get("Element to insert"));
@@ -650,18 +650,18 @@ public class ARLineSetView extends ViewGroup implements Responder, MTMathTypeVie
         }
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.views.MTMathTypeViewDelegate
+    @Override // com.oddlyspaced.calci.mathtype.views.MTMathTypeViewDelegate
     public void mathTypeViewDidChange(MTMathTypeView mathTypeView) {
         this.mLineSet.getValue().handleStringsModified(mathTypeView.getString());
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARViewGroup
+    @Override // com.oddlyspaced.calci.archimedes.views.ARViewGroup
     public RectF finalBoundsForChildAtIndex(int index) {
         PointF size = ((ARView) getChildAt(index)).finalSize();
         return RectUtil.create(0.0f, 0.0f, size.x, size.y);
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARView
+    @Override // com.oddlyspaced.calci.archimedes.views.ARView
     public PointF finalSize() {
         return this.mStackView.finalSize();
     }

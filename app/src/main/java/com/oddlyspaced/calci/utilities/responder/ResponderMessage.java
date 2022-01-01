@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.utilities.responder;
+package com.oddlyspaced.calci.utilities.responder;
 
 import java.util.HashMap;
 /* loaded from: classes.dex */

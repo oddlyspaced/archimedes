@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.utilities.observables;
+package com.oddlyspaced.calci.utilities.observables;
 
 import java.io.Serializable;
 import java.util.AbstractList;

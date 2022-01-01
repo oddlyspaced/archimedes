@@ -1,18 +1,18 @@
-package com.sparkappdesign.archimedes.archimedes.model;
+package com.oddlyspaced.calci.archimedes.model;
 
 import android.os.Handler;
 import android.util.Log;
-import com.sparkappdesign.archimedes.mathexpression.context.MEContext;
-import com.sparkappdesign.archimedes.mathexpression.context.MEIssue;
-import com.sparkappdesign.archimedes.mathexpression.enums.MEContextOptions;
-import com.sparkappdesign.archimedes.mathexpression.enums.MEExpressionForm;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEAdditions;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEEquals;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEValue;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEVariable;
-import com.sparkappdesign.archimedes.utilities.ListUtil;
-import com.sparkappdesign.archimedes.utilities.Transformation;
+import com.oddlyspaced.calci.mathexpression.context.MEContext;
+import com.oddlyspaced.calci.mathexpression.context.MEIssue;
+import com.oddlyspaced.calci.mathexpression.enums.MEContextOptions;
+import com.oddlyspaced.calci.mathexpression.enums.MEExpressionForm;
+import com.oddlyspaced.calci.mathexpression.expressions.MEAdditions;
+import com.oddlyspaced.calci.mathexpression.expressions.MEEquals;
+import com.oddlyspaced.calci.mathexpression.expressions.MEExpression;
+import com.oddlyspaced.calci.mathexpression.expressions.MEValue;
+import com.oddlyspaced.calci.mathexpression.expressions.MEVariable;
+import com.oddlyspaced.calci.utilities.ListUtil;
+import com.oddlyspaced.calci.utilities.Transformation;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -86,7 +86,7 @@ public class ARCalculationOperation implements Runnable {
 
     @Override // java.lang.Runnable
     public void run() {
-        MEContext.pushContext(this.mContext, new Runnable() { // from class: com.sparkappdesign.archimedes.archimedes.model.ARCalculationOperation.1
+        MEContext.pushContext(this.mContext, new Runnable() { // from class: com.oddlyspaced.calci.archimedes.model.ARCalculationOperation.1
             @Override // java.lang.Runnable
             public void run() {
                 ARCalculationOperation.this.calculate();
@@ -124,7 +124,7 @@ public class ARCalculationOperation implements Runnable {
             if (!MEContext.shouldStop()) {
                 final AtomicReference<ArrayList<HashMap<MEVariable, MEExpression>>> solutionSets = new AtomicReference<>();
                 final AtomicReference<ArrayList<MEIssue>> issues = new AtomicReference<>();
-                MEContext.pushContext(null, new Runnable() { // from class: com.sparkappdesign.archimedes.archimedes.model.ARCalculationOperation.2
+                MEContext.pushContext(null, new Runnable() { // from class: com.oddlyspaced.calci.archimedes.model.ARCalculationOperation.2
                     @Override // java.lang.Runnable
                     public void run() {
                         solutionSets.set(ARCalculationOperation.this.tryEquationSolvingForLines(inputExpressions, false));
@@ -133,7 +133,7 @@ public class ARCalculationOperation implements Runnable {
                 });
                 if (!MEContext.shouldStop()) {
                     if (solutionSets.get() == null) {
-                        MEContext.pushContext(null, new Runnable() { // from class: com.sparkappdesign.archimedes.archimedes.model.ARCalculationOperation.3
+                        MEContext.pushContext(null, new Runnable() { // from class: com.oddlyspaced.calci.archimedes.model.ARCalculationOperation.3
                             @Override // java.lang.Runnable
                             public void run() {
                                 solutionSets.set(ARCalculationOperation.this.tryEquationSolvingForLines(inputExpressions, true));
@@ -156,7 +156,7 @@ public class ARCalculationOperation implements Runnable {
                         while (it2.hasNext()) {
                             HashMap<MEVariable, MEExpression> solutionSet = it2.next();
                             ArrayList<MEVariable> sortedVariables = new ArrayList<>(solutionSet.keySet());
-                            Collections.sort(sortedVariables, new Comparator<MEVariable>() { // from class: com.sparkappdesign.archimedes.archimedes.model.ARCalculationOperation.4
+                            Collections.sort(sortedVariables, new Comparator<MEVariable>() { // from class: com.oddlyspaced.calci.archimedes.model.ARCalculationOperation.4
                                 public int compare(MEVariable var1, MEVariable var2) {
                                     return var1.getIdentifier().toString().compareTo(var2.getIdentifier().toString());
                                 }
@@ -195,7 +195,7 @@ public class ARCalculationOperation implements Runnable {
                 equations.add((MEEquals) line);
             }
         }
-        Collections.sort(equations, new Comparator<MEEquals>() { // from class: com.sparkappdesign.archimedes.archimedes.model.ARCalculationOperation.5
+        Collections.sort(equations, new Comparator<MEEquals>() { // from class: com.oddlyspaced.calci.archimedes.model.ARCalculationOperation.5
             public int compare(MEEquals eq1, MEEquals eq2) {
                 int result = Integer.valueOf(eq1.variables().size()).compareTo(Integer.valueOf(eq2.variables().size()));
                 return reverse ? -result : result;
@@ -206,7 +206,7 @@ public class ARCalculationOperation implements Runnable {
         }
         MEEquals equation = equations.get(0);
         ArrayList<MEVariable> variableArray = new ArrayList<>(equation.variables());
-        Collections.sort(variableArray, new Comparator<MEVariable>() { // from class: com.sparkappdesign.archimedes.archimedes.model.ARCalculationOperation.6
+        Collections.sort(variableArray, new Comparator<MEVariable>() { // from class: com.oddlyspaced.calci.archimedes.model.ARCalculationOperation.6
             public int compare(MEVariable var1, MEVariable var2) {
                 return var1.getIdentifier().toString().compareTo(var2.getIdentifier().toString());
             }
@@ -275,7 +275,7 @@ public class ARCalculationOperation implements Runnable {
             final AtomicBoolean isValid = new AtomicBoolean(true);
             final MEContext context = MEContext.getCurrent().copy();
             context.setForm(MEExpressionForm.Numeric);
-            MEContext.pushContext(context, new Runnable() { // from class: com.sparkappdesign.archimedes.archimedes.model.ARCalculationOperation.7
+            MEContext.pushContext(context, new Runnable() { // from class: com.oddlyspaced.calci.archimedes.model.ARCalculationOperation.7
                 @Override // java.lang.Runnable
                 public void run() {
                     MEEquals equation;
@@ -283,7 +283,7 @@ public class ARCalculationOperation implements Runnable {
                     boolean z;
                     Iterator it2 = originalExpressions.iterator();
                     while (it2.hasNext()) {
-                        MEExpression resolvedExpression = ((MEExpression) it2.next()).expressionWithTreeTransformation(new Transformation<MEExpression>() { // from class: com.sparkappdesign.archimedes.archimedes.model.ARCalculationOperation.7.1
+                        MEExpression resolvedExpression = ((MEExpression) it2.next()).expressionWithTreeTransformation(new Transformation<MEExpression>() { // from class: com.oddlyspaced.calci.archimedes.model.ARCalculationOperation.7.1
                             public MEExpression transform(MEExpression input) {
                                 MEExpression substitute;
                                 return (!(input instanceof MEVariable) || (substitute = (MEExpression) solutionSet.get(input)) == null) ? input : substitute;

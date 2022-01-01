@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes;
+package com.oddlyspaced.calci;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -27,7 +27,7 @@ public class Tutorial extends FragmentActivity {
         boolean showExitButton = getIntent().getBooleanExtra("SHOULD_SHOW_EXIT_BUTTON", false);
         ImageButton exitButton = (ImageButton) findViewById(R.id.exit_button);
         if (showExitButton) {
-            exitButton.setOnClickListener(new View.OnClickListener() { // from class: com.sparkappdesign.archimedes.Tutorial.1
+            exitButton.setOnClickListener(new View.OnClickListener() { // from class: com.oddlyspaced.calci.Tutorial.1
                 @Override // android.view.View.OnClickListener
                 public void onClick(View v) {
                     Tutorial.this.finish();

@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.tommath;
+package com.oddlyspaced.calci.tommath;
 /* loaded from: classes.dex */
 public class SWIGTYPE_p_mp_int {
     private long swigCPtr;

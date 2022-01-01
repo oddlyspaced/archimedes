@@ -1,10 +1,10 @@
-package com.sparkappdesign.archimedes.mathtype.nodes.elements;
+package com.oddlyspaced.calci.mathtype.nodes.elements;
 
-import com.sparkappdesign.archimedes.mathtype.measures.MTCommonMeasures;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasureContext;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasures;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTElement;
-import com.sparkappdesign.archimedes.utilities.GeneralUtil;
+import com.oddlyspaced.calci.mathtype.measures.MTCommonMeasures;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasureContext;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasures;
+import com.oddlyspaced.calci.mathtype.nodes.MTElement;
+import com.oddlyspaced.calci.utilities.GeneralUtil;
 import java.util.Locale;
 /* loaded from: classes.dex */
 public class MTText extends MTElement {
@@ -45,7 +45,7 @@ public class MTText extends MTElement {
         this.mScale = 1.0f;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTNode
     public MTMeasures measureWithContext(MTMeasureContext context) {
         String text = this.mText == null ? "" : this.mText;
         float scale = this.mScale;
@@ -64,7 +64,7 @@ public class MTText extends MTElement {
         return this.mText;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTElement, com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTElement, com.oddlyspaced.calci.mathtype.nodes.MTNode
     public MTText copy() {
         MTText text = new MTText();
         text.mTraits = this.mTraits.clone();
@@ -74,7 +74,7 @@ public class MTText extends MTElement {
         return text;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTNode
     public boolean equivalentTo(Object other) {
         if (this == other) {
             return true;

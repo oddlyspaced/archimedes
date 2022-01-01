@@ -1,23 +1,23 @@
-package com.sparkappdesign.archimedes.archimedes.model;
+package com.oddlyspaced.calci.archimedes.model;
 
-import com.sparkappdesign.archimedes.archimedes.enums.ARLineSetMode;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEVariable;
-import com.sparkappdesign.archimedes.mathtype.MTIssue;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTNode;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTString;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTVariable;
-import com.sparkappdesign.archimedes.mathtype.parsers.MTParser;
-import com.sparkappdesign.archimedes.mathtype.writers.MTWriter;
-import com.sparkappdesign.archimedes.utilities.events.Event;
-import com.sparkappdesign.archimedes.utilities.events.Observer;
-import com.sparkappdesign.archimedes.utilities.events.OwnedEvent;
-import com.sparkappdesign.archimedes.utilities.observables.ImmutableList;
-import com.sparkappdesign.archimedes.utilities.observables.MutableObservable;
-import com.sparkappdesign.archimedes.utilities.observables.Observable;
-import com.sparkappdesign.archimedes.utilities.observables.ObservableChange;
-import com.sparkappdesign.archimedes.utilities.observables.ObservableChangeGroup;
-import com.sparkappdesign.archimedes.utilities.observables.ObservableList;
+import com.oddlyspaced.calci.archimedes.enums.ARLineSetMode;
+import com.oddlyspaced.calci.mathexpression.expressions.MEExpression;
+import com.oddlyspaced.calci.mathexpression.expressions.MEVariable;
+import com.oddlyspaced.calci.mathtype.MTIssue;
+import com.oddlyspaced.calci.mathtype.nodes.MTNode;
+import com.oddlyspaced.calci.mathtype.nodes.MTString;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTVariable;
+import com.oddlyspaced.calci.mathtype.parsers.MTParser;
+import com.oddlyspaced.calci.mathtype.writers.MTWriter;
+import com.oddlyspaced.calci.utilities.events.Event;
+import com.oddlyspaced.calci.utilities.events.Observer;
+import com.oddlyspaced.calci.utilities.events.OwnedEvent;
+import com.oddlyspaced.calci.utilities.observables.ImmutableList;
+import com.oddlyspaced.calci.utilities.observables.MutableObservable;
+import com.oddlyspaced.calci.utilities.observables.Observable;
+import com.oddlyspaced.calci.utilities.observables.ObservableChange;
+import com.oddlyspaced.calci.utilities.observables.ObservableChangeGroup;
+import com.oddlyspaced.calci.utilities.observables.ObservableList;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -81,21 +81,21 @@ public class ARLineSet implements Serializable {
 
     public ARLineSet() {
         this.mStrings.add(new MTString());
-        this.mMode.getWillChange().add(new Observer<ObservableChange<ARLineSetMode>>() { // from class: com.sparkappdesign.archimedes.archimedes.model.ARLineSet.1
+        this.mMode.getWillChange().add(new Observer<ObservableChange<ARLineSetMode>>() { // from class: com.oddlyspaced.calci.archimedes.model.ARLineSet.1
             public void handle(ObservableChange<ARLineSetMode> change) {
                 if (!(change.getExtraInfo() instanceof String) || !change.getExtraInfo().equals(ARLineSet.DONT_INVALIDATE_FLAG)) {
                     ARLineSet.this.invalidateResults(change.getNewValue(), change.getGroup());
                 }
             }
         });
-        this.mStrings.getWillChange().add(new Observer<ObservableChange<ImmutableList<MTString>>>() { // from class: com.sparkappdesign.archimedes.archimedes.model.ARLineSet.2
+        this.mStrings.getWillChange().add(new Observer<ObservableChange<ImmutableList<MTString>>>() { // from class: com.oddlyspaced.calci.archimedes.model.ARLineSet.2
             public void handle(ObservableChange<ImmutableList<MTString>> change) {
                 if (!(change.getExtraInfo() instanceof String) || !change.getExtraInfo().equals(ARLineSet.DONT_INVALIDATE_FLAG)) {
                     ARLineSet.this.invalidateResults(ARLineSetMode.StringBased, change.getGroup());
                 }
             }
         });
-        this.mExpressions.getWillChange().add(new Observer<ObservableChange<ImmutableList<MEExpression>>>() { // from class: com.sparkappdesign.archimedes.archimedes.model.ARLineSet.3
+        this.mExpressions.getWillChange().add(new Observer<ObservableChange<ImmutableList<MEExpression>>>() { // from class: com.oddlyspaced.calci.archimedes.model.ARLineSet.3
             public void handle(ObservableChange<ImmutableList<MEExpression>> change) {
                 if (!(change.getExtraInfo() instanceof String) || !change.getExtraInfo().equals(ARLineSet.DONT_INVALIDATE_FLAG)) {
                     ARLineSet.this.invalidateResults(ARLineSetMode.ExpressionBased, change.getGroup());
@@ -209,21 +209,21 @@ public class ARLineSet implements Serializable {
         this.mParsingIssues = new ObservableList<>();
         this.mWritingIssues = new ObservableList<>();
         this.mStringEditedEvent = new OwnedEvent<>();
-        this.mMode.getWillChange().add(new Observer<ObservableChange<ARLineSetMode>>() { // from class: com.sparkappdesign.archimedes.archimedes.model.ARLineSet.4
+        this.mMode.getWillChange().add(new Observer<ObservableChange<ARLineSetMode>>() { // from class: com.oddlyspaced.calci.archimedes.model.ARLineSet.4
             public void handle(ObservableChange<ARLineSetMode> change) {
                 if (!(change.getExtraInfo() instanceof String) || !change.getExtraInfo().equals(ARLineSet.DONT_INVALIDATE_FLAG)) {
                     ARLineSet.this.invalidateResults(change.getNewValue(), change.getGroup());
                 }
             }
         });
-        this.mStrings.getWillChange().add(new Observer<ObservableChange<ImmutableList<MTString>>>() { // from class: com.sparkappdesign.archimedes.archimedes.model.ARLineSet.5
+        this.mStrings.getWillChange().add(new Observer<ObservableChange<ImmutableList<MTString>>>() { // from class: com.oddlyspaced.calci.archimedes.model.ARLineSet.5
             public void handle(ObservableChange<ImmutableList<MTString>> change) {
                 if (!(change.getExtraInfo() instanceof String) || !change.getExtraInfo().equals(ARLineSet.DONT_INVALIDATE_FLAG)) {
                     ARLineSet.this.invalidateResults(ARLineSetMode.StringBased, change.getGroup());
                 }
             }
         });
-        this.mExpressions.getWillChange().add(new Observer<ObservableChange<ImmutableList<MEExpression>>>() { // from class: com.sparkappdesign.archimedes.archimedes.model.ARLineSet.6
+        this.mExpressions.getWillChange().add(new Observer<ObservableChange<ImmutableList<MEExpression>>>() { // from class: com.oddlyspaced.calci.archimedes.model.ARLineSet.6
             public void handle(ObservableChange<ImmutableList<MEExpression>> change) {
                 if (!(change.getExtraInfo() instanceof String) || !change.getExtraInfo().equals(ARLineSet.DONT_INVALIDATE_FLAG)) {
                     ARLineSet.this.invalidateResults(ARLineSetMode.ExpressionBased, change.getGroup());

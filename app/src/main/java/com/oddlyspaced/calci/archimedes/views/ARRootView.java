@@ -1,11 +1,11 @@
-package com.sparkappdesign.archimedes.archimedes.views;
+package com.oddlyspaced.calci.archimedes.views;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
-import com.sparkappdesign.archimedes.R;
-import com.sparkappdesign.archimedes.archimedes.enums.ARButtonPadType;
+import com.oddlyspaced.calci.R;
+import com.oddlyspaced.calci.archimedes.enums.ARButtonPadType;
 /* loaded from: classes.dex */
 public class ARRootView extends ViewGroup {
     private ARButtonPad mButtonPad;

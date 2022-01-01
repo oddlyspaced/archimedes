@@ -1,6 +1,6 @@
-package com.sparkappdesign.archimedes.mathtype.enums;
+package com.oddlyspaced.calci.mathtype.enums;
 
-import com.sparkappdesign.archimedes.mathexpression.enums.METrigonometricFunctionType;
+import com.oddlyspaced.calci.mathexpression.enums.METrigonometricFunctionType;
 /* loaded from: classes.dex */
 public enum MTInlineOperatorType {
     None,

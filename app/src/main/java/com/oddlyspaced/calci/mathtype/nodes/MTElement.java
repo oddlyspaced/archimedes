@@ -1,15 +1,15 @@
-package com.sparkappdesign.archimedes.mathtype.nodes;
+package com.oddlyspaced.calci.mathtype.nodes;
 /* loaded from: classes.dex */
 public abstract class MTElement extends MTNode {
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTNode
     public abstract MTElement copy();
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTNode
     public Iterable<? extends MTString> getChildren() {
         return null;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTNode
     public MTString getParent() {
         return (MTString) this.mParent;
     }

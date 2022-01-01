@@ -1,6 +1,6 @@
-package com.sparkappdesign.archimedes.mathexpression.expressions;
+package com.oddlyspaced.calci.mathexpression.expressions;
 
-import com.sparkappdesign.archimedes.mathexpression.numbers.MEReal;
+import com.oddlyspaced.calci.mathexpression.numbers.MEReal;
 import java.util.HashMap;
 /* loaded from: classes.dex */
 public class MEUnit extends MEExpression {
@@ -28,17 +28,17 @@ public class MEUnit extends MEExpression {
             return placeholder;
         }
 
-        @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+        @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
         public boolean equals(Object other) {
             return this == other || (other instanceof METhisPlaceholder);
         }
 
-        @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+        @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
         public int hashCode() {
             return 0;
         }
 
-        @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+        @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
         public String toString() {
             return "[]";
         }
@@ -105,37 +105,37 @@ public class MEUnit extends MEExpression {
         return degrees;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public MEExpression partWithUnit() {
         return this;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public MEExpression quantityOfUnit() {
         return this.mQuantity;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public MEReal evaluateNumerically(MEReal value, MEVariable variable) {
         return convertToUnit(null, false).evaluateNumerically(value, variable);
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public double evaluateNumerically(double value, MEVariable variable) {
         return convertToUnit(null, false).evaluateNumerically(value, variable);
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public boolean equals(Object other) {
         return this == other;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public int hashCode() {
         return System.identityHashCode(this);
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public String toString() {
         return this.mSymbol;
     }

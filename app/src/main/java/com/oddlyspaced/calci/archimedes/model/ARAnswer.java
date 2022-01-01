@@ -1,20 +1,20 @@
-package com.sparkappdesign.archimedes.archimedes.model;
+package com.oddlyspaced.calci.archimedes.model;
 
 import android.os.Handler;
-import com.sparkappdesign.archimedes.archimedes.enums.ARAnswerState;
-import com.sparkappdesign.archimedes.mathexpression.context.MEIssue;
-import com.sparkappdesign.archimedes.mathexpression.enums.MEExpressionForm;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEPlaceholder;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEVariable;
-import com.sparkappdesign.archimedes.utilities.events.Observer;
-import com.sparkappdesign.archimedes.utilities.events.ObserverType;
-import com.sparkappdesign.archimedes.utilities.observables.ImmutableList;
-import com.sparkappdesign.archimedes.utilities.observables.MutableObservable;
-import com.sparkappdesign.archimedes.utilities.observables.Observable;
-import com.sparkappdesign.archimedes.utilities.observables.ObservableChange;
-import com.sparkappdesign.archimedes.utilities.observables.ObservableChangeGroup;
-import com.sparkappdesign.archimedes.utilities.observables.ObservableList;
+import com.oddlyspaced.calci.archimedes.enums.ARAnswerState;
+import com.oddlyspaced.calci.mathexpression.context.MEIssue;
+import com.oddlyspaced.calci.mathexpression.enums.MEExpressionForm;
+import com.oddlyspaced.calci.mathexpression.expressions.MEExpression;
+import com.oddlyspaced.calci.mathexpression.expressions.MEPlaceholder;
+import com.oddlyspaced.calci.mathexpression.expressions.MEVariable;
+import com.oddlyspaced.calci.utilities.events.Observer;
+import com.oddlyspaced.calci.utilities.events.ObserverType;
+import com.oddlyspaced.calci.utilities.observables.ImmutableList;
+import com.oddlyspaced.calci.utilities.observables.MutableObservable;
+import com.oddlyspaced.calci.utilities.observables.Observable;
+import com.oddlyspaced.calci.utilities.observables.ObservableChange;
+import com.oddlyspaced.calci.utilities.observables.ObservableChangeGroup;
+import com.oddlyspaced.calci.utilities.observables.ObservableList;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -109,12 +109,12 @@ public class ARAnswer implements ARObserverDelegate {
         this.mCalculation = calculation;
         this.mForm = form;
         this.mInputLines = calculation.getInputLines();
-        this.mObservers.add(this.mInputLines.getExpressions().getWillChange().add(new Observer<ObservableChange<ImmutableList<MEExpression>>>() { // from class: com.sparkappdesign.archimedes.archimedes.model.ARAnswer.1
+        this.mObservers.add(this.mInputLines.getExpressions().getWillChange().add(new Observer<ObservableChange<ImmutableList<MEExpression>>>() { // from class: com.oddlyspaced.calci.archimedes.model.ARAnswer.1
             public void handle(ObservableChange<ImmutableList<MEExpression>> change) {
                 ARAnswer.this.invalidateInternal(change.getGroup());
             }
         }));
-        this.mObservers.add(this.mInputLines.getExpressions().getDidChange().add(new Observer<ObservableChange<ImmutableList<MEExpression>>>() { // from class: com.sparkappdesign.archimedes.archimedes.model.ARAnswer.2
+        this.mObservers.add(this.mInputLines.getExpressions().getDidChange().add(new Observer<ObservableChange<ImmutableList<MEExpression>>>() { // from class: com.oddlyspaced.calci.archimedes.model.ARAnswer.2
             public void handle(ObservableChange<ImmutableList<MEExpression>> change) {
                 ARAnswer.this.handleInputExpressionsChanged();
             }
@@ -170,7 +170,7 @@ public class ARAnswer implements ARObserverDelegate {
                 operation = new ARCalculationOperation(input, this.mForm);
             }
             operation.setHandler(this.mHandler);
-            operation.setCompletionRunnable(new Runnable() { // from class: com.sparkappdesign.archimedes.archimedes.model.ARAnswer.3
+            operation.setCompletionRunnable(new Runnable() { // from class: com.oddlyspaced.calci.archimedes.model.ARAnswer.3
                 @Override // java.lang.Runnable
                 public void run() {
                     if (!operation.isCancelled() && operation == ARAnswer.this.mCalculationOperation) {
@@ -302,7 +302,7 @@ public class ARAnswer implements ARObserverDelegate {
         return expression;
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.model.ARObserverDelegate
+    @Override // com.oddlyspaced.calci.archimedes.model.ARObserverDelegate
     public void observerDidObserveChange(ARObserver observer) {
         if (this.mDependencyObservers.contains(observer)) {
             invalidate();

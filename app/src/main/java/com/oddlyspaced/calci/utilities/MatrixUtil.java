@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.utilities;
+package com.oddlyspaced.calci.utilities;
 
 import android.graphics.Matrix;
 import android.graphics.PointF;

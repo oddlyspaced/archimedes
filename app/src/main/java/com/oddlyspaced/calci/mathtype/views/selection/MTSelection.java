@@ -1,9 +1,9 @@
-package com.sparkappdesign.archimedes.mathtype.views.selection;
+package com.oddlyspaced.calci.mathtype.views.selection;
 
-import com.sparkappdesign.archimedes.mathtype.nodes.MTElement;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTString;
-import com.sparkappdesign.archimedes.utilities.GeneralUtil;
-import com.sparkappdesign.archimedes.utilities.Range;
+import com.oddlyspaced.calci.mathtype.nodes.MTElement;
+import com.oddlyspaced.calci.mathtype.nodes.MTString;
+import com.oddlyspaced.calci.utilities.GeneralUtil;
+import com.oddlyspaced.calci.utilities.Range;
 import java.io.Serializable;
 /* loaded from: classes.dex */
 public class MTSelection implements Serializable {

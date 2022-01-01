@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.archimedes.views;
+package com.oddlyspaced.calci.archimedes.views;
 
 import android.graphics.PointF;
 /* loaded from: classes.dex */

@@ -1,13 +1,13 @@
-package com.sparkappdesign.archimedes.archimedes.views;
+package com.oddlyspaced.calci.archimedes.views;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import com.sparkappdesign.archimedes.archimedes.model.ARButtonAction;
-import com.sparkappdesign.archimedes.archimedes.model.ARSettings;
-import com.sparkappdesign.archimedes.utilities.DeviceUtil;
+import com.oddlyspaced.calci.archimedes.model.ARButtonAction;
+import com.oddlyspaced.calci.archimedes.model.ARSettings;
+import com.oddlyspaced.calci.utilities.DeviceUtil;
 import java.util.ArrayList;
 import java.util.Iterator;
 /* loaded from: classes.dex */

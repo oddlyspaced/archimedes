@@ -1,8 +1,8 @@
-package com.sparkappdesign.archimedes.utilities.observables;
+package com.oddlyspaced.calci.utilities.observables;
 
-import com.sparkappdesign.archimedes.utilities.IterableUtil;
-import com.sparkappdesign.archimedes.utilities.events.Observer;
-import com.sparkappdesign.archimedes.utilities.events.ObserverType;
+import com.oddlyspaced.calci.utilities.IterableUtil;
+import com.oddlyspaced.calci.utilities.events.Observer;
+import com.oddlyspaced.calci.utilities.events.ObserverType;
 import java.util.ArrayList;
 import java.util.List;
 /* loaded from: classes.dex */
@@ -68,14 +68,14 @@ public abstract class ListObserver<T> implements ObserverType {
     /* JADX INFO: Access modifiers changed from: package-private */
     public final <U extends List<T>> void attachTo(Observable<U> observable) {
         remove();
-        this.mObserver = observable.getDidChange().add(new Observer<ObservableChange<U>>() { // from class: com.sparkappdesign.archimedes.utilities.observables.ListObserver.1
+        this.mObserver = observable.getDidChange().add(new Observer<ObservableChange<U>>() { // from class: com.oddlyspaced.calci.utilities.observables.ListObserver.1
             public void handle(ObservableChange<U> change) {
                 ListObserver.this.notifyOfDifferences((List) change.mOldValue, (List) change.mNewValue);
             }
         });
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.events.ObserverType
+    @Override // com.oddlyspaced.calci.utilities.events.ObserverType
     public final void remove() {
         if (this.mObserver != null) {
             this.mObserver.remove();

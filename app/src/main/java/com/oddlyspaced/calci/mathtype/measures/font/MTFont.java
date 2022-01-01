@@ -1,15 +1,15 @@
-package com.sparkappdesign.archimedes.mathtype.measures.font;
+package com.oddlyspaced.calci.mathtype.measures.font;
 
 import android.graphics.Paint;
 import android.graphics.PointF;
 import android.graphics.RectF;
 import android.graphics.Typeface;
-import com.sparkappdesign.archimedes.mathtype.enums.MTAlignmentType;
-import com.sparkappdesign.archimedes.mathtype.enums.MTGlyph;
-import com.sparkappdesign.archimedes.mathtype.measures.MTAlignment;
-import com.sparkappdesign.archimedes.mathtype.measures.MTGlyphMeasures;
-import com.sparkappdesign.archimedes.utilities.RectUtil;
-import com.sparkappdesign.archimedes.utilities.path.PathWrapper;
+import com.oddlyspaced.calci.mathtype.enums.MTAlignmentType;
+import com.oddlyspaced.calci.mathtype.enums.MTGlyph;
+import com.oddlyspaced.calci.mathtype.measures.MTAlignment;
+import com.oddlyspaced.calci.mathtype.measures.MTGlyphMeasures;
+import com.oddlyspaced.calci.utilities.RectUtil;
+import com.oddlyspaced.calci.utilities.path.PathWrapper;
 import java.util.EnumSet;
 import java.util.Hashtable;
 /* loaded from: classes.dex */

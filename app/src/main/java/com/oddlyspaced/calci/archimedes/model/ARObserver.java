@@ -1,6 +1,6 @@
-package com.sparkappdesign.archimedes.archimedes.model;
+package com.oddlyspaced.calci.archimedes.model;
 
-import com.sparkappdesign.archimedes.utilities.events.ObserverType;
+import com.oddlyspaced.calci.utilities.events.ObserverType;
 /* loaded from: classes.dex */
 public abstract class ARObserver implements ObserverType {
     private ARObserverDelegate mDelegate;

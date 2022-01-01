@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes;
+package com.oddlyspaced.calci;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -23,31 +23,31 @@ public class Help extends Activity {
         } catch (PackageManager.NameNotFoundException exception) {
             exception.printStackTrace();
         }
-        ((Button) findViewById(R.id.tutorial_button)).setOnClickListener(new View.OnClickListener() { // from class: com.sparkappdesign.archimedes.Help.1
+        ((Button) findViewById(R.id.tutorial_button)).setOnClickListener(new View.OnClickListener() { // from class: com.oddlyspaced.calci.Help.1
             @Override // android.view.View.OnClickListener
             public void onClick(View v) {
                 Help.this.startActivity(new Intent(Help.this, Tutorial.class));
             }
         });
-        ((Button) findViewById(R.id.power_tips_button)).setOnClickListener(new View.OnClickListener() { // from class: com.sparkappdesign.archimedes.Help.2
+        ((Button) findViewById(R.id.power_tips_button)).setOnClickListener(new View.OnClickListener() { // from class: com.oddlyspaced.calci.Help.2
             @Override // android.view.View.OnClickListener
             public void onClick(View v) {
                 Help.this.startActivity(new Intent(Help.this, PowerTips.class));
             }
         });
-        ((Button) findViewById(R.id.email)).setOnClickListener(new View.OnClickListener() { // from class: com.sparkappdesign.archimedes.Help.3
+        ((Button) findViewById(R.id.email)).setOnClickListener(new View.OnClickListener() { // from class: com.oddlyspaced.calci.Help.3
             @Override // android.view.View.OnClickListener
             public void onClick(View v) {
                 Help.this.startActivity(Intent.createChooser(new Intent("android.intent.action.SENDTO", Uri.fromParts("mailto", "android@archimedescalculator.com", null)), "Send Email"));
             }
         });
-        ((Button) findViewById(R.id.rate_review)).setOnClickListener(new View.OnClickListener() { // from class: com.sparkappdesign.archimedes.Help.4
+        ((Button) findViewById(R.id.rate_review)).setOnClickListener(new View.OnClickListener() { // from class: com.oddlyspaced.calci.Help.4
             @Override // android.view.View.OnClickListener
             public void onClick(View v) {
                 Help.this.startActivity(new Intent("android.intent.action.VIEW", Uri.parse("market://details?id=" + Help.this.getPackageName())));
             }
         });
-        ((Button) findViewById(R.id.share)).setOnClickListener(new View.OnClickListener() { // from class: com.sparkappdesign.archimedes.Help.5
+        ((Button) findViewById(R.id.share)).setOnClickListener(new View.OnClickListener() { // from class: com.oddlyspaced.calci.Help.5
             @Override // android.view.View.OnClickListener
             public void onClick(View v) {
                 Intent intent = new Intent("android.intent.action.SEND");
@@ -57,7 +57,7 @@ public class Help extends Activity {
                 Help.this.startActivity(Intent.createChooser(intent, "Share"));
             }
         });
-        ((Button) findViewById(R.id.legal)).setOnClickListener(new View.OnClickListener() { // from class: com.sparkappdesign.archimedes.Help.6
+        ((Button) findViewById(R.id.legal)).setOnClickListener(new View.OnClickListener() { // from class: com.oddlyspaced.calci.Help.6
             @Override // android.view.View.OnClickListener
             public void onClick(View v) {
                 Intent intent = new Intent("android.intent.action.VIEW");

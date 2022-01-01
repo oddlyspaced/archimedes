@@ -1,7 +1,7 @@
-package com.sparkappdesign.archimedes.utilities.animatable;
+package com.oddlyspaced.calci.utilities.animatable;
 
 import android.graphics.PointF;
-import com.sparkappdesign.archimedes.utilities.PointUtil;
+import com.oddlyspaced.calci.utilities.PointUtil;
 /* loaded from: classes.dex */
 public class AnimatablePointF extends Animatable<PointF> {
     /* JADX INFO: Access modifiers changed from: protected */
@@ -25,7 +25,7 @@ public class AnimatablePointF extends Animatable<PointF> {
         this.mFinalValue = new PointF(initialPoint.x, initialPoint.y);
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.animatable.Animatable
+    @Override // com.oddlyspaced.calci.utilities.animatable.Animatable
     public void updateForAnimationFraction(float fraction) {
         PointUtil.setInterpolated((PointF) this.mCurrentValue, (PointF) this.mInitialValue, (PointF) this.mFinalValue, fraction);
     }

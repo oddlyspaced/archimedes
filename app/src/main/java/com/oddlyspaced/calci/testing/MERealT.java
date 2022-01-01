@@ -1,7 +1,7 @@
-package com.sparkappdesign.archimedes.testing;
+package com.oddlyspaced.calci.testing;
 
 import android.util.Log;
-import com.sparkappdesign.archimedes.mathexpression.numbers.MEReal;
+import com.oddlyspaced.calci.mathexpression.numbers.MEReal;
 import java.util.Random;
 /* loaded from: classes.dex */
 public class MERealT {

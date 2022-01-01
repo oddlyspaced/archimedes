@@ -1,13 +1,13 @@
-package com.sparkappdesign.archimedes.mathtype.measures;
+package com.oddlyspaced.calci.mathtype.measures;
 
 import android.graphics.PointF;
 import android.graphics.RectF;
-import com.sparkappdesign.archimedes.mathtype.enums.MTBaselineShiftType;
-import com.sparkappdesign.archimedes.mathtype.enums.MTMeasuresOptions;
-import com.sparkappdesign.archimedes.mathtype.measures.font.MTFont;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTElement;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTNode;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTString;
+import com.oddlyspaced.calci.mathtype.enums.MTBaselineShiftType;
+import com.oddlyspaced.calci.mathtype.enums.MTMeasuresOptions;
+import com.oddlyspaced.calci.mathtype.measures.font.MTFont;
+import com.oddlyspaced.calci.mathtype.nodes.MTElement;
+import com.oddlyspaced.calci.mathtype.nodes.MTNode;
+import com.oddlyspaced.calci.mathtype.nodes.MTString;
 import java.util.EnumSet;
 /* loaded from: classes.dex */
 public class MTCommonMeasures {

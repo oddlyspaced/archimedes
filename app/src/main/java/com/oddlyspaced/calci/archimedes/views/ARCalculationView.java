@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.archimedes.views;
+package com.oddlyspaced.calci.archimedes.views;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -13,39 +13,39 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
-import com.sparkappdesign.archimedes.R;
-import com.sparkappdesign.archimedes.archimedes.enums.ARCalculationViewStyle;
-import com.sparkappdesign.archimedes.archimedes.enums.ARScrollPriority;
-import com.sparkappdesign.archimedes.archimedes.model.ARAnswer;
-import com.sparkappdesign.archimedes.archimedes.model.ARCalculation;
-import com.sparkappdesign.archimedes.archimedes.model.ARCalculationDelegate;
-import com.sparkappdesign.archimedes.archimedes.model.ARCalculationOperation;
-import com.sparkappdesign.archimedes.archimedes.model.ARSettings;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTElement;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTNode;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTString;
-import com.sparkappdesign.archimedes.mathtype.parsers.MTParser;
-import com.sparkappdesign.archimedes.mathtype.views.MTMathTypeView;
-import com.sparkappdesign.archimedes.mathtype.views.input.MTMessageType;
-import com.sparkappdesign.archimedes.mathtype.views.selection.MTSelection;
-import com.sparkappdesign.archimedes.mathtype.views.selection.MTSelectionDrawable;
-import com.sparkappdesign.archimedes.mathtype.writers.MTWriter;
-import com.sparkappdesign.archimedes.utilities.GeneralUtil;
-import com.sparkappdesign.archimedes.utilities.RectUtil;
-import com.sparkappdesign.archimedes.utilities.ViewUtil;
-import com.sparkappdesign.archimedes.utilities.events.Observer;
-import com.sparkappdesign.archimedes.utilities.events.ObserverType;
-import com.sparkappdesign.archimedes.utilities.observables.ImmutableList;
-import com.sparkappdesign.archimedes.utilities.observables.ListObserver;
-import com.sparkappdesign.archimedes.utilities.observables.MutableObservable;
-import com.sparkappdesign.archimedes.utilities.observables.Observable;
-import com.sparkappdesign.archimedes.utilities.observables.ObservableChainLink;
-import com.sparkappdesign.archimedes.utilities.observables.ObservableChange;
-import com.sparkappdesign.archimedes.utilities.responder.Responder;
-import com.sparkappdesign.archimedes.utilities.responder.ResponderManager;
-import com.sparkappdesign.archimedes.utilities.responder.ResponderMessage;
-import com.sparkappdesign.archimedes.utilities.responder.ResponderUtil;
+import com.oddlyspaced.calci.R;
+import com.oddlyspaced.calci.archimedes.enums.ARCalculationViewStyle;
+import com.oddlyspaced.calci.archimedes.enums.ARScrollPriority;
+import com.oddlyspaced.calci.archimedes.model.ARAnswer;
+import com.oddlyspaced.calci.archimedes.model.ARCalculation;
+import com.oddlyspaced.calci.archimedes.model.ARCalculationDelegate;
+import com.oddlyspaced.calci.archimedes.model.ARCalculationOperation;
+import com.oddlyspaced.calci.archimedes.model.ARSettings;
+import com.oddlyspaced.calci.mathexpression.expressions.MEExpression;
+import com.oddlyspaced.calci.mathtype.nodes.MTElement;
+import com.oddlyspaced.calci.mathtype.nodes.MTNode;
+import com.oddlyspaced.calci.mathtype.nodes.MTString;
+import com.oddlyspaced.calci.mathtype.parsers.MTParser;
+import com.oddlyspaced.calci.mathtype.views.MTMathTypeView;
+import com.oddlyspaced.calci.mathtype.views.input.MTMessageType;
+import com.oddlyspaced.calci.mathtype.views.selection.MTSelection;
+import com.oddlyspaced.calci.mathtype.views.selection.MTSelectionDrawable;
+import com.oddlyspaced.calci.mathtype.writers.MTWriter;
+import com.oddlyspaced.calci.utilities.GeneralUtil;
+import com.oddlyspaced.calci.utilities.RectUtil;
+import com.oddlyspaced.calci.utilities.ViewUtil;
+import com.oddlyspaced.calci.utilities.events.Observer;
+import com.oddlyspaced.calci.utilities.events.ObserverType;
+import com.oddlyspaced.calci.utilities.observables.ImmutableList;
+import com.oddlyspaced.calci.utilities.observables.ListObserver;
+import com.oddlyspaced.calci.utilities.observables.MutableObservable;
+import com.oddlyspaced.calci.utilities.observables.Observable;
+import com.oddlyspaced.calci.utilities.observables.ObservableChainLink;
+import com.oddlyspaced.calci.utilities.observables.ObservableChange;
+import com.oddlyspaced.calci.utilities.responder.Responder;
+import com.oddlyspaced.calci.utilities.responder.ResponderManager;
+import com.oddlyspaced.calci.utilities.responder.ResponderMessage;
+import com.oddlyspaced.calci.utilities.responder.ResponderUtil;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -192,14 +192,14 @@ public class ARCalculationView extends ViewGroup implements Responder, ARLineSet
         this.mAnswersPagerView = answersPagerView;
         this.mCalculation = new MutableObservable<>();
         this.mObservers = new ArrayList<>();
-        this.mObservers.add(this.mCalculation.chain(new ObservableChainLink<ARCalculation, ImmutableList<ARAnswer>>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARCalculationView.2
+        this.mObservers.add(this.mCalculation.chain(new ObservableChainLink<ARCalculation, ImmutableList<ARAnswer>>() { // from class: com.oddlyspaced.calci.archimedes.views.ARCalculationView.2
             public Observable<ImmutableList<ARAnswer>> get(ARCalculation calculation) {
                 if (calculation != null) {
                     return calculation.getAnswers();
                 }
                 return null;
             }
-        }).addObserver(new ListObserver<ARAnswer>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARCalculationView.1
+        }).addObserver(new ListObserver<ARAnswer>() { // from class: com.oddlyspaced.calci.archimedes.views.ARCalculationView.1
             public void handleAdd(ARAnswer answer, int index) {
                 ARCalculationView.this.handleAddedAnswer(answer, index);
             }
@@ -208,7 +208,7 @@ public class ARCalculationView extends ViewGroup implements Responder, ARLineSet
                 ARCalculationView.this.handleRemovedAnswer(answer, index);
             }
         }));
-        this.mObservers.add(ResponderManager.getFirstResponder().addObserver(new Observer<ObservableChange<Responder>>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARCalculationView.3
+        this.mObservers.add(ResponderManager.getFirstResponder().addObserver(new Observer<ObservableChange<Responder>>() { // from class: com.oddlyspaced.calci.archimedes.views.ARCalculationView.3
             public void handle(ObservableChange<Responder> change) {
                 ARCalculationView.this.handleFirstResponderChanged(change);
             }
@@ -405,12 +405,12 @@ public class ARCalculationView extends ViewGroup implements Responder, ARLineSet
         }
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public boolean canHandleMessageType(String type) {
         return type.equals(MTMessageType.INSERT_ELEMENT);
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public Responder getAncestor() {
         ViewParent parent = getParent();
         if (parent instanceof Responder) {
@@ -419,7 +419,7 @@ public class ARCalculationView extends ViewGroup implements Responder, ARLineSet
         return null;
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public boolean isChildAllowedToHandleMessage(Responder child, ResponderMessage message) {
         if (message.getType().equals(MTMessageType.INSERT_ELEMENT)) {
             return child instanceof MTMathTypeView;
@@ -427,14 +427,14 @@ public class ARCalculationView extends ViewGroup implements Responder, ARLineSet
         return true;
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public void handleMessage(String type, HashMap<String, Object> contents) {
         if (type.equals(MTMessageType.INSERT_ELEMENT)) {
             performActionInsertElement((MTElement) contents.get("Element to insert"));
         }
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARLineSetViewDelegate
+    @Override // com.oddlyspaced.calci.archimedes.views.ARLineSetViewDelegate
     public long parsingDelayForLineSetView(ARLineSetView lineSetView, long defaultDelay) {
         if (lineSetView != this.mInputLinesView) {
             return defaultDelay;
@@ -448,22 +448,22 @@ public class ARCalculationView extends ViewGroup implements Responder, ARLineSet
         return defaultDelay;
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARLineSetViewDelegate
+    @Override // com.oddlyspaced.calci.archimedes.views.ARLineSetViewDelegate
     public MTWriter writerForLineSetView(ARLineSetView lineSetView) {
         return null;
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARLineSetViewDelegate
+    @Override // com.oddlyspaced.calci.archimedes.views.ARLineSetViewDelegate
     public MTParser parserForLineSetView(ARLineSetView lineSetView) {
         return null;
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARLineSetViewDelegate
+    @Override // com.oddlyspaced.calci.archimedes.views.ARLineSetViewDelegate
     public long writingDelayForLineSetView(ARLineSetView lineSetView, long defaultDelay) {
         return defaultDelay;
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.model.ARCalculationDelegate
+    @Override // com.oddlyspaced.calci.archimedes.model.ARCalculationDelegate
     public ARCalculationOperation createCalculationOperation(ARCalculation calculation, ARAnswer answer, ArrayList<MEExpression> inputExpressions) {
         if (this.mDelegate != null) {
             return this.mDelegate.createCalculationOperation(this, answer, inputExpressions);
@@ -471,11 +471,11 @@ public class ARCalculationView extends ViewGroup implements Responder, ARLineSet
         return null;
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.model.ARCalculationDelegate
+    @Override // com.oddlyspaced.calci.archimedes.model.ARCalculationDelegate
     public void calculationWillUpdateAnswer(ARCalculation calculation, ARAnswer answer) {
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.model.ARCalculationDelegate
+    @Override // com.oddlyspaced.calci.archimedes.model.ARCalculationDelegate
     public void calculationDidUpdateAnswer(ARCalculation calculation, ARAnswer answer) {
         int answerIndex = getCalculation().getAnswers().getValue().indexOf(answer);
         if (this.mAutoScrollView != null && this.mAutoScrollView.getActiveItem() == this && this.mAnswersPagerView.getCurrentRoundedPageIndex() == answerIndex) {
@@ -487,7 +487,7 @@ public class ARCalculationView extends ViewGroup implements Responder, ARLineSet
         this.mAutoScrollView.scrollToAreaOfInterest(AREAS_OF_INTEREST_ON_UPDATED_ANSWER, ARScrollPriority.ConsiderAsManualScroll, true);
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARPagerViewDelegate
+    @Override // com.oddlyspaced.calci.archimedes.views.ARPagerViewDelegate
     public void pagerViewDidScroll(ARPagerView pagerView) {
         Iterator<ARPagerPage> it = this.mAnswersPagerView.getPages().iterator();
         while (it.hasNext()) {
@@ -496,19 +496,19 @@ public class ARCalculationView extends ViewGroup implements Responder, ARLineSet
         }
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARPagerViewDelegate
+    @Override // com.oddlyspaced.calci.archimedes.views.ARPagerViewDelegate
     public void pagerViewWillScrollToPageAtIndex(ARPagerView pagerView, int targetIndex) {
         if (this.mAutoScrollView != null && this.mAutoScrollView.getActiveItem() == this) {
             this.mAutoScrollView.scrollToAreaOfInterest(AREAS_OF_INTEREST_ON_ANSWER_SCROLL, ARScrollPriority.ConsiderAsManualScroll, true);
         }
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARAutoScrollViewItem
+    @Override // com.oddlyspaced.calci.archimedes.views.ARAutoScrollViewItem
     public RectF frameInAutoScrollView(ARAutoScrollView autoScrollView) {
         return finalBoundsForViewInAncestor(this, autoScrollView.getContentView());
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARAutoScrollViewItem
+    @Override // com.oddlyspaced.calci.archimedes.views.ARAutoScrollViewItem
     public ArrayList<RectF> areasOfInterestWithIdentifier(ARAutoScrollView autoScrollView, String identifier) {
         if (!ViewUtil.isDescendant(this, autoScrollView) || !getHandledIdentifiers().contains(identifier)) {
             return null;
@@ -547,22 +547,22 @@ public class ARCalculationView extends ViewGroup implements Responder, ARLineSet
         }
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARAutoScrollViewItem
+    @Override // com.oddlyspaced.calci.archimedes.views.ARAutoScrollViewItem
     public ARScrollPriority priorityForScrollToAreasOfInterest(ARAutoScrollView autoScrollView, String identifier) {
         return null;
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARAutoScrollViewItem
+    @Override // com.oddlyspaced.calci.archimedes.views.ARAutoScrollViewItem
     public void addedToAutoScrollView(ARAutoScrollView autoScrollView) {
         this.mAutoScrollView = autoScrollView;
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARAutoScrollViewItem
+    @Override // com.oddlyspaced.calci.archimedes.views.ARAutoScrollViewItem
     public void removedFromAutoScrollView(ARAutoScrollView autoScrollView) {
         this.mAutoScrollView = null;
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARViewGroup
+    @Override // com.oddlyspaced.calci.archimedes.views.ARViewGroup
     public RectF finalBoundsForChildAtIndex(int index) {
         PointF size = ((ARView) getChildAt(index)).finalSize();
         float y = 0.0f;
@@ -572,7 +572,7 @@ public class ARCalculationView extends ViewGroup implements Responder, ARLineSet
         return RectUtil.create(0.0f, y, size.x, size.y);
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARView
+    @Override // com.oddlyspaced.calci.archimedes.views.ARView
     public PointF finalSize() {
         PointF finalSize = this.mInputLinesView.finalSize();
         finalSize.y += this.mAnswersPagerView.finalSize().y;

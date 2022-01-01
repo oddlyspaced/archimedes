@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.utilities.animatable;
+package com.oddlyspaced.calci.utilities.animatable;
 /* loaded from: classes.dex */
 public abstract class Animatable<Type> {
     protected Type mCurrentValue;

@@ -1,11 +1,11 @@
-package com.sparkappdesign.archimedes.mathtype.measures;
+package com.oddlyspaced.calci.mathtype.measures;
 
 import android.graphics.PointF;
 import android.graphics.RectF;
-import com.sparkappdesign.archimedes.mathtype.measures.font.MTFont;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTNode;
-import com.sparkappdesign.archimedes.utilities.PointUtil;
-import com.sparkappdesign.archimedes.utilities.RectUtil;
+import com.oddlyspaced.calci.mathtype.measures.font.MTFont;
+import com.oddlyspaced.calci.mathtype.nodes.MTNode;
+import com.oddlyspaced.calci.utilities.PointUtil;
+import com.oddlyspaced.calci.utilities.RectUtil;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Iterator;

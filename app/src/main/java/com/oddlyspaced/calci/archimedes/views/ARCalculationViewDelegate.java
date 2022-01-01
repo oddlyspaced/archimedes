@@ -1,8 +1,8 @@
-package com.sparkappdesign.archimedes.archimedes.views;
+package com.oddlyspaced.calci.archimedes.views;
 
-import com.sparkappdesign.archimedes.archimedes.model.ARAnswer;
-import com.sparkappdesign.archimedes.archimedes.model.ARCalculationOperation;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression;
+import com.oddlyspaced.calci.archimedes.model.ARAnswer;
+import com.oddlyspaced.calci.archimedes.model.ARCalculationOperation;
+import com.oddlyspaced.calci.mathexpression.expressions.MEExpression;
 import java.util.ArrayList;
 /* loaded from: classes.dex */
 public interface ARCalculationViewDelegate {

@@ -1,6 +1,6 @@
-package com.sparkappdesign.archimedes.archimedes.model;
+package com.oddlyspaced.calci.archimedes.model;
 
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression;
+import com.oddlyspaced.calci.mathexpression.expressions.MEExpression;
 import java.util.ArrayList;
 /* loaded from: classes.dex */
 public interface ARCalculationDelegate {

@@ -1,7 +1,7 @@
-package com.sparkappdesign.archimedes;
+package com.oddlyspaced.calci;
 /* loaded from: classes.dex */
 public final class BuildConfig {
-    public static final String APPLICATION_ID = "com.sparkappdesign.archimedes";
+    public static final String APPLICATION_ID = "com.oddlyspaced.calci";
     public static final String BUILD_TYPE = "release";
     public static final boolean DEBUG = false;
     public static final String FLAVOR = "";

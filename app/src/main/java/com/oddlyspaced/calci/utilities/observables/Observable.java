@@ -1,9 +1,9 @@
-package com.sparkappdesign.archimedes.utilities.observables;
+package com.oddlyspaced.calci.utilities.observables;
 
-import com.sparkappdesign.archimedes.utilities.events.Event;
-import com.sparkappdesign.archimedes.utilities.events.Observer;
-import com.sparkappdesign.archimedes.utilities.events.ObserverType;
-import com.sparkappdesign.archimedes.utilities.events.OwnedEvent;
+import com.oddlyspaced.calci.utilities.events.Event;
+import com.oddlyspaced.calci.utilities.events.Observer;
+import com.oddlyspaced.calci.utilities.events.ObserverType;
+import com.oddlyspaced.calci.utilities.events.OwnedEvent;
 /* loaded from: classes.dex */
 public abstract class Observable<T> {
     OwnedEvent<ObservableChange<T>> mDidChange;

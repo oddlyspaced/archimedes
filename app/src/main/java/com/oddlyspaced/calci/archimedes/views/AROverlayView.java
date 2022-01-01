@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.archimedes.views;
+package com.oddlyspaced.calci.archimedes.views;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -9,8 +9,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RelativeLayout;
-import com.sparkappdesign.archimedes.mathtype.views.MTMathTypeView;
-import com.sparkappdesign.archimedes.utilities.FloatingOptionsMenu;
+import com.oddlyspaced.calci.mathtype.views.MTMathTypeView;
+import com.oddlyspaced.calci.utilities.FloatingOptionsMenu;
 /* loaded from: classes.dex */
 public class AROverlayView extends RelativeLayout {
     private static AROverlayView mInstance;

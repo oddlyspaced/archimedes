@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.utilities.observables;
+package com.oddlyspaced.calci.utilities.observables;
 
 import java.util.HashMap;
 /* loaded from: classes.dex */

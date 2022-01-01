@@ -1,7 +1,7 @@
-package com.sparkappdesign.archimedes.archimedes.views;
+package com.oddlyspaced.calci.archimedes.views;
 
-import com.sparkappdesign.archimedes.mathtype.parsers.MTParser;
-import com.sparkappdesign.archimedes.mathtype.writers.MTWriter;
+import com.oddlyspaced.calci.mathtype.parsers.MTParser;
+import com.oddlyspaced.calci.mathtype.writers.MTWriter;
 /* JADX INFO: Access modifiers changed from: package-private */
 /* loaded from: classes.dex */
 public interface ARLineSetViewDelegate {

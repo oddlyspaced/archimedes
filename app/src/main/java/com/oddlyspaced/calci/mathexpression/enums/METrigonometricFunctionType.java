@@ -1,6 +1,6 @@
-package com.sparkappdesign.archimedes.mathexpression.enums;
+package com.oddlyspaced.calci.mathexpression.enums;
 
-import com.sparkappdesign.archimedes.mathtype.enums.MTInlineOperatorType;
+import com.oddlyspaced.calci.mathtype.enums.MTInlineOperatorType;
 /* loaded from: classes.dex */
 public enum METrigonometricFunctionType {
     Sine,

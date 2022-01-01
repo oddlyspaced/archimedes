@@ -1,8 +1,8 @@
-package com.sparkappdesign.archimedes.mathtype.measures;
+package com.oddlyspaced.calci.mathtype.measures;
 
-import com.sparkappdesign.archimedes.mathtype.enums.MTDigitGroupingStyle;
-import com.sparkappdesign.archimedes.mathtype.measures.font.MTFont;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTElement;
+import com.oddlyspaced.calci.mathtype.enums.MTDigitGroupingStyle;
+import com.oddlyspaced.calci.mathtype.measures.font.MTFont;
+import com.oddlyspaced.calci.mathtype.nodes.MTElement;
 import java.util.Hashtable;
 /* loaded from: classes.dex */
 public class MTMeasureContext {

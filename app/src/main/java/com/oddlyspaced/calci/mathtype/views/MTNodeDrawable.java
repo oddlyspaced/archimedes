@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.mathtype.views;
+package com.oddlyspaced.calci.mathtype.views;
 
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
@@ -6,14 +6,14 @@ import android.graphics.Paint;
 import android.graphics.PointF;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
-import com.sparkappdesign.archimedes.mathtype.measures.MTGlyphMeasures;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasures;
-import com.sparkappdesign.archimedes.utilities.PointUtil;
-import com.sparkappdesign.archimedes.utilities.RectUtil;
-import com.sparkappdesign.archimedes.utilities.animatable.AnimatableFloat;
-import com.sparkappdesign.archimedes.utilities.animatable.AnimatablePointF;
-import com.sparkappdesign.archimedes.utilities.animatable.AnimatableRectF;
-import com.sparkappdesign.archimedes.utilities.path.PathWrapper;
+import com.oddlyspaced.calci.mathtype.measures.MTGlyphMeasures;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasures;
+import com.oddlyspaced.calci.utilities.PointUtil;
+import com.oddlyspaced.calci.utilities.RectUtil;
+import com.oddlyspaced.calci.utilities.animatable.AnimatableFloat;
+import com.oddlyspaced.calci.utilities.animatable.AnimatablePointF;
+import com.oddlyspaced.calci.utilities.animatable.AnimatableRectF;
+import com.oddlyspaced.calci.utilities.path.PathWrapper;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;

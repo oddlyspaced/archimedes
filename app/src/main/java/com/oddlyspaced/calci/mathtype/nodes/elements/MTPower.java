@@ -1,19 +1,19 @@
-package com.sparkappdesign.archimedes.mathtype.nodes.elements;
+package com.oddlyspaced.calci.mathtype.nodes.elements;
 
 import android.graphics.RectF;
-import com.sparkappdesign.archimedes.mathtype.enums.MTBaselineShiftType;
-import com.sparkappdesign.archimedes.mathtype.measures.MTCommonMeasures;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasureContext;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasures;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTElement;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTString;
-import com.sparkappdesign.archimedes.utilities.RectUtil;
+import com.oddlyspaced.calci.mathtype.enums.MTBaselineShiftType;
+import com.oddlyspaced.calci.mathtype.measures.MTCommonMeasures;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasureContext;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasures;
+import com.oddlyspaced.calci.mathtype.nodes.MTElement;
+import com.oddlyspaced.calci.mathtype.nodes.MTString;
+import com.oddlyspaced.calci.utilities.RectUtil;
 import java.util.Arrays;
 /* loaded from: classes.dex */
 public class MTPower extends MTElement {
     private MTString mExponent;
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTElement, com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTElement, com.oddlyspaced.calci.mathtype.nodes.MTNode
     public Iterable<? extends MTString> getChildren() {
         return Arrays.asList(this.mExponent);
     }
@@ -33,7 +33,7 @@ public class MTPower extends MTElement {
         }
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTNode
     public MTMeasures measureWithContext(MTMeasureContext context) {
         MTMeasures measures = MTCommonMeasures.measuresForBaselineShift(this, MTBaselineShiftType.Superscript, this.mExponent, context);
         RectF lineTextBounds = context.getFont().genericLineBounds();
@@ -48,7 +48,7 @@ public class MTPower extends MTElement {
         return "^(" + this.mExponent + ")";
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTElement, com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTElement, com.oddlyspaced.calci.mathtype.nodes.MTNode
     public MTPower copy() {
         MTPower copy = new MTPower();
         copy.mTraits = this.mTraits.clone();
@@ -57,7 +57,7 @@ public class MTPower extends MTElement {
         return copy;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTNode
     public boolean equivalentTo(Object other) {
         if (this == other) {
             return true;

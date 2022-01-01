@@ -1,15 +1,15 @@
-package com.sparkappdesign.archimedes.mathtype.measures.font;
+package com.oddlyspaced.calci.mathtype.measures.font;
 
 import android.graphics.Matrix;
 import android.graphics.PointF;
 import android.graphics.RectF;
-import com.sparkappdesign.archimedes.mathtype.enums.MTAlignmentType;
-import com.sparkappdesign.archimedes.mathtype.measures.MTAlignment;
-import com.sparkappdesign.archimedes.mathtype.measures.MTGlyphMeasures;
-import com.sparkappdesign.archimedes.utilities.MatrixUtil;
-import com.sparkappdesign.archimedes.utilities.RectUtil;
-import com.sparkappdesign.archimedes.utilities.TypefaceCache;
-import com.sparkappdesign.archimedes.utilities.path.TweenablePath;
+import com.oddlyspaced.calci.mathtype.enums.MTAlignmentType;
+import com.oddlyspaced.calci.mathtype.measures.MTAlignment;
+import com.oddlyspaced.calci.mathtype.measures.MTGlyphMeasures;
+import com.oddlyspaced.calci.utilities.MatrixUtil;
+import com.oddlyspaced.calci.utilities.RectUtil;
+import com.oddlyspaced.calci.utilities.TypefaceCache;
+import com.oddlyspaced.calci.utilities.path.TweenablePath;
 import java.util.EnumSet;
 /* loaded from: classes.dex */
 public class MTFontMyriadProLight extends MTFont {
@@ -17,7 +17,7 @@ public class MTFontMyriadProLight extends MTFont {
         super(TypefaceCache.get(TypefaceCache.MYRIAD_PRO_LIGHT), fontSizeInPixels);
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.measures.font.MTFont
+    @Override // com.oddlyspaced.calci.mathtype.measures.font.MTFont
     public MTGlyphMeasures divisionMeasures(RectF dividendBounds, RectF divisorBounds) {
         RectF dividendBounds2 = new RectF(dividendBounds);
         RectF divisorBounds2 = new RectF(divisorBounds);
@@ -57,7 +57,7 @@ public class MTFontMyriadProLight extends MTFont {
         return measures;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.measures.font.MTFont
+    @Override // com.oddlyspaced.calci.mathtype.measures.font.MTFont
     public MTGlyphMeasures rootMeasures(RectF contentBounds, RectF degreeBounds) {
         RectF contentBounds2 = new RectF(contentBounds);
         RectF degreeBounds2 = new RectF(degreeBounds);
@@ -111,7 +111,7 @@ public class MTFontMyriadProLight extends MTFont {
         return measures;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.measures.font.MTFont
+    @Override // com.oddlyspaced.calci.mathtype.measures.font.MTFont
     public MTGlyphMeasures parenthesesMeasures(RectF contentBounds) {
         RectF contentBounds2 = new RectF(contentBounds);
         Object cacheKey = MTFont.cacheKeyForParentheses(contentBounds2);
@@ -164,12 +164,12 @@ public class MTFontMyriadProLight extends MTFont {
         return measures;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.measures.font.MTFont
+    @Override // com.oddlyspaced.calci.mathtype.measures.font.MTFont
     public RectF defaultPlaceholderBounds() {
         return RectUtil.create(0.0f, -ascender(), this.mFontSizeInPixels * 0.65f, ascender() - (descender() * 0.67f));
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.measures.font.MTFont
+    @Override // com.oddlyspaced.calci.mathtype.measures.font.MTFont
     public MTGlyphMeasures placeholderMeasures(RectF bounds) {
         RectF bounds2 = new RectF(bounds);
         Object cacheKey = MTFont.cacheKeyForPlaceholder(bounds2);
@@ -218,32 +218,32 @@ public class MTFontMyriadProLight extends MTFont {
         return path;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.measures.font.MTFont
+    @Override // com.oddlyspaced.calci.mathtype.measures.font.MTFont
     public MTFont copy() {
         return new MTFontMyriadProLight(getFontSizeInPixels());
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.measures.font.MTFont
+    @Override // com.oddlyspaced.calci.mathtype.measures.font.MTFont
     public MTFont copy(float pointSize) {
         return new MTFontMyriadProLight(pointSize);
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.measures.font.MTFont
+    @Override // com.oddlyspaced.calci.mathtype.measures.font.MTFont
     public float ascender() {
         return 0.75f * this.mFontSizeInPixels;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.measures.font.MTFont
+    @Override // com.oddlyspaced.calci.mathtype.measures.font.MTFont
     public float descender() {
         return -0.25f * this.mFontSizeInPixels;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.measures.font.MTFont
+    @Override // com.oddlyspaced.calci.mathtype.measures.font.MTFont
     public float xHeight() {
         return 0.484f * this.mFontSizeInPixels;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.measures.font.MTFont
+    @Override // com.oddlyspaced.calci.mathtype.measures.font.MTFont
     public float capHeight() {
         return 0.674f * this.mFontSizeInPixels;
     }

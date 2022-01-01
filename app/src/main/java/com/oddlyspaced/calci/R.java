@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes;
+package com.oddlyspaced.calci;
 /* loaded from: classes.dex */
 public final class R {
 

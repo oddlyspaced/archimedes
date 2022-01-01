@@ -1,13 +1,13 @@
-package com.sparkappdesign.archimedes.mathexpression.context;
+package com.oddlyspaced.calci.mathexpression.context;
 
 import android.util.Log;
-import com.sparkappdesign.archimedes.mathexpression.enums.MEContextOptions;
-import com.sparkappdesign.archimedes.mathexpression.enums.MEExpressionForm;
-import com.sparkappdesign.archimedes.mathexpression.enums.MEIssueType;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEUnit;
-import com.sparkappdesign.archimedes.mathexpression.numbers.MEReal;
-import com.sparkappdesign.archimedes.utilities.ListUtil;
+import com.oddlyspaced.calci.mathexpression.enums.MEContextOptions;
+import com.oddlyspaced.calci.mathexpression.enums.MEExpressionForm;
+import com.oddlyspaced.calci.mathexpression.enums.MEIssueType;
+import com.oddlyspaced.calci.mathexpression.expressions.MEExpression;
+import com.oddlyspaced.calci.mathexpression.expressions.MEUnit;
+import com.oddlyspaced.calci.mathexpression.numbers.MEReal;
+import com.oddlyspaced.calci.utilities.ListUtil;
 import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.HashMap;

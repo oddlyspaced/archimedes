@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes;
+package com.oddlyspaced.calci;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,18 +6,18 @@ import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import com.sparkappdesign.archimedes.archimedes.model.ARCalculation;
-import com.sparkappdesign.archimedes.archimedes.model.ARCalculationList;
-import com.sparkappdesign.archimedes.archimedes.model.ARSettings;
-import com.sparkappdesign.archimedes.archimedes.views.ARCalculationListView;
-import com.sparkappdesign.archimedes.archimedes.views.AROverlayView;
-import com.sparkappdesign.archimedes.archimedes.views.ARRootView;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTString;
-import com.sparkappdesign.archimedes.mathtype.views.selection.MTSelection;
-import com.sparkappdesign.archimedes.testing.MERealT;
-import com.sparkappdesign.archimedes.utilities.FloatingOptionsMenu;
-import com.sparkappdesign.archimedes.utilities.observables.ObservableList;
-import com.sparkappdesign.archimedes.utilities.responder.ResponderManager;
+import com.oddlyspaced.calci.archimedes.model.ARCalculation;
+import com.oddlyspaced.calci.archimedes.model.ARCalculationList;
+import com.oddlyspaced.calci.archimedes.model.ARSettings;
+import com.oddlyspaced.calci.archimedes.views.ARCalculationListView;
+import com.oddlyspaced.calci.archimedes.views.AROverlayView;
+import com.oddlyspaced.calci.archimedes.views.ARRootView;
+import com.oddlyspaced.calci.mathtype.nodes.MTString;
+import com.oddlyspaced.calci.mathtype.views.selection.MTSelection;
+import com.oddlyspaced.calci.testing.MERealT;
+import com.oddlyspaced.calci.utilities.FloatingOptionsMenu;
+import com.oddlyspaced.calci.utilities.observables.ObservableList;
+import com.oddlyspaced.calci.utilities.responder.ResponderManager;
 import java.io.Serializable;
 /* loaded from: classes.dex */
 public class Archimedes extends Activity {

@@ -1,12 +1,12 @@
-package com.sparkappdesign.archimedes.archimedes.views;
+package com.oddlyspaced.calci.archimedes.views;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.TextView;
-import com.sparkappdesign.archimedes.R;
-import com.sparkappdesign.archimedes.archimedes.model.ARIssue;
-import com.sparkappdesign.archimedes.utilities.TypefaceCache;
+import com.oddlyspaced.calci.R;
+import com.oddlyspaced.calci.archimedes.model.ARIssue;
+import com.oddlyspaced.calci.utilities.TypefaceCache;
 /* loaded from: classes.dex */
 public class ARErrorView extends TextView {
     private ARIssue mIssue;

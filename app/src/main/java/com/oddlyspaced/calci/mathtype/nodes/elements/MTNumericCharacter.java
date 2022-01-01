@@ -1,12 +1,12 @@
-package com.sparkappdesign.archimedes.mathtype.nodes.elements;
+package com.oddlyspaced.calci.mathtype.nodes.elements;
 
 import android.graphics.RectF;
-import com.sparkappdesign.archimedes.mathtype.enums.MTNumericCharacterType;
-import com.sparkappdesign.archimedes.mathtype.measures.MTCommonMeasures;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasureContext;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasures;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTElement;
-import com.sparkappdesign.archimedes.utilities.RectUtil;
+import com.oddlyspaced.calci.mathtype.enums.MTNumericCharacterType;
+import com.oddlyspaced.calci.mathtype.measures.MTCommonMeasures;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasureContext;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasures;
+import com.oddlyspaced.calci.mathtype.nodes.MTElement;
+import com.oddlyspaced.calci.utilities.RectUtil;
 /* loaded from: classes.dex */
 public class MTNumericCharacter extends MTElement {
     private MTNumericCharacterType mType;
@@ -27,7 +27,7 @@ public class MTNumericCharacter extends MTElement {
         this.mType = type;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTNode
     public MTMeasures measureWithContext(MTMeasureContext context) {
         String text = getText();
         if (this.mType != MTNumericCharacterType.GroupingSpace) {
@@ -75,7 +75,7 @@ public class MTNumericCharacter extends MTElement {
         return getText();
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTElement, com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTElement, com.oddlyspaced.calci.mathtype.nodes.MTNode
     public MTNumericCharacter copy() {
         MTNumericCharacter copy = new MTNumericCharacter();
         copy.mTraits = this.mTraits.clone();
@@ -83,7 +83,7 @@ public class MTNumericCharacter extends MTElement {
         return copy;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTNode
     public boolean equivalentTo(Object other) {
         if (this == other) {
             return true;

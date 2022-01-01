@@ -1,7 +1,7 @@
-package com.sparkappdesign.archimedes.mathexpression.expressions;
+package com.oddlyspaced.calci.mathexpression.expressions;
 
-import com.sparkappdesign.archimedes.mathexpression.numbers.MEReal;
-import com.sparkappdesign.archimedes.utilities.GeneralUtil;
+import com.oddlyspaced.calci.mathexpression.numbers.MEReal;
+import com.oddlyspaced.calci.utilities.GeneralUtil;
 /* loaded from: classes.dex */
 public class MEVariable extends MEExpression {
     private Object mIdentifier;
@@ -17,7 +17,7 @@ public class MEVariable extends MEExpression {
         this.mIdentifier = identifier;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public MEReal evaluateNumerically(MEReal value, MEVariable variable) {
         if (equals(variable)) {
             return value;
@@ -25,7 +25,7 @@ public class MEVariable extends MEExpression {
         return null;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public double evaluateNumerically(double value, MEVariable variable) {
         if (equals(variable)) {
             return value;
@@ -33,7 +33,7 @@ public class MEVariable extends MEExpression {
         return Double.NaN;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public boolean equals(Object other) {
         if (this == other) {
             return true;
@@ -44,12 +44,12 @@ public class MEVariable extends MEExpression {
         return false;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public int hashCode() {
         return GeneralUtil.hashCode(this.mIdentifier);
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public String toString() {
         return this.mIdentifier.toString();
     }

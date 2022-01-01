@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.utilities;
+package com.oddlyspaced.calci.utilities;
 
 import java.util.Iterator;
 import java.util.List;
@@ -9,11 +9,11 @@ public final class IterableUtil {
     }
 
     public static <T> Iterable<T> reverse(final List<T> list) {
-        return new Iterable<T>() { // from class: com.sparkappdesign.archimedes.utilities.IterableUtil.1
+        return new Iterable<T>() { // from class: com.oddlyspaced.calci.utilities.IterableUtil.1
             @Override // java.lang.Iterable
             public Iterator<T> iterator() {
                 final ListIterator listIterator = list.listIterator(list.size());
-                return new Iterator<T>() { // from class: com.sparkappdesign.archimedes.utilities.IterableUtil.1.1
+                return new Iterator<T>() { // from class: com.oddlyspaced.calci.utilities.IterableUtil.1.1
                     @Override // java.util.Iterator
                     public boolean hasNext() {
                         return listIterator.hasPrevious();

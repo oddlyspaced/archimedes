@@ -1,10 +1,10 @@
-package com.sparkappdesign.archimedes;
+package com.oddlyspaced.calci;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
-import com.sparkappdesign.archimedes.archimedes.model.ARSettings;
+import com.oddlyspaced.calci.archimedes.model.ARSettings;
 /* loaded from: classes.dex */
 public class Settings extends Activity {
     @Override // android.app.Activity

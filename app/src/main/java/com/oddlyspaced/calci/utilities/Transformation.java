@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.utilities;
+package com.oddlyspaced.calci.utilities;
 /* loaded from: classes.dex */
 public interface Transformation<T> {
     T transform(T t);

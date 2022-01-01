@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.archimedes.views;
+package com.oddlyspaced.calci.archimedes.views;
 
 import android.content.Context;
 import android.graphics.PointF;
@@ -11,14 +11,14 @@ import android.view.View;
 import android.view.ViewParent;
 import android.widget.ScrollView;
 import android.widget.Scroller;
-import com.sparkappdesign.archimedes.R;
-import com.sparkappdesign.archimedes.archimedes.enums.ARScrollPriority;
-import com.sparkappdesign.archimedes.archimedes.enums.ARScrollState;
-import com.sparkappdesign.archimedes.utilities.GeneralUtil;
-import com.sparkappdesign.archimedes.utilities.IterableUtil;
-import com.sparkappdesign.archimedes.utilities.RectUtil;
-import com.sparkappdesign.archimedes.utilities.responder.Responder;
-import com.sparkappdesign.archimedes.utilities.responder.ResponderMessage;
+import com.oddlyspaced.calci.R;
+import com.oddlyspaced.calci.archimedes.enums.ARScrollPriority;
+import com.oddlyspaced.calci.archimedes.enums.ARScrollState;
+import com.oddlyspaced.calci.utilities.GeneralUtil;
+import com.oddlyspaced.calci.utilities.IterableUtil;
+import com.oddlyspaced.calci.utilities.RectUtil;
+import com.oddlyspaced.calci.utilities.responder.Responder;
+import com.oddlyspaced.calci.utilities.responder.ResponderMessage;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -321,7 +321,7 @@ public class ARAutoScrollView extends ScrollView implements Responder {
         return result;
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public Responder getAncestor() {
         ViewParent parent = getParent();
         if (parent instanceof Responder) {
@@ -330,17 +330,17 @@ public class ARAutoScrollView extends ScrollView implements Responder {
         return null;
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public boolean canHandleMessageType(String type) {
         return false;
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public boolean isChildAllowedToHandleMessage(Responder child, ResponderMessage message) {
         return true;
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public void handleMessage(String type, HashMap<String, Object> contents) {
     }
 }

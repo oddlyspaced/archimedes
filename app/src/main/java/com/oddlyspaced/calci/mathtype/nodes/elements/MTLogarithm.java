@@ -1,14 +1,14 @@
-package com.sparkappdesign.archimedes.mathtype.nodes.elements;
+package com.oddlyspaced.calci.mathtype.nodes.elements;
 
 import android.graphics.PointF;
 import android.graphics.RectF;
-import com.sparkappdesign.archimedes.mathtype.enums.MTNodeTraits;
-import com.sparkappdesign.archimedes.mathtype.measures.MTGlyphMeasures;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasureContext;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasures;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTElement;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTString;
-import com.sparkappdesign.archimedes.utilities.RectUtil;
+import com.oddlyspaced.calci.mathtype.enums.MTNodeTraits;
+import com.oddlyspaced.calci.mathtype.measures.MTGlyphMeasures;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasureContext;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasures;
+import com.oddlyspaced.calci.mathtype.nodes.MTElement;
+import com.oddlyspaced.calci.mathtype.nodes.MTString;
+import com.oddlyspaced.calci.utilities.RectUtil;
 import java.util.Arrays;
 import java.util.EnumSet;
 /* loaded from: classes.dex */
@@ -16,7 +16,7 @@ public class MTLogarithm extends MTElement {
     private static final String MTGLYPH_LOGARITHM_TEXT_KEY = "MTGLYPH_LOGARITHM_TEXT_KEY";
     private MTString mBase;
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTElement, com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTElement, com.oddlyspaced.calci.mathtype.nodes.MTNode
     public Iterable<? extends MTString> getChildren() {
         return Arrays.asList(this.mBase);
     }
@@ -41,7 +41,7 @@ public class MTLogarithm extends MTElement {
         this.mBase.mTraits = !baseEditable ? EnumSet.of(MTNodeTraits.CantSelectOrEditChildren) : EnumSet.noneOf(MTNodeTraits.class);
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTNode
     public MTMeasures measureWithContext(MTMeasureContext context) {
         MTMeasures measures = new MTMeasures(this, context);
         MTGlyphMeasures textMeasures = context.getFont().genericGlyphMeasures("log");
@@ -65,7 +65,7 @@ public class MTLogarithm extends MTElement {
         return "log[" + this.mBase + "] ";
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTElement, com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTElement, com.oddlyspaced.calci.mathtype.nodes.MTNode
     public MTLogarithm copy() {
         MTLogarithm copy = new MTLogarithm();
         copy.mTraits = this.mTraits.clone();
@@ -74,7 +74,7 @@ public class MTLogarithm extends MTElement {
         return copy;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTNode
     public boolean equivalentTo(Object other) {
         if (this == other) {
             return true;

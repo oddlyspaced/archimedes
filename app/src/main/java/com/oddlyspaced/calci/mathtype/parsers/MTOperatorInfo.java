@@ -1,18 +1,18 @@
-package com.sparkappdesign.archimedes.mathtype.parsers;
+package com.oddlyspaced.calci.mathtype.parsers;
 
-import com.sparkappdesign.archimedes.mathtype.enums.MTAssociativity;
-import com.sparkappdesign.archimedes.mathtype.enums.MTInlineOperatorType;
-import com.sparkappdesign.archimedes.mathtype.enums.MTNodeTraits;
-import com.sparkappdesign.archimedes.mathtype.enums.MTOperandSide;
-import com.sparkappdesign.archimedes.mathtype.enums.MTOperatorNotation;
-import com.sparkappdesign.archimedes.mathtype.enums.MTPrecedence;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTElement;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTDivision;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTInlineOperator;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTLogarithm;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTPower;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTPowerOfTenExponent;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTRoot;
+import com.oddlyspaced.calci.mathtype.enums.MTAssociativity;
+import com.oddlyspaced.calci.mathtype.enums.MTInlineOperatorType;
+import com.oddlyspaced.calci.mathtype.enums.MTNodeTraits;
+import com.oddlyspaced.calci.mathtype.enums.MTOperandSide;
+import com.oddlyspaced.calci.mathtype.enums.MTOperatorNotation;
+import com.oddlyspaced.calci.mathtype.enums.MTPrecedence;
+import com.oddlyspaced.calci.mathtype.nodes.MTElement;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTDivision;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTInlineOperator;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTLogarithm;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTPower;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTPowerOfTenExponent;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTRoot;
 /* loaded from: classes.dex */
 public class MTOperatorInfo {
     private MTAssociativity mAssociativity;

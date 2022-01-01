@@ -1,9 +1,9 @@
-package com.sparkappdesign.archimedes.utilities.path;
+package com.oddlyspaced.calci.utilities.path;
 
 import android.graphics.Matrix;
 import android.graphics.Path;
 import android.graphics.PointF;
-import com.sparkappdesign.archimedes.utilities.PointUtil;
+import com.oddlyspaced.calci.utilities.PointUtil;
 import java.util.ArrayList;
 import java.util.Iterator;
 /* loaded from: classes.dex */
@@ -108,22 +108,22 @@ public class TweenablePath extends PathWrapper {
         private MoveElement() {
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.path.TweenablePath.PathElement
+        @Override // com.oddlyspaced.calci.utilities.path.TweenablePath.PathElement
         public void transformPoints(float[] matrixValues) {
             TweenablePath.this.transformPoint(this.mEndPoint, matrixValues);
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.path.TweenablePath.PathElement
+        @Override // com.oddlyspaced.calci.utilities.path.TweenablePath.PathElement
         public void setInterpolated(PathElement initial, PathElement target, float fraction) {
             PointUtil.setInterpolated(this.mEndPoint, ((MoveElement) initial).mEndPoint, ((MoveElement) target).mEndPoint, fraction);
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.path.TweenablePath.PathElement
+        @Override // com.oddlyspaced.calci.utilities.path.TweenablePath.PathElement
         public void addToPath(Path path) {
             path.moveTo(this.mEndPoint.x, this.mEndPoint.y);
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.path.TweenablePath.PathElement
+        @Override // com.oddlyspaced.calci.utilities.path.TweenablePath.PathElement
         public MoveElement copy() {
             MoveElement copy = new MoveElement();
             copy.mEndPoint = new PointF(this.mEndPoint.x, this.mEndPoint.y);
@@ -139,22 +139,22 @@ public class TweenablePath extends PathWrapper {
         private LineElement() {
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.path.TweenablePath.PathElement
+        @Override // com.oddlyspaced.calci.utilities.path.TweenablePath.PathElement
         public void transformPoints(float[] matrixValues) {
             TweenablePath.this.transformPoint(this.mEndPoint, matrixValues);
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.path.TweenablePath.PathElement
+        @Override // com.oddlyspaced.calci.utilities.path.TweenablePath.PathElement
         public void setInterpolated(PathElement initial, PathElement target, float fraction) {
             PointUtil.setInterpolated(this.mEndPoint, ((LineElement) initial).mEndPoint, ((LineElement) target).mEndPoint, fraction);
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.path.TweenablePath.PathElement
+        @Override // com.oddlyspaced.calci.utilities.path.TweenablePath.PathElement
         public void addToPath(Path path) {
             path.lineTo(this.mEndPoint.x, this.mEndPoint.y);
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.path.TweenablePath.PathElement
+        @Override // com.oddlyspaced.calci.utilities.path.TweenablePath.PathElement
         public LineElement copy() {
             LineElement copy = new LineElement();
             copy.mEndPoint = new PointF(this.mEndPoint.x, this.mEndPoint.y);
@@ -170,13 +170,13 @@ public class TweenablePath extends PathWrapper {
         private QuadElement() {
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.path.TweenablePath.PathElement
+        @Override // com.oddlyspaced.calci.utilities.path.TweenablePath.PathElement
         public void transformPoints(float[] matrixValues) {
             TweenablePath.this.transformPoint(this.mControlPoint, matrixValues);
             TweenablePath.this.transformPoint(this.mEndPoint, matrixValues);
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.path.TweenablePath.PathElement
+        @Override // com.oddlyspaced.calci.utilities.path.TweenablePath.PathElement
         public void setInterpolated(PathElement initial, PathElement target, float fraction) {
             QuadElement initialMove = (QuadElement) initial;
             QuadElement targetMove = (QuadElement) target;
@@ -184,12 +184,12 @@ public class TweenablePath extends PathWrapper {
             PointUtil.setInterpolated(this.mEndPoint, initialMove.mEndPoint, targetMove.mEndPoint, fraction);
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.path.TweenablePath.PathElement
+        @Override // com.oddlyspaced.calci.utilities.path.TweenablePath.PathElement
         public void addToPath(Path path) {
             path.quadTo(this.mControlPoint.x, this.mControlPoint.y, this.mEndPoint.x, this.mEndPoint.y);
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.path.TweenablePath.PathElement
+        @Override // com.oddlyspaced.calci.utilities.path.TweenablePath.PathElement
         public QuadElement copy() {
             QuadElement copy = new QuadElement();
             copy.mControlPoint = new PointF(this.mControlPoint.x, this.mControlPoint.y);
@@ -208,14 +208,14 @@ public class TweenablePath extends PathWrapper {
         private CubicElement() {
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.path.TweenablePath.PathElement
+        @Override // com.oddlyspaced.calci.utilities.path.TweenablePath.PathElement
         public void transformPoints(float[] matrixValues) {
             TweenablePath.this.transformPoint(this.mStartControlPoint, matrixValues);
             TweenablePath.this.transformPoint(this.mEndControlPoint, matrixValues);
             TweenablePath.this.transformPoint(this.mEndPoint, matrixValues);
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.path.TweenablePath.PathElement
+        @Override // com.oddlyspaced.calci.utilities.path.TweenablePath.PathElement
         public void setInterpolated(PathElement initial, PathElement target, float fraction) {
             CubicElement initialMove = (CubicElement) initial;
             CubicElement targetMove = (CubicElement) target;
@@ -224,12 +224,12 @@ public class TweenablePath extends PathWrapper {
             PointUtil.setInterpolated(this.mEndPoint, initialMove.mEndPoint, targetMove.mEndPoint, fraction);
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.path.TweenablePath.PathElement
+        @Override // com.oddlyspaced.calci.utilities.path.TweenablePath.PathElement
         public void addToPath(Path path) {
             path.cubicTo(this.mStartControlPoint.x, this.mStartControlPoint.y, this.mEndControlPoint.x, this.mEndControlPoint.y, this.mEndPoint.x, this.mEndPoint.y);
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.path.TweenablePath.PathElement
+        @Override // com.oddlyspaced.calci.utilities.path.TweenablePath.PathElement
         public CubicElement copy() {
             CubicElement copy = new CubicElement();
             copy.mStartControlPoint = new PointF(this.mStartControlPoint.x, this.mStartControlPoint.y);
@@ -245,20 +245,20 @@ public class TweenablePath extends PathWrapper {
         private CloseElement() {
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.path.TweenablePath.PathElement
+        @Override // com.oddlyspaced.calci.utilities.path.TweenablePath.PathElement
         public void transformPoints(float[] matrixValues) {
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.path.TweenablePath.PathElement
+        @Override // com.oddlyspaced.calci.utilities.path.TweenablePath.PathElement
         public void setInterpolated(PathElement initial, PathElement target, float fraction) {
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.path.TweenablePath.PathElement
+        @Override // com.oddlyspaced.calci.utilities.path.TweenablePath.PathElement
         public void addToPath(Path path) {
             path.close();
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.path.TweenablePath.PathElement
+        @Override // com.oddlyspaced.calci.utilities.path.TweenablePath.PathElement
         public CloseElement copy() {
             return new CloseElement();
         }

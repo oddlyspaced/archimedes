@@ -1,10 +1,10 @@
-package com.sparkappdesign.archimedes.utilities.animatable;
+package com.oddlyspaced.calci.utilities.animatable;
 
 import android.graphics.Matrix;
 import android.graphics.RectF;
-import com.sparkappdesign.archimedes.utilities.GeneralUtil;
-import com.sparkappdesign.archimedes.utilities.path.PathWrapper;
-import com.sparkappdesign.archimedes.utilities.path.TweenablePath;
+import com.oddlyspaced.calci.utilities.GeneralUtil;
+import com.oddlyspaced.calci.utilities.path.PathWrapper;
+import com.oddlyspaced.calci.utilities.path.TweenablePath;
 /* loaded from: classes.dex */
 public class AnimatablePath extends Animatable<PathWrapper> {
     private Matrix matrix = new Matrix();
@@ -49,7 +49,7 @@ public class AnimatablePath extends Animatable<PathWrapper> {
         this.mFinalValue = new PathWrapper(initialPath);
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.animatable.Animatable
+    @Override // com.oddlyspaced.calci.utilities.animatable.Animatable
     public void updateForAnimationFraction(float fraction) {
         if (!(this.mInitialValue instanceof TweenablePath) || !(this.mCurrentValue instanceof TweenablePath) || !(this.mFinalValue instanceof TweenablePath)) {
             ((PathWrapper) this.mInitialValue).getPath().computeBounds(this.pathBounds, false);

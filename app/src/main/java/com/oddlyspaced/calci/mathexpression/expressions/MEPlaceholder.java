@@ -1,6 +1,6 @@
-package com.sparkappdesign.archimedes.mathexpression.expressions;
+package com.oddlyspaced.calci.mathexpression.expressions;
 
-import com.sparkappdesign.archimedes.utilities.GeneralUtil;
+import com.oddlyspaced.calci.utilities.GeneralUtil;
 /* loaded from: classes.dex */
 public class MEPlaceholder extends MEExpression {
     private Object mIdentifier;
@@ -16,7 +16,7 @@ public class MEPlaceholder extends MEExpression {
         this.mIdentifier = identifier;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public boolean equals(Object other) {
         if (this == other) {
             return true;
@@ -27,12 +27,12 @@ public class MEPlaceholder extends MEExpression {
         return false;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public int hashCode() {
         return GeneralUtil.hashCode(this.mIdentifier);
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public String toString() {
         return this.mIdentifier.toString();
     }

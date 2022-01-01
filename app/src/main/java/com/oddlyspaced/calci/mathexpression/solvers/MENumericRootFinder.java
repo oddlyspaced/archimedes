@@ -1,12 +1,12 @@
-package com.sparkappdesign.archimedes.mathexpression.solvers;
+package com.oddlyspaced.calci.mathexpression.solvers;
 
-import com.sparkappdesign.archimedes.mathexpression.MEInterval;
-import com.sparkappdesign.archimedes.mathexpression.context.MEContext;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEValue;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEVariable;
-import com.sparkappdesign.archimedes.mathexpression.numbers.MEInteger;
-import com.sparkappdesign.archimedes.mathexpression.numbers.MEReal;
+import com.oddlyspaced.calci.mathexpression.MEInterval;
+import com.oddlyspaced.calci.mathexpression.context.MEContext;
+import com.oddlyspaced.calci.mathexpression.expressions.MEExpression;
+import com.oddlyspaced.calci.mathexpression.expressions.MEValue;
+import com.oddlyspaced.calci.mathexpression.expressions.MEVariable;
+import com.oddlyspaced.calci.mathexpression.numbers.MEInteger;
+import com.oddlyspaced.calci.mathexpression.numbers.MEReal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;

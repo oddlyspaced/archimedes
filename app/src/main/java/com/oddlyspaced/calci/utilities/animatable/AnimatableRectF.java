@@ -1,7 +1,7 @@
-package com.sparkappdesign.archimedes.utilities.animatable;
+package com.oddlyspaced.calci.utilities.animatable;
 
 import android.graphics.RectF;
-import com.sparkappdesign.archimedes.utilities.RectUtil;
+import com.oddlyspaced.calci.utilities.RectUtil;
 /* loaded from: classes.dex */
 public class AnimatableRectF extends Animatable<RectF> {
     /* JADX INFO: Access modifiers changed from: protected */
@@ -25,7 +25,7 @@ public class AnimatableRectF extends Animatable<RectF> {
         this.mFinalValue = new RectF(initialRect);
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.animatable.Animatable
+    @Override // com.oddlyspaced.calci.utilities.animatable.Animatable
     public void updateForAnimationFraction(float fraction) {
         RectUtil.setInterpolated((RectF) this.mCurrentValue, (RectF) this.mInitialValue, (RectF) this.mFinalValue, fraction);
     }

@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.utilities.path;
+package com.oddlyspaced.calci.utilities.path;
 
 import android.graphics.Path;
 /* loaded from: classes.dex */

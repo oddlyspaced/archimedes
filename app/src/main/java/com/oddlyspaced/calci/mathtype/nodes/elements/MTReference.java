@@ -1,15 +1,15 @@
-package com.sparkappdesign.archimedes.mathtype.nodes.elements;
+package com.oddlyspaced.calci.mathtype.nodes.elements;
 
-import com.sparkappdesign.archimedes.mathexpression.enums.MEExpressionForm;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression;
-import com.sparkappdesign.archimedes.mathtype.MTMEPlaceholderIdentifier;
-import com.sparkappdesign.archimedes.mathtype.enums.MTNodeTraits;
-import com.sparkappdesign.archimedes.mathtype.measures.MTCommonMeasures;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasureContext;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasures;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTElement;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTString;
-import com.sparkappdesign.archimedes.utilities.GeneralUtil;
+import com.oddlyspaced.calci.mathexpression.enums.MEExpressionForm;
+import com.oddlyspaced.calci.mathexpression.expressions.MEExpression;
+import com.oddlyspaced.calci.mathtype.MTMEPlaceholderIdentifier;
+import com.oddlyspaced.calci.mathtype.enums.MTNodeTraits;
+import com.oddlyspaced.calci.mathtype.measures.MTCommonMeasures;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasureContext;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasures;
+import com.oddlyspaced.calci.mathtype.nodes.MTElement;
+import com.oddlyspaced.calci.mathtype.nodes.MTString;
+import com.oddlyspaced.calci.utilities.GeneralUtil;
 import java.util.ArrayList;
 import java.util.EnumSet;
 /* loaded from: classes.dex */
@@ -36,7 +36,7 @@ public class MTReference extends MTElement implements MTMEPlaceholderIdentifier 
         this.mIdentifier = identifier;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTNode
     public MTMeasures measureWithContext(MTMeasureContext context) {
         return MTCommonMeasures.measuresForContainer(this, this.mName, context);
     }
@@ -46,7 +46,7 @@ public class MTReference extends MTElement implements MTMEPlaceholderIdentifier 
         return this.mName.toString();
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTElement, com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTElement, com.oddlyspaced.calci.mathtype.nodes.MTNode
     public MTReference copy() {
         MTReference copy = new MTReference();
         copy.mName = this.mName.copy();
@@ -55,7 +55,7 @@ public class MTReference extends MTElement implements MTMEPlaceholderIdentifier 
         return copy;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTNode
     public boolean equivalentTo(Object other) {
         if (this == other) {
             return true;
@@ -69,7 +69,7 @@ public class MTReference extends MTElement implements MTMEPlaceholderIdentifier 
         return false;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.MTMEPlaceholderIdentifier
+    @Override // com.oddlyspaced.calci.mathtype.MTMEPlaceholderIdentifier
     public ArrayList<MEExpression> expressionsForForm(MEExpressionForm form) {
         return this.mIdentifier.expressionsForForm(form);
     }

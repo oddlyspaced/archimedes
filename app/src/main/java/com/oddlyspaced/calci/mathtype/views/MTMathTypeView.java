@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.mathtype.views;
+package com.oddlyspaced.calci.mathtype.views;
 
 import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
@@ -24,48 +24,48 @@ import android.view.ViewParent;
 import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 import android.widget.OverScroller;
-import com.sparkappdesign.archimedes.R;
-import com.sparkappdesign.archimedes.archimedes.views.AROverlayDelegate;
-import com.sparkappdesign.archimedes.archimedes.views.AROverlayView;
-import com.sparkappdesign.archimedes.archimedes.views.ARView;
-import com.sparkappdesign.archimedes.mathtype.enums.MTDigitGroupingStyle;
-import com.sparkappdesign.archimedes.mathtype.enums.MTDragState;
-import com.sparkappdesign.archimedes.mathtype.enums.MTElementInputBehavior;
-import com.sparkappdesign.archimedes.mathtype.enums.MTInlineOperatorType;
-import com.sparkappdesign.archimedes.mathtype.enums.MTNodeTraits;
-import com.sparkappdesign.archimedes.mathtype.enums.MTOperandSide;
-import com.sparkappdesign.archimedes.mathtype.enums.MTOperatorNotation;
-import com.sparkappdesign.archimedes.mathtype.enums.MTParenthesesPlacement;
-import com.sparkappdesign.archimedes.mathtype.enums.MTSelectionHandle;
-import com.sparkappdesign.archimedes.mathtype.enums.MTStringInputBehavior;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasures;
-import com.sparkappdesign.archimedes.mathtype.measures.font.MTFontMyriadProLight;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTElement;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTNode;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTString;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTInlineOperator;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTParentheses;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTPower;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTReference;
-import com.sparkappdesign.archimedes.mathtype.parsers.MTOperatorInfo;
-import com.sparkappdesign.archimedes.mathtype.parsers.MTParser;
-import com.sparkappdesign.archimedes.mathtype.parsers.MTTextParser;
-import com.sparkappdesign.archimedes.mathtype.views.input.MTInputBehavior;
-import com.sparkappdesign.archimedes.mathtype.views.input.MTMessageType;
-import com.sparkappdesign.archimedes.mathtype.views.selection.MTSelection;
-import com.sparkappdesign.archimedes.mathtype.views.selection.MTSelectionDrawable;
-import com.sparkappdesign.archimedes.utilities.FloatingOptionsMenu;
-import com.sparkappdesign.archimedes.utilities.GeneralUtil;
-import com.sparkappdesign.archimedes.utilities.PointUtil;
-import com.sparkappdesign.archimedes.utilities.Range;
-import com.sparkappdesign.archimedes.utilities.RectUtil;
-import com.sparkappdesign.archimedes.utilities.Timer;
-import com.sparkappdesign.archimedes.utilities.events.Observer;
-import com.sparkappdesign.archimedes.utilities.events.ObserverType;
-import com.sparkappdesign.archimedes.utilities.observables.ObservableChange;
-import com.sparkappdesign.archimedes.utilities.responder.Responder;
-import com.sparkappdesign.archimedes.utilities.responder.ResponderManager;
-import com.sparkappdesign.archimedes.utilities.responder.ResponderMessage;
+import com.oddlyspaced.calci.R;
+import com.oddlyspaced.calci.archimedes.views.AROverlayDelegate;
+import com.oddlyspaced.calci.archimedes.views.AROverlayView;
+import com.oddlyspaced.calci.archimedes.views.ARView;
+import com.oddlyspaced.calci.mathtype.enums.MTDigitGroupingStyle;
+import com.oddlyspaced.calci.mathtype.enums.MTDragState;
+import com.oddlyspaced.calci.mathtype.enums.MTElementInputBehavior;
+import com.oddlyspaced.calci.mathtype.enums.MTInlineOperatorType;
+import com.oddlyspaced.calci.mathtype.enums.MTNodeTraits;
+import com.oddlyspaced.calci.mathtype.enums.MTOperandSide;
+import com.oddlyspaced.calci.mathtype.enums.MTOperatorNotation;
+import com.oddlyspaced.calci.mathtype.enums.MTParenthesesPlacement;
+import com.oddlyspaced.calci.mathtype.enums.MTSelectionHandle;
+import com.oddlyspaced.calci.mathtype.enums.MTStringInputBehavior;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasures;
+import com.oddlyspaced.calci.mathtype.measures.font.MTFontMyriadProLight;
+import com.oddlyspaced.calci.mathtype.nodes.MTElement;
+import com.oddlyspaced.calci.mathtype.nodes.MTNode;
+import com.oddlyspaced.calci.mathtype.nodes.MTString;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTInlineOperator;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTParentheses;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTPower;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTReference;
+import com.oddlyspaced.calci.mathtype.parsers.MTOperatorInfo;
+import com.oddlyspaced.calci.mathtype.parsers.MTParser;
+import com.oddlyspaced.calci.mathtype.parsers.MTTextParser;
+import com.oddlyspaced.calci.mathtype.views.input.MTInputBehavior;
+import com.oddlyspaced.calci.mathtype.views.input.MTMessageType;
+import com.oddlyspaced.calci.mathtype.views.selection.MTSelection;
+import com.oddlyspaced.calci.mathtype.views.selection.MTSelectionDrawable;
+import com.oddlyspaced.calci.utilities.FloatingOptionsMenu;
+import com.oddlyspaced.calci.utilities.GeneralUtil;
+import com.oddlyspaced.calci.utilities.PointUtil;
+import com.oddlyspaced.calci.utilities.Range;
+import com.oddlyspaced.calci.utilities.RectUtil;
+import com.oddlyspaced.calci.utilities.Timer;
+import com.oddlyspaced.calci.utilities.events.Observer;
+import com.oddlyspaced.calci.utilities.events.ObserverType;
+import com.oddlyspaced.calci.utilities.observables.ObservableChange;
+import com.oddlyspaced.calci.utilities.responder.Responder;
+import com.oddlyspaced.calci.utilities.responder.ResponderManager;
+import com.oddlyspaced.calci.utilities.responder.ResponderMessage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -132,7 +132,7 @@ public class MTMathTypeView extends View implements Responder, AROverlayDelegate
     private final float HANDLE_GRAB_MARGIN = getResources().getDimension(R.dimen.handle_grab_margin);
     private final float MAX_DISTANCE_BETWEEN_TAPS = getResources().getDimension(R.dimen.max_distance_between_taps);
     private final float OPTIONS_MENU_MARGIN = getResources().getDimension(R.dimen.options_menu_margin);
-    private Runnable waitForLongPress = new Runnable() { // from class: com.sparkappdesign.archimedes.mathtype.views.MTMathTypeView.3
+    private Runnable waitForLongPress = new Runnable() { // from class: com.oddlyspaced.calci.mathtype.views.MTMathTypeView.3
         @Override // java.lang.Runnable
         public void run() {
             MTMathTypeView.this.handleLongPress(MTMathTypeView.this.mTapDownPoint);
@@ -361,7 +361,7 @@ public class MTMathTypeView extends View implements Responder, AROverlayDelegate
 
     private void scheduleUpdate() {
         if (this.mUpdateRunnable == null) {
-            this.mUpdateRunnable = new Runnable() { // from class: com.sparkappdesign.archimedes.mathtype.views.MTMathTypeView.1
+            this.mUpdateRunnable = new Runnable() { // from class: com.oddlyspaced.calci.mathtype.views.MTMathTypeView.1
                 @Override // java.lang.Runnable
                 public void run() {
                     MTMathTypeView.this.update();
@@ -434,7 +434,7 @@ public class MTMathTypeView extends View implements Responder, AROverlayDelegate
         this.mMathTypeDrawable.setCallback(this);
         this.mSelectionDrawable.setCallback(this);
         this.mOverScroller = new OverScroller(context);
-        this.mObservers.add(ResponderManager.getFirstResponder().getWillChange().add(new Observer<ObservableChange<Responder>>() { // from class: com.sparkappdesign.archimedes.mathtype.views.MTMathTypeView.2
+        this.mObservers.add(ResponderManager.getFirstResponder().getWillChange().add(new Observer<ObservableChange<Responder>>() { // from class: com.oddlyspaced.calci.mathtype.views.MTMathTypeView.2
             public void handle(ObservableChange<Responder> change) {
                 MTMathTypeView.this.handleFirstResponderWillChange(change.getOldValue(), change.getNewValue());
             }
@@ -776,7 +776,7 @@ public class MTMathTypeView extends View implements Responder, AROverlayDelegate
         this.mAnimator = ValueAnimator.ofFloat(0.0f, 1.0f);
         this.mAnimator.setInterpolator(this.mInterpolator);
         this.mAnimator.setDuration(remainingTime);
-        this.mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: com.sparkappdesign.archimedes.mathtype.views.MTMathTypeView.4
+        this.mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: com.oddlyspaced.calci.mathtype.views.MTMathTypeView.4
             @Override // android.animation.ValueAnimator.AnimatorUpdateListener
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
                 MTMathTypeView.this.scrollTo(startX + ((int) (valueAnimator.getAnimatedFraction() * dx)), startY);
@@ -809,7 +809,7 @@ public class MTMathTypeView extends View implements Responder, AROverlayDelegate
             this.mAnimator = ValueAnimator.ofFloat(0.0f, 1.0f);
             this.mAnimator.setInterpolator(this.mInterpolator);
             this.mAnimator.setDuration((long) duration);
-            this.mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: com.sparkappdesign.archimedes.mathtype.views.MTMathTypeView.5
+            this.mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: com.oddlyspaced.calci.mathtype.views.MTMathTypeView.5
                 @Override // android.animation.ValueAnimator.AnimatorUpdateListener
                 public void onAnimationUpdate(ValueAnimator valueAnimator) {
                     MTMathTypeView.this.scrollTo(startX + ((int) (valueAnimator.getAnimatedFraction() * scrollDistance)), startY);
@@ -843,7 +843,7 @@ public class MTMathTypeView extends View implements Responder, AROverlayDelegate
 
         @Override // java.util.TimerTask, java.lang.Runnable
         public void run() {
-            MTMathTypeView.this.mAutoScrollHandler.post(new Runnable() { // from class: com.sparkappdesign.archimedes.mathtype.views.MTMathTypeView.AutoScrollTask.1
+            MTMathTypeView.this.mAutoScrollHandler.post(new Runnable() { // from class: com.oddlyspaced.calci.mathtype.views.MTMathTypeView.AutoScrollTask.1
                 @Override // java.lang.Runnable
                 public void run() {
                     MTMathTypeView.this.updateAutoScroll(MTMathTypeView.this.mAutoScrollTouchPoint);
@@ -1084,7 +1084,7 @@ public class MTMathTypeView extends View implements Responder, AROverlayDelegate
         }
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public boolean canHandleMessageType(String type) {
         if (this.mEditable) {
             return type.equals(MTMessageType.INSERT_ELEMENT) || type.equals(MTMessageType.BACKSPACE) || type.equals(MTMessageType.CLEAR_LINE) || type.equals(MTMessageType.COPY) || type.equals(MTMessageType.PASTE);
@@ -1092,7 +1092,7 @@ public class MTMathTypeView extends View implements Responder, AROverlayDelegate
         return type.equals(MTMessageType.COPY);
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public Responder getAncestor() {
         ViewParent parent = getParent();
         if (parent instanceof Responder) {
@@ -1101,12 +1101,12 @@ public class MTMathTypeView extends View implements Responder, AROverlayDelegate
         return null;
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public boolean isChildAllowedToHandleMessage(Responder child, ResponderMessage message) {
         return true;
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public void handleMessage(String type, HashMap<String, Object> contents) {
         if (type.equals(MTMessageType.INSERT_ELEMENT)) {
             insertElement((MTElement) contents.get("Element to insert"), true);
@@ -1191,7 +1191,7 @@ public class MTMathTypeView extends View implements Responder, AROverlayDelegate
     }
 
     public void insertElement(final MTElement element, final boolean animated) {
-        suspendMathTypeNotification(new Runnable() { // from class: com.sparkappdesign.archimedes.mathtype.views.MTMathTypeView.6
+        suspendMathTypeNotification(new Runnable() { // from class: com.oddlyspaced.calci.mathtype.views.MTMathTypeView.6
             @Override // java.lang.Runnable
             public void run() {
                 MTMathTypeView.this.insertElementInternal(element, animated);
@@ -1362,7 +1362,7 @@ public class MTMathTypeView extends View implements Responder, AROverlayDelegate
     }
 
     public void backspace(final boolean animated) {
-        suspendMathTypeNotification(new Runnable() { // from class: com.sparkappdesign.archimedes.mathtype.views.MTMathTypeView.7
+        suspendMathTypeNotification(new Runnable() { // from class: com.oddlyspaced.calci.mathtype.views.MTMathTypeView.7
             @Override // java.lang.Runnable
             public void run() {
                 MTMathTypeView.this.backspaceInternal(animated);
@@ -1462,7 +1462,7 @@ public class MTMathTypeView extends View implements Responder, AROverlayDelegate
     }
 
     public void clearLine(final boolean animated) {
-        suspendMathTypeNotification(new Runnable() { // from class: com.sparkappdesign.archimedes.mathtype.views.MTMathTypeView.8
+        suspendMathTypeNotification(new Runnable() { // from class: com.oddlyspaced.calci.mathtype.views.MTMathTypeView.8
             @Override // java.lang.Runnable
             public void run() {
                 MTMathTypeView.this.clearLineInternal(animated);
@@ -1508,14 +1508,14 @@ public class MTMathTypeView extends View implements Responder, AROverlayDelegate
     private void showOptionsMenu(boolean delayed) {
         FloatingOptionsMenu optionsMenu = FloatingOptionsMenu.getInstance(getContext());
         optionsMenu.clear();
-        optionsMenu.addOption(MTMessageType.COPY, getResources().getDrawable(this.mEditable ? R.drawable.button_options_menu_left : R.drawable.button_options_menu_single), new Runnable() { // from class: com.sparkappdesign.archimedes.mathtype.views.MTMathTypeView.9
+        optionsMenu.addOption(MTMessageType.COPY, getResources().getDrawable(this.mEditable ? R.drawable.button_options_menu_left : R.drawable.button_options_menu_single), new Runnable() { // from class: com.oddlyspaced.calci.mathtype.views.MTMathTypeView.9
             @Override // java.lang.Runnable
             public void run() {
                 new ResponderMessage(MTMessageType.COPY, null).send();
             }
         });
         if (this.mEditable) {
-            optionsMenu.addOption(MTMessageType.PASTE, getResources().getDrawable(R.drawable.button_options_menu_right), new Runnable() { // from class: com.sparkappdesign.archimedes.mathtype.views.MTMathTypeView.10
+            optionsMenu.addOption(MTMessageType.PASTE, getResources().getDrawable(R.drawable.button_options_menu_right), new Runnable() { // from class: com.oddlyspaced.calci.mathtype.views.MTMathTypeView.10
                 @Override // java.lang.Runnable
                 public void run() {
                     new ResponderMessage(MTMessageType.PASTE, null).send();
@@ -1562,7 +1562,7 @@ public class MTMathTypeView extends View implements Responder, AROverlayDelegate
         FloatingOptionsMenu.getInstance(getContext()).hide(animated);
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.AROverlayDelegate
+    @Override // com.oddlyspaced.calci.archimedes.views.AROverlayDelegate
     public boolean onOverlayTouchEvent(MotionEvent event) {
         boolean handleEvent;
         if (event.getAction() == 0) {
@@ -1578,7 +1578,7 @@ public class MTMathTypeView extends View implements Responder, AROverlayDelegate
         return onTouchEvent(event);
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARView
+    @Override // com.oddlyspaced.calci.archimedes.views.ARView
     public PointF finalSize() {
         return this.mMathTypeDrawable.predictFinalSize();
     }

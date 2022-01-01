@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.archimedes.views;
+package com.oddlyspaced.calci.archimedes.views;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -10,11 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.animation.DecelerateInterpolator;
-import com.sparkappdesign.archimedes.R;
-import com.sparkappdesign.archimedes.utilities.GeneralUtil;
-import com.sparkappdesign.archimedes.utilities.RectUtil;
-import com.sparkappdesign.archimedes.utilities.responder.Responder;
-import com.sparkappdesign.archimedes.utilities.responder.ResponderMessage;
+import com.oddlyspaced.calci.R;
+import com.oddlyspaced.calci.utilities.GeneralUtil;
+import com.oddlyspaced.calci.utilities.RectUtil;
+import com.oddlyspaced.calci.utilities.responder.Responder;
+import com.oddlyspaced.calci.utilities.responder.ResponderMessage;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -112,7 +112,7 @@ public class ARStackView extends ViewGroup implements Responder, ARViewGroup {
         this.mInitialPositions.add(index, Integer.valueOf(index != 0 ? getChildAt(index - 1).getBottom() + this.mSpacing : 0));
         prepareAnimation(animated);
         this.mAnimator.setDuration(animated ? (long) this.ANIMATION_DURATION : 0);
-        this.mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARStackView.1
+        this.mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: com.oddlyspaced.calci.archimedes.views.ARStackView.1
             @Override // android.animation.ValueAnimator.AnimatorUpdateListener
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
                 ARStackView.this.requestLayout();
@@ -141,7 +141,7 @@ public class ARStackView extends ViewGroup implements Responder, ARViewGroup {
         this.mInitialPositions.remove(index);
         prepareAnimation(animated);
         this.mAnimator.setDuration(animated ? (long) this.ANIMATION_DURATION : 0);
-        this.mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARStackView.2
+        this.mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: com.oddlyspaced.calci.archimedes.views.ARStackView.2
             @Override // android.animation.ValueAnimator.AnimatorUpdateListener
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
                 ARStackView.this.requestLayout();
@@ -166,7 +166,7 @@ public class ARStackView extends ViewGroup implements Responder, ARViewGroup {
         return (int) GeneralUtil.interpolate((float) initialPosition, (float) targetPosition, fraction);
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public Responder getAncestor() {
         ViewParent parent = getParent();
         if (parent instanceof Responder) {
@@ -175,21 +175,21 @@ public class ARStackView extends ViewGroup implements Responder, ARViewGroup {
         return null;
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public boolean canHandleMessageType(String type) {
         return false;
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public boolean isChildAllowedToHandleMessage(Responder child, ResponderMessage message) {
         return true;
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public void handleMessage(String type, HashMap<String, Object> contents) {
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARViewGroup
+    @Override // com.oddlyspaced.calci.archimedes.views.ARViewGroup
     public RectF finalBoundsForChildAtIndex(int index) {
         float top = (float) this.mSpacing;
         for (int i = 0; i < index; i++) {
@@ -199,7 +199,7 @@ public class ARStackView extends ViewGroup implements Responder, ARViewGroup {
         return RectUtil.create(0.0f, top, finalSize.x, finalSize.y);
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARView
+    @Override // com.oddlyspaced.calci.archimedes.views.ARView
     public PointF finalSize() {
         PointF finalSize = new PointF((float) getWidth(), (float) this.mSpacing);
         for (int i = 0; i < getChildCount(); i++) {

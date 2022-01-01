@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.archimedes.views;
+package com.oddlyspaced.calci.archimedes.views;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -10,9 +10,9 @@ import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.TextView;
-import com.sparkappdesign.archimedes.R;
-import com.sparkappdesign.archimedes.utilities.GeneralUtil;
-import com.sparkappdesign.archimedes.utilities.TypefaceCache;
+import com.oddlyspaced.calci.R;
+import com.oddlyspaced.calci.utilities.GeneralUtil;
+import com.oddlyspaced.calci.utilities.TypefaceCache;
 /* loaded from: classes.dex */
 public class ARSeparatorView extends TextView {
     private int mColor = getContext().getResources().getColor(R.color.tint);
@@ -80,7 +80,7 @@ public class ARSeparatorView extends TextView {
         this.mPaint.setAntiAlias(true);
         setGravity(17);
         updateTextAndColor();
-        getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARSeparatorView.1
+        getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() { // from class: com.oddlyspaced.calci.archimedes.views.ARSeparatorView.1
             @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
             public void onGlobalLayout() {
                 ARSeparatorView.this.updateLayout();

@@ -1,8 +1,8 @@
-package com.sparkappdesign.archimedes.mathtype.measures;
+package com.oddlyspaced.calci.mathtype.measures;
 
 import android.graphics.PointF;
 import android.graphics.RectF;
-import com.sparkappdesign.archimedes.utilities.path.PathWrapper;
+import com.oddlyspaced.calci.utilities.path.PathWrapper;
 import java.util.Hashtable;
 /* loaded from: classes.dex */
 public class MTGlyphMeasures {

@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.utilities;
+package com.oddlyspaced.calci.utilities;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 /* loaded from: classes.dex */

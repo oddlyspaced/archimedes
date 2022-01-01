@@ -1,12 +1,12 @@
-package com.sparkappdesign.archimedes.mathexpression.expressions;
+package com.oddlyspaced.calci.mathexpression.expressions;
 
-import com.sparkappdesign.archimedes.mathexpression.context.MEContext;
-import com.sparkappdesign.archimedes.mathexpression.context.MEIssue;
-import com.sparkappdesign.archimedes.mathexpression.enums.MEDivisionSide;
-import com.sparkappdesign.archimedes.mathexpression.solvers.MEFunctionInverter;
-import com.sparkappdesign.archimedes.mathexpression.solvers.MERootFinder;
-import com.sparkappdesign.archimedes.utilities.GeneralUtil;
-import com.sparkappdesign.archimedes.utilities.observables.ImmutableList;
+import com.oddlyspaced.calci.mathexpression.context.MEContext;
+import com.oddlyspaced.calci.mathexpression.context.MEIssue;
+import com.oddlyspaced.calci.mathexpression.enums.MEDivisionSide;
+import com.oddlyspaced.calci.mathexpression.solvers.MEFunctionInverter;
+import com.oddlyspaced.calci.mathexpression.solvers.MERootFinder;
+import com.oddlyspaced.calci.utilities.GeneralUtil;
+import com.oddlyspaced.calci.utilities.observables.ImmutableList;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -34,12 +34,12 @@ public class MEEquals extends MEExpression {
         this.mRightOperand = rightOperand;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public ImmutableList<MEExpression> children() {
         return new ImmutableList<>(Arrays.asList(this.mLeftOperand, this.mRightOperand));
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public MEEquals copyWithChildren(Collection<? extends MEExpression> children) {
         if (GeneralUtil.equalOrBothNull(children(), children)) {
             return this;
@@ -51,12 +51,12 @@ public class MEEquals extends MEExpression {
         return copy;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public MEExpression partWithUnit() {
         return null;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public MEExpression canonicalize() {
         MEExpression left = this.mLeftOperand.canonicalize();
         if (shouldStop(left)) {
@@ -178,7 +178,7 @@ public class MEEquals extends MEExpression {
         return part;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public boolean equals(Object other) {
         if (this == other) {
             return true;
@@ -190,12 +190,12 @@ public class MEEquals extends MEExpression {
         return GeneralUtil.equalOrBothNull(this.mLeftOperand, otherEquals.mLeftOperand) && GeneralUtil.equalOrBothNull(this.mRightOperand, otherEquals.mRightOperand);
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public int hashCode() {
         return GeneralUtil.hashCode(this.mLeftOperand) ^ GeneralUtil.hashCode(this.mRightOperand);
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public String toString() {
         return this.mLeftOperand.toString() + " = " + this.mRightOperand.toString();
     }

@@ -1,9 +1,9 @@
-package com.sparkappdesign.archimedes.mathexpression.numbers;
+package com.oddlyspaced.calci.mathexpression.numbers;
 
-import com.sparkappdesign.archimedes.mathexpression.context.MEContext;
-import com.sparkappdesign.archimedes.mathexpression.context.MEIssue;
-import com.sparkappdesign.archimedes.tommath.SWIGTYPE_p_mp_int;
-import com.sparkappdesign.archimedes.tommath.tommath;
+import com.oddlyspaced.calci.mathexpression.context.MEContext;
+import com.oddlyspaced.calci.mathexpression.context.MEIssue;
+import com.oddlyspaced.calci.tommath.SWIGTYPE_p_mp_int;
+import com.oddlyspaced.calci.tommath.tommath;
 /* loaded from: classes.dex */
 public class MEInteger {
     private static final long MAX_WORDS = 12000;

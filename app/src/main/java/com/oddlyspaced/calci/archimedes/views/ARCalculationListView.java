@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.archimedes.views;
+package com.oddlyspaced.calci.archimedes.views;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -7,34 +7,34 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
-import com.sparkappdesign.archimedes.R;
-import com.sparkappdesign.archimedes.archimedes.enums.ARCalculationListViewAlignment;
-import com.sparkappdesign.archimedes.archimedes.enums.ARScrollPriority;
-import com.sparkappdesign.archimedes.archimedes.model.ARCalculation;
-import com.sparkappdesign.archimedes.archimedes.model.ARCalculationList;
-import com.sparkappdesign.archimedes.archimedes.model.ARPreviousAnswerReference;
-import com.sparkappdesign.archimedes.archimedes.model.ARSettings;
-import com.sparkappdesign.archimedes.mathtype.MTMEPlaceholderIdentifier;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTNode;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTString;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTReference;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTText;
-import com.sparkappdesign.archimedes.mathtype.views.MTMathTypeView;
-import com.sparkappdesign.archimedes.mathtype.views.input.MTMessageType;
-import com.sparkappdesign.archimedes.mathtype.views.selection.MTSelection;
-import com.sparkappdesign.archimedes.utilities.GeneralUtil;
-import com.sparkappdesign.archimedes.utilities.ViewUtil;
-import com.sparkappdesign.archimedes.utilities.events.Observer;
-import com.sparkappdesign.archimedes.utilities.events.ObserverType;
-import com.sparkappdesign.archimedes.utilities.observables.ImmutableList;
-import com.sparkappdesign.archimedes.utilities.observables.ListObserver;
-import com.sparkappdesign.archimedes.utilities.observables.MutableObservable;
-import com.sparkappdesign.archimedes.utilities.observables.ObservableChainLink;
-import com.sparkappdesign.archimedes.utilities.observables.ObservableChange;
-import com.sparkappdesign.archimedes.utilities.observables.ObservableList;
-import com.sparkappdesign.archimedes.utilities.responder.Responder;
-import com.sparkappdesign.archimedes.utilities.responder.ResponderManager;
-import com.sparkappdesign.archimedes.utilities.responder.ResponderMessage;
+import com.oddlyspaced.calci.R;
+import com.oddlyspaced.calci.archimedes.enums.ARCalculationListViewAlignment;
+import com.oddlyspaced.calci.archimedes.enums.ARScrollPriority;
+import com.oddlyspaced.calci.archimedes.model.ARCalculation;
+import com.oddlyspaced.calci.archimedes.model.ARCalculationList;
+import com.oddlyspaced.calci.archimedes.model.ARPreviousAnswerReference;
+import com.oddlyspaced.calci.archimedes.model.ARSettings;
+import com.oddlyspaced.calci.mathtype.MTMEPlaceholderIdentifier;
+import com.oddlyspaced.calci.mathtype.nodes.MTNode;
+import com.oddlyspaced.calci.mathtype.nodes.MTString;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTReference;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTText;
+import com.oddlyspaced.calci.mathtype.views.MTMathTypeView;
+import com.oddlyspaced.calci.mathtype.views.input.MTMessageType;
+import com.oddlyspaced.calci.mathtype.views.selection.MTSelection;
+import com.oddlyspaced.calci.utilities.GeneralUtil;
+import com.oddlyspaced.calci.utilities.ViewUtil;
+import com.oddlyspaced.calci.utilities.events.Observer;
+import com.oddlyspaced.calci.utilities.events.ObserverType;
+import com.oddlyspaced.calci.utilities.observables.ImmutableList;
+import com.oddlyspaced.calci.utilities.observables.ListObserver;
+import com.oddlyspaced.calci.utilities.observables.MutableObservable;
+import com.oddlyspaced.calci.utilities.observables.ObservableChainLink;
+import com.oddlyspaced.calci.utilities.observables.ObservableChange;
+import com.oddlyspaced.calci.utilities.observables.ObservableList;
+import com.oddlyspaced.calci.utilities.responder.Responder;
+import com.oddlyspaced.calci.utilities.responder.ResponderManager;
+import com.oddlyspaced.calci.utilities.responder.ResponderMessage;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -159,14 +159,14 @@ public class ARCalculationListView extends ViewGroup implements Responder {
         autoScrollView.addView(calculationsStackView);
         calculationsStackView.setSpacing(this.CALCULATION_SPACING);
         this.mCalculationsStackView = calculationsStackView;
-        this.mObservers.add(this.mCalculationList.chain(new ObservableChainLink<ARCalculationList, ImmutableList<ARCalculation>>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARCalculationListView.2
+        this.mObservers.add(this.mCalculationList.chain(new ObservableChainLink<ARCalculationList, ImmutableList<ARCalculation>>() { // from class: com.oddlyspaced.calci.archimedes.views.ARCalculationListView.2
             public MutableObservable<ImmutableList<ARCalculation>> get(ARCalculationList calculationList) {
                 if (calculationList != null) {
                     return calculationList.getCalculations();
                 }
                 return null;
             }
-        }).addObserver(new ListObserver<ARCalculation>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARCalculationListView.1
+        }).addObserver(new ListObserver<ARCalculation>() { // from class: com.oddlyspaced.calci.archimedes.views.ARCalculationListView.1
             public void handleAdd(ARCalculation calculation, int index) {
                 ARCalculationListView.this.handleAddedCalculation(calculation, index);
             }
@@ -175,7 +175,7 @@ public class ARCalculationListView extends ViewGroup implements Responder {
                 ARCalculationListView.this.handleRemovedCalculation(calculation, index);
             }
         }));
-        this.mObservers.add(ResponderManager.getFirstResponder().addObserver(new Observer<ObservableChange<Responder>>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARCalculationListView.3
+        this.mObservers.add(ResponderManager.getFirstResponder().addObserver(new Observer<ObservableChange<Responder>>() { // from class: com.oddlyspaced.calci.archimedes.views.ARCalculationListView.3
             public void handle(ObservableChange<Responder> change) {
                 ARCalculationListView.this.handleFirstResponderChanged(change);
             }
@@ -452,7 +452,7 @@ public class ARCalculationListView extends ViewGroup implements Responder {
     }
 
     private void handleDidPerformEditAction() {
-        post(new Runnable() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARCalculationListView.4
+        post(new Runnable() { // from class: com.oddlyspaced.calci.archimedes.views.ARCalculationListView.4
             @Override // java.lang.Runnable
             public void run() {
                 ARCalculationListView.this.mAutoScrollView.scrollToAreaOfInterest(MTMathTypeView.AREAS_OF_INTEREST_ON_EDIT, ARScrollPriority.RespectManualScrollOverAreasOfInterest, true);
@@ -460,12 +460,12 @@ public class ARCalculationListView extends ViewGroup implements Responder {
         });
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public boolean canHandleMessageType(String type) {
         return type.equals(MTMessageType.BACKSPACE) || type.equals(MTMessageType.CLEAR_ALL) || type.equals(MTMessageType.ENTER) || type.equals(MTMessageType.INSERT_ANS) || type.equals(MTMessageType.SHOULD_AUTO_INSERT_ANS) || type.equals(MTMessageType.DID_PERFORM_EDIT) || type.equals(MTMessageType.UPDATE_REFERENCE);
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public Responder getAncestor() {
         ViewParent parent = getParent();
         if (parent instanceof Responder) {
@@ -474,12 +474,12 @@ public class ARCalculationListView extends ViewGroup implements Responder {
         return null;
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public boolean isChildAllowedToHandleMessage(Responder child, ResponderMessage message) {
         return !canHandleMessageType(message.getType());
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public void handleMessage(String type, HashMap<String, Object> contents) {
         char c = 65535;
         switch (type.hashCode()) {

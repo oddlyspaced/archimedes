@@ -1,9 +1,9 @@
-package com.sparkappdesign.archimedes.mathexpression.expressions;
+package com.oddlyspaced.calci.mathexpression.expressions;
 
-import com.sparkappdesign.archimedes.mathexpression.numbers.MEInteger;
-import com.sparkappdesign.archimedes.mathexpression.numbers.MERational;
-import com.sparkappdesign.archimedes.mathexpression.numbers.MEReal;
-import com.sparkappdesign.archimedes.utilities.GeneralUtil;
+import com.oddlyspaced.calci.mathexpression.numbers.MEInteger;
+import com.oddlyspaced.calci.mathexpression.numbers.MERational;
+import com.oddlyspaced.calci.mathexpression.numbers.MEReal;
+import com.oddlyspaced.calci.utilities.GeneralUtil;
 /* loaded from: classes.dex */
 public class MEValue extends MEExpression {
     private static MEValue e;
@@ -166,7 +166,7 @@ public class MEValue extends MEExpression {
         return new MEValue(MERational.div(this.mRational, other.mRational));
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public MEValue negate() {
         if (this.mRational != null) {
             return new MEValue(MERational.neg(this.mRational));
@@ -181,7 +181,7 @@ public class MEValue extends MEExpression {
         return new MEValue(MEReal.abs(this.mReal));
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public MEValue invert() {
         if (this.mRational != null) {
             return new MEValue(MERational.inv(this.mRational));
@@ -189,27 +189,27 @@ public class MEValue extends MEExpression {
         return new MEValue(MEReal.inv(this.mReal));
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public MEValue coefficient() {
         return this;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public MEValue partWithoutCoefficient() {
         return null;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public MEReal evaluateNumerically(MEReal value, MEVariable variable) {
         return this.mReal;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public double evaluateNumerically(double value, MEVariable variable) {
         return this.mReal.toDouble();
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public boolean equals(Object other) {
         if (this == other) {
             return true;
@@ -224,7 +224,7 @@ public class MEValue extends MEExpression {
         return MERational.isEqual(this.mRational, otherValue.mRational);
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public int hashCode() {
         return GeneralUtil.hashCode(this.mRational) ^ GeneralUtil.hashCode(this.mReal);
     }
@@ -273,12 +273,12 @@ public class MEValue extends MEExpression {
         return a;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public boolean isNegative() {
         return this.mReal.isNegative();
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public boolean isZero() {
         return this.mReal.isZero();
     }
@@ -287,7 +287,7 @@ public class MEValue extends MEExpression {
         return this.mReal.toDouble();
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public String toString() {
         return this.mRational != null ? this.mRational.toString() : this.mReal.toString();
     }

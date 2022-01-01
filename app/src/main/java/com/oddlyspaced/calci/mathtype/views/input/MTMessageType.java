@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.mathtype.views.input;
+package com.oddlyspaced.calci.mathtype.views.input;
 /* loaded from: classes.dex */
 public final class MTMessageType {
     public static final String BACKSPACE = "BACKSPACE";

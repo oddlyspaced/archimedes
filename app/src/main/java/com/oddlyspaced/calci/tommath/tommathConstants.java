@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.tommath;
+package com.oddlyspaced.calci.tommath;
 /* loaded from: classes.dex */
 public interface tommathConstants {
     public static final int MP_EQ = 0;

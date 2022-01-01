@@ -1,21 +1,21 @@
-package com.sparkappdesign.archimedes.mathtype.nodes.elements;
+package com.oddlyspaced.calci.mathtype.nodes.elements;
 
 import android.graphics.PointF;
 import android.graphics.RectF;
-import com.sparkappdesign.archimedes.mathtype.enums.MTBaselineShiftType;
-import com.sparkappdesign.archimedes.mathtype.measures.MTCommonMeasures;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasureContext;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasures;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTElement;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTString;
-import com.sparkappdesign.archimedes.utilities.PointUtil;
+import com.oddlyspaced.calci.mathtype.enums.MTBaselineShiftType;
+import com.oddlyspaced.calci.mathtype.measures.MTCommonMeasures;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasureContext;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasures;
+import com.oddlyspaced.calci.mathtype.nodes.MTElement;
+import com.oddlyspaced.calci.mathtype.nodes.MTString;
+import com.oddlyspaced.calci.utilities.PointUtil;
 import java.util.Arrays;
 import java.util.Iterator;
 /* loaded from: classes.dex */
 public class MTPowerOfTenExponent extends MTElement {
     private MTString mExponent = new MTString(this);
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTElement, com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTElement, com.oddlyspaced.calci.mathtype.nodes.MTNode
     public Iterable<? extends MTString> getChildren() {
         return Arrays.asList(this.mExponent);
     }
@@ -24,7 +24,7 @@ public class MTPowerOfTenExponent extends MTElement {
         return this.mExponent;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTNode
     public MTMeasures measureWithContext(MTMeasureContext context) {
         MTMeasures measures = MTCommonMeasures.measuresForText(this, "×10", context);
         MTMeasures exponentMeasures = MTCommonMeasures.measuresForBaselineShift(this, MTBaselineShiftType.Superscript, this.mExponent, context);
@@ -46,7 +46,7 @@ public class MTPowerOfTenExponent extends MTElement {
         return "×10^(" + this.mExponent + ")";
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTElement, com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTElement, com.oddlyspaced.calci.mathtype.nodes.MTNode
     public MTPowerOfTenExponent copy() {
         MTPowerOfTenExponent copy = new MTPowerOfTenExponent();
         copy.mTraits = this.mTraits.clone();
@@ -55,7 +55,7 @@ public class MTPowerOfTenExponent extends MTElement {
         return copy;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTNode
     public boolean equivalentTo(Object other) {
         if (this == other) {
             return true;

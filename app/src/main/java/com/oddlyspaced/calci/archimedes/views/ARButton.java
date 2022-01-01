@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.archimedes.views;
+package com.oddlyspaced.calci.archimedes.views;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -10,10 +10,10 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.ImageButton;
-import com.sparkappdesign.archimedes.R;
-import com.sparkappdesign.archimedes.archimedes.model.ARButtonAction;
-import com.sparkappdesign.archimedes.archimedes.model.ARSettings;
-import com.sparkappdesign.archimedes.utilities.DeviceUtil;
+import com.oddlyspaced.calci.R;
+import com.oddlyspaced.calci.archimedes.model.ARButtonAction;
+import com.oddlyspaced.calci.archimedes.model.ARSettings;
+import com.oddlyspaced.calci.utilities.DeviceUtil;
 /* loaded from: classes.dex */
 public class ARButton extends ImageButton implements View.OnTouchListener {
     private static final long TAP_TIME = 150;
@@ -46,7 +46,7 @@ public class ARButton extends ImageButton implements View.OnTouchListener {
 
     private ARButton(Context context) {
         super(context);
-        this.mActionRunnable = new Runnable() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARButton.2
+        this.mActionRunnable = new Runnable() { // from class: com.oddlyspaced.calci.archimedes.views.ARButton.2
             @Override // java.lang.Runnable
             public void run() {
                 ARButton.this.performButtonClick();
@@ -58,7 +58,7 @@ public class ARButton extends ImageButton implements View.OnTouchListener {
 
     private ARButton(Context context, AttributeSet attrs) {
         super(context, attrs);
-        this.mActionRunnable = new Runnable() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARButton.2
+        this.mActionRunnable = new Runnable() { // from class: com.oddlyspaced.calci.archimedes.views.ARButton.2
             @Override // java.lang.Runnable
             public void run() {
                 ARButton.this.performButtonClick();
@@ -70,7 +70,7 @@ public class ARButton extends ImageButton implements View.OnTouchListener {
 
     private ARButton(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        this.mActionRunnable = new Runnable() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARButton.2
+        this.mActionRunnable = new Runnable() { // from class: com.oddlyspaced.calci.archimedes.views.ARButton.2
             @Override // java.lang.Runnable
             public void run() {
                 ARButton.this.performButtonClick();
@@ -88,7 +88,7 @@ public class ARButton extends ImageButton implements View.OnTouchListener {
         this(context);
         this.mAction = ARButtonAction.getAction(getContext(), actionKey);
         this.mColumnSpan = columnSpan;
-        getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARButton.1
+        getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() { // from class: com.oddlyspaced.calci.archimedes.views.ARButton.1
             @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
             public void onGlobalLayout() {
                 ARButton.this.setButtonStyle();

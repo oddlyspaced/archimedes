@@ -1,14 +1,14 @@
-package com.sparkappdesign.archimedes.mathexpression.solvers;
+package com.oddlyspaced.calci.mathexpression.solvers;
 
-import com.sparkappdesign.archimedes.mathexpression.context.MEContext;
-import com.sparkappdesign.archimedes.mathexpression.context.MEIssue;
-import com.sparkappdesign.archimedes.mathexpression.enums.MEExpressionForm;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEEquals;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEPower;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEValue;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEVariable;
-import com.sparkappdesign.archimedes.mathexpression.numbers.MERational;
+import com.oddlyspaced.calci.mathexpression.context.MEContext;
+import com.oddlyspaced.calci.mathexpression.context.MEIssue;
+import com.oddlyspaced.calci.mathexpression.enums.MEExpressionForm;
+import com.oddlyspaced.calci.mathexpression.expressions.MEEquals;
+import com.oddlyspaced.calci.mathexpression.expressions.MEExpression;
+import com.oddlyspaced.calci.mathexpression.expressions.MEPower;
+import com.oddlyspaced.calci.mathexpression.expressions.MEValue;
+import com.oddlyspaced.calci.mathexpression.expressions.MEVariable;
+import com.oddlyspaced.calci.mathexpression.numbers.MERational;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -50,7 +50,7 @@ public class MERootFinder {
                 MEExpression originalSolution = it.next();
                 if (!MEContext.shouldStop()) {
                     final AtomicReference<MEExpression> solution = new AtomicReference<>(originalSolution);
-                    MEContext.pushContext(null, new Runnable() { // from class: com.sparkappdesign.archimedes.mathexpression.solvers.MERootFinder.1
+                    MEContext.pushContext(null, new Runnable() { // from class: com.oddlyspaced.calci.mathexpression.solvers.MERootFinder.1
                         @Override // java.lang.Runnable
                         public void run() {
                             solution.set(MEPower.powerWithBaseAndExponent((MEExpression) solution.get(), exponent));
@@ -82,7 +82,7 @@ public class MERootFinder {
                     final AtomicBoolean isValid = new AtomicBoolean(false);
                     final MEContext context = MEContext.getCurrent().copy();
                     context.setForm(MEExpressionForm.Numeric);
-                    MEContext.pushContext(context, new Runnable() { // from class: com.sparkappdesign.archimedes.mathexpression.solvers.MERootFinder.2
+                    MEContext.pushContext(context, new Runnable() { // from class: com.oddlyspaced.calci.mathexpression.solvers.MERootFinder.2
                         @Override // java.lang.Runnable
                         public void run() {
                             MEExpression result = MEExpression.this.substituteExpression(variable, solution3).canonicalize();

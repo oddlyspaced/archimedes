@@ -1,45 +1,45 @@
-package com.sparkappdesign.archimedes.mathtype.writers;
+package com.oddlyspaced.calci.mathtype.writers;
 
-import com.sparkappdesign.archimedes.mathexpression.enums.MEExpressionForm;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEAdditions;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEConstant;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEEquals;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MELogarithm;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEMultiplications;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEPlaceholder;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEPower;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEQuantity;
-import com.sparkappdesign.archimedes.mathexpression.expressions.METrigonometricFunction;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEUnit;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEValue;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEVariable;
-import com.sparkappdesign.archimedes.mathexpression.numbers.MEInteger;
-import com.sparkappdesign.archimedes.mathexpression.numbers.MERational;
-import com.sparkappdesign.archimedes.mathtype.MTMEPlaceholderIdentifier;
-import com.sparkappdesign.archimedes.mathtype.MTMEVariableIdentifier;
-import com.sparkappdesign.archimedes.mathtype.enums.MTInlineOperatorType;
-import com.sparkappdesign.archimedes.mathtype.enums.MTNodeTraits;
-import com.sparkappdesign.archimedes.mathtype.enums.MTNumericCharacterType;
-import com.sparkappdesign.archimedes.mathtype.enums.MTPrecedence;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTElement;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTString;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTDivision;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTInlineOperator;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTLogarithm;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTNumericCharacter;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTParentheses;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTPower;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTReference;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTRoot;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTText;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTVariable;
-import com.sparkappdesign.archimedes.mathtype.parsers.MTOperatorInfo;
-import com.sparkappdesign.archimedes.mathtype.parsers.MTParser;
-import com.sparkappdesign.archimedes.utilities.IterableUtil;
-import com.sparkappdesign.archimedes.utilities.ListUtil;
-import com.sparkappdesign.archimedes.utilities.Range;
-import com.sparkappdesign.archimedes.utilities.observables.ImmutableList;
+import com.oddlyspaced.calci.mathexpression.enums.MEExpressionForm;
+import com.oddlyspaced.calci.mathexpression.expressions.MEAdditions;
+import com.oddlyspaced.calci.mathexpression.expressions.MEConstant;
+import com.oddlyspaced.calci.mathexpression.expressions.MEEquals;
+import com.oddlyspaced.calci.mathexpression.expressions.MEExpression;
+import com.oddlyspaced.calci.mathexpression.expressions.MELogarithm;
+import com.oddlyspaced.calci.mathexpression.expressions.MEMultiplications;
+import com.oddlyspaced.calci.mathexpression.expressions.MEPlaceholder;
+import com.oddlyspaced.calci.mathexpression.expressions.MEPower;
+import com.oddlyspaced.calci.mathexpression.expressions.MEQuantity;
+import com.oddlyspaced.calci.mathexpression.expressions.METrigonometricFunction;
+import com.oddlyspaced.calci.mathexpression.expressions.MEUnit;
+import com.oddlyspaced.calci.mathexpression.expressions.MEValue;
+import com.oddlyspaced.calci.mathexpression.expressions.MEVariable;
+import com.oddlyspaced.calci.mathexpression.numbers.MEInteger;
+import com.oddlyspaced.calci.mathexpression.numbers.MERational;
+import com.oddlyspaced.calci.mathtype.MTMEPlaceholderIdentifier;
+import com.oddlyspaced.calci.mathtype.MTMEVariableIdentifier;
+import com.oddlyspaced.calci.mathtype.enums.MTInlineOperatorType;
+import com.oddlyspaced.calci.mathtype.enums.MTNodeTraits;
+import com.oddlyspaced.calci.mathtype.enums.MTNumericCharacterType;
+import com.oddlyspaced.calci.mathtype.enums.MTPrecedence;
+import com.oddlyspaced.calci.mathtype.nodes.MTElement;
+import com.oddlyspaced.calci.mathtype.nodes.MTString;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTDivision;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTInlineOperator;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTLogarithm;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTNumericCharacter;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTParentheses;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTPower;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTReference;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTRoot;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTText;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTVariable;
+import com.oddlyspaced.calci.mathtype.parsers.MTOperatorInfo;
+import com.oddlyspaced.calci.mathtype.parsers.MTParser;
+import com.oddlyspaced.calci.utilities.IterableUtil;
+import com.oddlyspaced.calci.utilities.ListUtil;
+import com.oddlyspaced.calci.utilities.Range;
+import com.oddlyspaced.calci.utilities.observables.ImmutableList;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -320,7 +320,7 @@ public class MTWriter {
         if (addMinus) {
             string.appendElement(new MTInlineOperator(MTInlineOperatorType.Minus));
         }
-        Collections.sort(newOperands, new Comparator<MEExpression>() { // from class: com.sparkappdesign.archimedes.mathtype.writers.MTWriter.1
+        Collections.sort(newOperands, new Comparator<MEExpression>() { // from class: com.oddlyspaced.calci.mathtype.writers.MTWriter.1
             public int compare(MEExpression operand1, MEExpression operand2) {
                 Boolean isUnit1 = Boolean.valueOf(operand1 instanceof MEUnit);
                 if (isUnit1 != Boolean.valueOf(operand2 instanceof MEUnit)) {
@@ -583,7 +583,7 @@ public class MTWriter {
 
     private void addParentheses(MTString string, ArrayList<Range> rangesArray) {
         ArrayList<Range> ranges = new ArrayList<>(rangesArray);
-        Collections.sort(ranges, new Comparator<Range>() { // from class: com.sparkappdesign.archimedes.mathtype.writers.MTWriter.2
+        Collections.sort(ranges, new Comparator<Range>() { // from class: com.oddlyspaced.calci.mathtype.writers.MTWriter.2
             public int compare(Range range1, Range range2) {
                 return Integer.valueOf(range1.getMaxRange()).compareTo(Integer.valueOf(range2.getMaxRange()));
             }

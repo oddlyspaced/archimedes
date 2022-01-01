@@ -1,7 +1,7 @@
-package com.sparkappdesign.archimedes.archimedes.views;
+package com.oddlyspaced.calci.archimedes.views;
 
 import android.graphics.RectF;
-import com.sparkappdesign.archimedes.archimedes.enums.ARScrollPriority;
+import com.oddlyspaced.calci.archimedes.enums.ARScrollPriority;
 import java.util.ArrayList;
 /* loaded from: classes.dex */
 public interface ARAutoScrollViewItem {

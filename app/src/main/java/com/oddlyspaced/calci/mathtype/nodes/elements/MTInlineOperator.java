@@ -1,15 +1,15 @@
-package com.sparkappdesign.archimedes.mathtype.nodes.elements;
+package com.oddlyspaced.calci.mathtype.nodes.elements;
 
 import android.support.v4.util.TimeUtils;
 import android.support.v4.widget.ViewDragHelper;
-import com.sparkappdesign.archimedes.mathtype.enums.MTInlineOperatorType;
-import com.sparkappdesign.archimedes.mathtype.measures.MTCommonMeasures;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasureContext;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasures;
-import com.sparkappdesign.archimedes.mathtype.measures.font.MTFont;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTElement;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTString;
-import com.sparkappdesign.archimedes.utilities.RectUtil;
+import com.oddlyspaced.calci.mathtype.enums.MTInlineOperatorType;
+import com.oddlyspaced.calci.mathtype.measures.MTCommonMeasures;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasureContext;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasures;
+import com.oddlyspaced.calci.mathtype.measures.font.MTFont;
+import com.oddlyspaced.calci.mathtype.nodes.MTElement;
+import com.oddlyspaced.calci.mathtype.nodes.MTString;
+import com.oddlyspaced.calci.utilities.RectUtil;
 /* loaded from: classes.dex */
 public class MTInlineOperator extends MTElement {
     private MTInlineOperatorType mType;
@@ -42,7 +42,7 @@ public class MTInlineOperator extends MTElement {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: com.sparkappdesign.archimedes.mathtype.nodes.elements.MTInlineOperator$1  reason: invalid class name */
+    /* renamed from: com.oddlyspaced.calci.mathtype.nodes.elements.MTInlineOperator$1  reason: invalid class name */
     /* loaded from: classes.dex */
     public static /* synthetic */ class AnonymousClass1 {
         static final /* synthetic */ int[] $SwitchMap$com$sparkappdesign$archimedes$mathtype$enums$MTInlineOperatorType = new int[MTInlineOperatorType.values().length];
@@ -238,7 +238,7 @@ public class MTInlineOperator extends MTElement {
         }
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTNode
     public MTMeasures measureWithContext(MTMeasureContext context) {
         String text = getText();
         if (this.mType != MTInlineOperatorType.EngineeringExponent) {
@@ -257,7 +257,7 @@ public class MTInlineOperator extends MTElement {
         return getText();
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTElement, com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTElement, com.oddlyspaced.calci.mathtype.nodes.MTNode
     public MTInlineOperator copy() {
         MTInlineOperator copy = new MTInlineOperator();
         copy.mTraits = this.mTraits.clone();
@@ -265,7 +265,7 @@ public class MTInlineOperator extends MTElement {
         return copy;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTNode
     public boolean equivalentTo(Object other) {
         if (this == other) {
             return true;

@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.mathtype.views.selection;
+package com.oddlyspaced.calci.mathtype.views.selection;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -10,12 +10,12 @@ import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.support.v4.view.MotionEventCompat;
 import android.view.animation.LinearInterpolator;
-import com.sparkappdesign.archimedes.R;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasures;
-import com.sparkappdesign.archimedes.mathtype.views.MTMathTypeDrawable;
-import com.sparkappdesign.archimedes.utilities.GeneralUtil;
-import com.sparkappdesign.archimedes.utilities.RectUtil;
-import com.sparkappdesign.archimedes.utilities.animatable.AnimatableRectF;
+import com.oddlyspaced.calci.R;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasures;
+import com.oddlyspaced.calci.mathtype.views.MTMathTypeDrawable;
+import com.oddlyspaced.calci.utilities.GeneralUtil;
+import com.oddlyspaced.calci.utilities.RectUtil;
+import com.oddlyspaced.calci.utilities.animatable.AnimatableRectF;
 /* loaded from: classes.dex */
 public class MTSelectionDrawable extends Drawable {
     private static final int ALPHA = 64;
@@ -131,7 +131,7 @@ public class MTSelectionDrawable extends Drawable {
         this.mAnimator = ValueAnimator.ofFloat(0.0f, 1.0f);
         this.mAnimator.setInterpolator(this.mInterpolator);
         this.mAnimator.setDuration(duration);
-        this.mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: com.sparkappdesign.archimedes.mathtype.views.selection.MTSelectionDrawable.1
+        this.mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: com.oddlyspaced.calci.mathtype.views.selection.MTSelectionDrawable.1
             @Override // android.animation.ValueAnimator.AnimatorUpdateListener
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
                 MTSelectionDrawable.this.mSelectionBounds.updateForAnimationFraction(valueAnimator.getAnimatedFraction());

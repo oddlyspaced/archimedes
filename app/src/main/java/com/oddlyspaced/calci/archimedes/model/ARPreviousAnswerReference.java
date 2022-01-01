@@ -1,13 +1,13 @@
-package com.sparkappdesign.archimedes.archimedes.model;
+package com.oddlyspaced.calci.archimedes.model;
 
-import com.sparkappdesign.archimedes.mathexpression.enums.MEExpressionForm;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression;
-import com.sparkappdesign.archimedes.utilities.GeneralUtil;
-import com.sparkappdesign.archimedes.utilities.events.ObserverType;
-import com.sparkappdesign.archimedes.utilities.observables.ImmutableList;
-import com.sparkappdesign.archimedes.utilities.observables.ObservableChainLink;
-import com.sparkappdesign.archimedes.utilities.observables.ObservableList;
-import com.sparkappdesign.archimedes.utilities.observables.ValueObserver;
+import com.oddlyspaced.calci.mathexpression.enums.MEExpressionForm;
+import com.oddlyspaced.calci.mathexpression.expressions.MEExpression;
+import com.oddlyspaced.calci.utilities.GeneralUtil;
+import com.oddlyspaced.calci.utilities.events.ObserverType;
+import com.oddlyspaced.calci.utilities.observables.ImmutableList;
+import com.oddlyspaced.calci.utilities.observables.ObservableChainLink;
+import com.oddlyspaced.calci.utilities.observables.ObservableList;
+import com.oddlyspaced.calci.utilities.observables.ValueObserver;
 import java.io.Serializable;
 import java.util.ArrayList;
 /* loaded from: classes.dex */
@@ -39,7 +39,7 @@ public class ARPreviousAnswerReference extends ARReference implements Serializab
         this.mCalculation = calculation;
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.model.ARReference, com.sparkappdesign.archimedes.mathtype.MTMEPlaceholderIdentifier
+    @Override // com.oddlyspaced.calci.archimedes.model.ARReference, com.oddlyspaced.calci.mathtype.MTMEPlaceholderIdentifier
     public ArrayList<MEExpression> expressionsForForm(MEExpressionForm form) {
         ImmutableList expressions;
         int indexBeforeCalculation = this.mCalculationList.getCalculations().indexOf(this.mCalculation) - 1;
@@ -49,7 +49,7 @@ public class ARPreviousAnswerReference extends ARReference implements Serializab
         return new ArrayList<>(expressions);
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.model.ARReference
+    @Override // com.oddlyspaced.calci.archimedes.model.ARReference
     public ArrayList<ARObserver> createExpressionDependencyObserversForForm(MEExpressionForm form) {
         ArrayList<ARObserver> result = new ArrayList<>();
         result.add(new ARPreviousAnswerObserver(form, this.mCalculation, this.mCalculationList));
@@ -79,7 +79,7 @@ public class ARPreviousAnswerReference extends ARReference implements Serializab
         private ObserverType mObserver;
 
         public ARPreviousAnswerObserver(final MEExpressionForm answerForm, final ARCalculation calculation, ARCalculationList calculationList) {
-            this.mObserver = calculationList.getCalculations().chain(new ObservableChainLink<ImmutableList<ARCalculation>, ImmutableList<MEExpression>>() { // from class: com.sparkappdesign.archimedes.archimedes.model.ARPreviousAnswerReference.ARPreviousAnswerObserver.2
+            this.mObserver = calculationList.getCalculations().chain(new ObservableChainLink<ImmutableList<ARCalculation>, ImmutableList<MEExpression>>() { // from class: com.oddlyspaced.calci.archimedes.model.ARPreviousAnswerReference.ARPreviousAnswerObserver.2
                 public ObservableList<MEExpression> get(ImmutableList<ARCalculation> base) {
                     int indexOfCalculation = base.indexOf(calculation);
                     if (indexOfCalculation >= 1) {
@@ -87,14 +87,14 @@ public class ARPreviousAnswerReference extends ARReference implements Serializab
                     }
                     return null;
                 }
-            }).addObserver(new ValueObserver<ImmutableList<MEExpression>>() { // from class: com.sparkappdesign.archimedes.archimedes.model.ARPreviousAnswerReference.ARPreviousAnswerObserver.1
+            }).addObserver(new ValueObserver<ImmutableList<MEExpression>>() { // from class: com.oddlyspaced.calci.archimedes.model.ARPreviousAnswerReference.ARPreviousAnswerObserver.1
                 public void handle(ImmutableList<MEExpression> newValue) {
                     ARPreviousAnswerObserver.this.notifyDidChange();
                 }
             });
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.events.ObserverType
+        @Override // com.oddlyspaced.calci.utilities.events.ObserverType
         public void remove() {
             this.mObserver.remove();
         }

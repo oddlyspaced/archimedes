@@ -1,6 +1,6 @@
-package com.sparkappdesign.archimedes.archimedes.model;
+package com.oddlyspaced.calci.archimedes.model;
 
-import com.sparkappdesign.archimedes.mathexpression.context.MEIssue;
+import com.oddlyspaced.calci.mathexpression.context.MEIssue;
 /* loaded from: classes.dex */
 public class ARIssue {
     private String mMessage;

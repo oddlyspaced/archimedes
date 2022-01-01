@@ -1,7 +1,7 @@
-package com.sparkappdesign.archimedes.mathexpression;
+package com.oddlyspaced.calci.mathexpression;
 
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEValue;
-import com.sparkappdesign.archimedes.utilities.GeneralUtil;
+import com.oddlyspaced.calci.mathexpression.expressions.MEValue;
+import com.oddlyspaced.calci.utilities.GeneralUtil;
 /* loaded from: classes.dex */
 public class MEInterval {
     private boolean mIsLeftClosed;

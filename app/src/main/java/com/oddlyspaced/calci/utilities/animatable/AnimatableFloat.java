@@ -1,6 +1,6 @@
-package com.sparkappdesign.archimedes.utilities.animatable;
+package com.oddlyspaced.calci.utilities.animatable;
 
-import com.sparkappdesign.archimedes.utilities.GeneralUtil;
+import com.oddlyspaced.calci.utilities.GeneralUtil;
 /* loaded from: classes.dex */
 public class AnimatableFloat extends Animatable<Float> {
     /* JADX INFO: Access modifiers changed from: protected */
@@ -24,7 +24,7 @@ public class AnimatableFloat extends Animatable<Float> {
         this.mFinalValue = initialValue;
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.animatable.Animatable
+    @Override // com.oddlyspaced.calci.utilities.animatable.Animatable
     public void updateForAnimationFraction(float fraction) {
         this.mCurrentValue = Float.valueOf(GeneralUtil.interpolate(((Float) this.mInitialValue).floatValue(), ((Float) this.mFinalValue).floatValue(), fraction));
     }

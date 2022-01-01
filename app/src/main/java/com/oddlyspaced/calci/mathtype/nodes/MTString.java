@@ -1,13 +1,13 @@
-package com.sparkappdesign.archimedes.mathtype.nodes;
+package com.oddlyspaced.calci.mathtype.nodes;
 
 import android.graphics.PointF;
 import android.graphics.RectF;
-import com.sparkappdesign.archimedes.mathtype.enums.MTNodeTraits;
-import com.sparkappdesign.archimedes.mathtype.measures.MTCommonMeasures;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasureContext;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasures;
-import com.sparkappdesign.archimedes.utilities.PointUtil;
-import com.sparkappdesign.archimedes.utilities.Range;
+import com.oddlyspaced.calci.mathtype.enums.MTNodeTraits;
+import com.oddlyspaced.calci.mathtype.measures.MTCommonMeasures;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasureContext;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasures;
+import com.oddlyspaced.calci.utilities.PointUtil;
+import com.oddlyspaced.calci.utilities.Range;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Iterator;
@@ -15,12 +15,12 @@ import java.util.Iterator;
 public class MTString extends MTNode {
     private ArrayList<MTElement> mElements;
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTNode
     public Iterable<? extends MTElement> getChildren() {
         return this.mElements;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTNode
     public MTElement getParent() {
         return (MTElement) this.mParent;
     }
@@ -34,7 +34,7 @@ public class MTString extends MTNode {
         this(null);
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTNode
     public MTMeasures measureWithContext(MTMeasureContext context) {
         if (isNotEmpty()) {
             MTMeasures measures = new MTMeasures(this, context);
@@ -238,7 +238,7 @@ public class MTString extends MTNode {
         return string;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTNode
     public MTString copy() {
         MTString copy = new MTString();
         copy.mTraits = this.mTraits.clone();
@@ -252,7 +252,7 @@ public class MTString extends MTNode {
         return copy;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTNode
     public boolean equivalentTo(Object other) {
         if (this == other) {
             return true;

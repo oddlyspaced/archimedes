@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.tommath;
+package com.oddlyspaced.calci.tommath;
 /* loaded from: classes.dex */
 public class tommath implements tommathConstants {
     public static long mp_alloc_init() {

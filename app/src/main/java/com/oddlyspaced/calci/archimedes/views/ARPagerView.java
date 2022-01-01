@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.archimedes.views;
+package com.oddlyspaced.calci.archimedes.views;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -20,13 +20,13 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.ViewTreeObserver;
 import android.widget.OverScroller;
-import com.sparkappdesign.archimedes.R;
-import com.sparkappdesign.archimedes.utilities.FloatingOptionsMenu;
-import com.sparkappdesign.archimedes.utilities.GeneralUtil;
-import com.sparkappdesign.archimedes.utilities.RectUtil;
-import com.sparkappdesign.archimedes.utilities.TypefaceCache;
-import com.sparkappdesign.archimedes.utilities.responder.Responder;
-import com.sparkappdesign.archimedes.utilities.responder.ResponderMessage;
+import com.oddlyspaced.calci.R;
+import com.oddlyspaced.calci.utilities.FloatingOptionsMenu;
+import com.oddlyspaced.calci.utilities.GeneralUtil;
+import com.oddlyspaced.calci.utilities.RectUtil;
+import com.oddlyspaced.calci.utilities.TypefaceCache;
+import com.oddlyspaced.calci.utilities.responder.Responder;
+import com.oddlyspaced.calci.utilities.responder.ResponderMessage;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -161,7 +161,7 @@ public class ARPagerView extends ViewGroup implements Responder, ARViewGroup {
         Bundle bundle = (Bundle) state;
         super.onRestoreInstanceState(bundle.getParcelable("savedInstanceState"));
         final int currentRoundedPageIndex = bundle.getInt("currentRoundedPageIndex");
-        this.mContentView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARPagerView.1
+        this.mContentView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() { // from class: com.oddlyspaced.calci.archimedes.views.ARPagerView.1
             @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
             public void onGlobalLayout() {
                 ARPagerView.this.mContentView.scrollTo(ARPagerView.this.mContentView.getScrollXForPage(currentRoundedPageIndex), 0);
@@ -265,7 +265,7 @@ public class ARPagerView extends ViewGroup implements Responder, ARViewGroup {
         return 1.0f;
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public Responder getAncestor() {
         ViewParent parent = getParent();
         if (parent instanceof Responder) {
@@ -274,27 +274,27 @@ public class ARPagerView extends ViewGroup implements Responder, ARViewGroup {
         return null;
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public boolean canHandleMessageType(String type) {
         return false;
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public boolean isChildAllowedToHandleMessage(Responder child, ResponderMessage message) {
         return true;
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public void handleMessage(String type, HashMap<String, Object> contents) {
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARViewGroup
+    @Override // com.oddlyspaced.calci.archimedes.views.ARViewGroup
     public RectF finalBoundsForChildAtIndex(int index) {
         PointF size = ((ARView) getChildAt(index)).finalSize();
         return RectUtil.create(0.0f, 0.0f, size.x, size.y);
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARView
+    @Override // com.oddlyspaced.calci.archimedes.views.ARView
     public PointF finalSize() {
         return this.mContentView.finalSize();
     }
@@ -338,7 +338,7 @@ public class ARPagerView extends ViewGroup implements Responder, ARViewGroup {
             while (it.hasNext()) {
                 addView(((ARPagerPage) it.next()).getView());
             }
-            getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARPagerView.ARPagerContentView.1
+            getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() { // from class: com.oddlyspaced.calci.archimedes.views.ARPagerView.ARPagerContentView.1
                 @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
                 public void onGlobalLayout() {
                     ARPagerContentView.this.scrollTo(ARPagerContentView.this.getScrollXForPage(ARPagerView.this.mMainPageIndex), 0);
@@ -555,7 +555,7 @@ public class ARPagerView extends ViewGroup implements Responder, ARViewGroup {
             return ((ARPagerPage) ARPagerView.this.mPages.get(index)).getView().getMeasuredHeight();
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+        @Override // com.oddlyspaced.calci.utilities.responder.Responder
         public Responder getAncestor() {
             ViewParent parent = getParent();
             if (parent instanceof Responder) {
@@ -564,27 +564,27 @@ public class ARPagerView extends ViewGroup implements Responder, ARViewGroup {
             return null;
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+        @Override // com.oddlyspaced.calci.utilities.responder.Responder
         public boolean canHandleMessageType(String type) {
             return false;
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+        @Override // com.oddlyspaced.calci.utilities.responder.Responder
         public boolean isChildAllowedToHandleMessage(Responder child, ResponderMessage message) {
             return true;
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+        @Override // com.oddlyspaced.calci.utilities.responder.Responder
         public void handleMessage(String type, HashMap<String, Object> contents) {
         }
 
-        @Override // com.sparkappdesign.archimedes.archimedes.views.ARViewGroup
+        @Override // com.oddlyspaced.calci.archimedes.views.ARViewGroup
         public RectF finalBoundsForChildAtIndex(int index) {
             PointF size = ((ARView) getChildAt(index)).finalSize();
             return RectUtil.create((float) getChildAt(index).getLeft(), 0.0f, size.x, size.y);
         }
 
-        @Override // com.sparkappdesign.archimedes.archimedes.views.ARView
+        @Override // com.oddlyspaced.calci.archimedes.views.ARView
         public PointF finalSize() {
             return ((ARView) ((ARPagerPage) ARPagerView.this.mPages.get(ARPagerView.this.mTargetPageIndex)).getView()).finalSize();
         }

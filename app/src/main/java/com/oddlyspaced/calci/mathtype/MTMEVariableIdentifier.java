@@ -1,6 +1,6 @@
-package com.sparkappdesign.archimedes.mathtype;
+package com.oddlyspaced.calci.mathtype;
 
-import com.sparkappdesign.archimedes.mathtype.nodes.MTString;
+import com.oddlyspaced.calci.mathtype.nodes.MTString;
 /* loaded from: classes.dex */
 public class MTMEVariableIdentifier {
     private MTString mName;

@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.archimedes.views;
+package com.oddlyspaced.calci.archimedes.views;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -8,17 +8,17 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import com.sparkappdesign.archimedes.R;
-import com.sparkappdesign.archimedes.archimedes.enums.ARButtonPadType;
-import com.sparkappdesign.archimedes.archimedes.model.ARButtonAction;
-import com.sparkappdesign.archimedes.archimedes.model.ARSettings;
-import com.sparkappdesign.archimedes.mathexpression.enums.MEAngleUnitType;
-import com.sparkappdesign.archimedes.utilities.DeviceUtil;
+import com.oddlyspaced.calci.R;
+import com.oddlyspaced.calci.archimedes.enums.ARButtonPadType;
+import com.oddlyspaced.calci.archimedes.model.ARButtonAction;
+import com.oddlyspaced.calci.archimedes.model.ARSettings;
+import com.oddlyspaced.calci.mathexpression.enums.MEAngleUnitType;
+import com.oddlyspaced.calci.utilities.DeviceUtil;
 /* loaded from: classes.dex */
 public class ARButtonPad extends ViewGroup {
     private ARButton mAngleUnitButton;
     private ARPagerView mPagerView;
-    private BroadcastReceiver mSettingsChangedListener = new BroadcastReceiver() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARButtonPad.1
+    private BroadcastReceiver mSettingsChangedListener = new BroadcastReceiver() { // from class: com.oddlyspaced.calci.archimedes.views.ARButtonPad.1
         @Override // android.content.BroadcastReceiver
         public void onReceive(Context context, Intent intent) {
             ARButtonPad.this.removeAllViews();

@@ -1,10 +1,10 @@
-package com.sparkappdesign.archimedes.archimedes.model;
+package com.oddlyspaced.calci.archimedes.model;
 
-import com.sparkappdesign.archimedes.mathexpression.enums.MEExpressionForm;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEPlaceholder;
-import com.sparkappdesign.archimedes.mathtype.MTMEPlaceholderIdentifier;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTReference;
+import com.oddlyspaced.calci.mathexpression.enums.MEExpressionForm;
+import com.oddlyspaced.calci.mathexpression.expressions.MEExpression;
+import com.oddlyspaced.calci.mathexpression.expressions.MEPlaceholder;
+import com.oddlyspaced.calci.mathtype.MTMEPlaceholderIdentifier;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTReference;
 import java.util.ArrayList;
 /* loaded from: classes.dex */
 public class ARReference implements MTMEPlaceholderIdentifier {
@@ -20,7 +20,7 @@ public class ARReference implements MTMEPlaceholderIdentifier {
         return identifier instanceof ARReference ? (ARReference) identifier : null;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.MTMEPlaceholderIdentifier
+    @Override // com.oddlyspaced.calci.mathtype.MTMEPlaceholderIdentifier
     public ArrayList<MEExpression> expressionsForForm(MEExpressionForm form) {
         return null;
     }

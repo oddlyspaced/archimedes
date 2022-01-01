@@ -1,7 +1,7 @@
-package com.sparkappdesign.archimedes.utilities.observables;
+package com.oddlyspaced.calci.utilities.observables;
 /* loaded from: classes.dex */
 public class MutableObservable<T> extends Observable<T> {
-    @Override // com.sparkappdesign.archimedes.utilities.observables.Observable
+    @Override // com.oddlyspaced.calci.utilities.observables.Observable
     public final void setValue(T newValue) {
         super.setValue(newValue);
     }

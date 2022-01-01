@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.mathtype.views;
+package com.oddlyspaced.calci.mathtype.views;
 
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
@@ -7,10 +7,10 @@ import android.graphics.Path;
 import android.graphics.PointF;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
-import com.sparkappdesign.archimedes.utilities.animatable.AnimatablePath;
-import com.sparkappdesign.archimedes.utilities.animatable.AnimatablePointF;
-import com.sparkappdesign.archimedes.utilities.animatable.AnimatableRectF;
-import com.sparkappdesign.archimedes.utilities.path.PathWrapper;
+import com.oddlyspaced.calci.utilities.animatable.AnimatablePath;
+import com.oddlyspaced.calci.utilities.animatable.AnimatablePointF;
+import com.oddlyspaced.calci.utilities.animatable.AnimatableRectF;
+import com.oddlyspaced.calci.utilities.path.PathWrapper;
 /* loaded from: classes.dex */
 public class MTGlyphDrawable extends Drawable {
     private AnimatableRectF mBounds;

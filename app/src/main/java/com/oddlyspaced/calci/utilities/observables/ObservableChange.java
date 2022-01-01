@@ -1,6 +1,6 @@
-package com.sparkappdesign.archimedes.utilities.observables;
+package com.oddlyspaced.calci.utilities.observables;
 
-import com.sparkappdesign.archimedes.utilities.events.Condition;
+import com.oddlyspaced.calci.utilities.events.Condition;
 /* loaded from: classes.dex */
 public final class ObservableChange<T> {
     Object mExtraInfo;
@@ -39,8 +39,8 @@ public final class ObservableChange<T> {
 
     public void raiseWillChange() {
         if (this.mObservable.mWillChange != null) {
-            this.mObservable.mWillChange.raise(this, new Condition() { // from class: com.sparkappdesign.archimedes.utilities.observables.ObservableChange.1
-                @Override // com.sparkappdesign.archimedes.utilities.events.Condition
+            this.mObservable.mWillChange.raise(this, new Condition() { // from class: com.oddlyspaced.calci.utilities.observables.ObservableChange.1
+                @Override // com.oddlyspaced.calci.utilities.events.Condition
                 public boolean isSatisfied() {
                     return ObservableChange.this.mGroup == null;
                 }

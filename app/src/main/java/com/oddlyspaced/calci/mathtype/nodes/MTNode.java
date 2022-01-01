@@ -1,8 +1,8 @@
-package com.sparkappdesign.archimedes.mathtype.nodes;
+package com.oddlyspaced.calci.mathtype.nodes;
 
-import com.sparkappdesign.archimedes.mathtype.enums.MTNodeTraits;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasureContext;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasures;
+import com.oddlyspaced.calci.mathtype.enums.MTNodeTraits;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasureContext;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasures;
 import java.io.Serializable;
 import java.util.EnumSet;
 /* loaded from: classes.dex */

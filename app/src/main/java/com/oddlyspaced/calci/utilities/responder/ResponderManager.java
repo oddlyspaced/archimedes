@@ -1,8 +1,8 @@
-package com.sparkappdesign.archimedes.utilities.responder;
+package com.oddlyspaced.calci.utilities.responder;
 
-import com.sparkappdesign.archimedes.mathtype.views.MTMathTypeView;
-import com.sparkappdesign.archimedes.utilities.observables.MutableObservable;
-import com.sparkappdesign.archimedes.utilities.observables.Observable;
+import com.oddlyspaced.calci.mathtype.views.MTMathTypeView;
+import com.oddlyspaced.calci.utilities.observables.MutableObservable;
+import com.oddlyspaced.calci.utilities.observables.Observable;
 /* loaded from: classes.dex */
 public class ResponderManager {
     private static MutableObservable<Responder> mFirstResponder = new MutableObservable<>();

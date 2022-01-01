@@ -1,11 +1,11 @@
-package com.sparkappdesign.archimedes.mathtype.nodes.elements;
+package com.oddlyspaced.calci.mathtype.nodes.elements;
 
-import com.sparkappdesign.archimedes.mathtype.enums.MTNodeTraits;
-import com.sparkappdesign.archimedes.mathtype.measures.MTCommonMeasures;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasureContext;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasures;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTElement;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTString;
+import com.oddlyspaced.calci.mathtype.enums.MTNodeTraits;
+import com.oddlyspaced.calci.mathtype.measures.MTCommonMeasures;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasureContext;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasures;
+import com.oddlyspaced.calci.mathtype.nodes.MTElement;
+import com.oddlyspaced.calci.mathtype.nodes.MTString;
 import java.util.Arrays;
 import java.util.EnumSet;
 /* loaded from: classes.dex */
@@ -13,7 +13,7 @@ public class MTRoot extends MTElement {
     private MTString mContents;
     private MTString mDegree;
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTElement, com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTElement, com.oddlyspaced.calci.mathtype.nodes.MTNode
     public Iterable<? extends MTString> getChildren() {
         return Arrays.asList(this.mContents, this.mDegree);
     }
@@ -50,7 +50,7 @@ public class MTRoot extends MTElement {
         this.mDegree.mTraits = !degreeEditable ? EnumSet.of(MTNodeTraits.CantSelectOrEditChildren) : EnumSet.noneOf(MTNodeTraits.class);
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTNode
     public MTMeasures measureWithContext(MTMeasureContext context) {
         return MTCommonMeasures.measuresForRoot(this, this.mContents, this.mDegree, context);
     }
@@ -63,7 +63,7 @@ public class MTRoot extends MTElement {
         return "√(" + this.mContents + ")";
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTElement, com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTElement, com.oddlyspaced.calci.mathtype.nodes.MTNode
     public MTRoot copy() {
         MTRoot copy = new MTRoot();
         copy.mTraits = this.mTraits.clone();
@@ -74,7 +74,7 @@ public class MTRoot extends MTElement {
         return copy;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathtype.nodes.MTNode
+    @Override // com.oddlyspaced.calci.mathtype.nodes.MTNode
     public boolean equivalentTo(Object other) {
         if (this == other) {
             return true;

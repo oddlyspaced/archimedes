@@ -1,9 +1,9 @@
-package com.sparkappdesign.archimedes.utilities.observables;
+package com.oddlyspaced.calci.utilities.observables;
 
-import com.sparkappdesign.archimedes.utilities.WeakableReference;
-import com.sparkappdesign.archimedes.utilities.events.Event;
-import com.sparkappdesign.archimedes.utilities.events.Observer;
-import com.sparkappdesign.archimedes.utilities.events.OwnedEvent;
+import com.oddlyspaced.calci.utilities.WeakableReference;
+import com.oddlyspaced.calci.utilities.events.Event;
+import com.oddlyspaced.calci.utilities.events.Observer;
+import com.oddlyspaced.calci.utilities.events.OwnedEvent;
 import java.lang.ref.WeakReference;
 /* JADX INFO: Access modifiers changed from: package-private */
 /* loaded from: classes.dex */
@@ -61,7 +61,7 @@ public final class ObservableChain<B, C> extends Observable<C> {
         change.mGroup.setNewValueInternal(this, change.mNewValue, change.mExtraInfo);
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.observables.Observable
+    @Override // com.oddlyspaced.calci.utilities.observables.Observable
     public Event<ObservableChange<C>> getWillChange() {
         if (this.mWillChange != null) {
             return this.mWillChange;
@@ -71,7 +71,7 @@ public final class ObservableChain<B, C> extends Observable<C> {
         return chainOwnedEvent;
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.observables.Observable
+    @Override // com.oddlyspaced.calci.utilities.observables.Observable
     public Event<ObservableChange<C>> getDidChange() {
         if (this.mDidChange != null) {
             return this.mDidChange;
@@ -91,14 +91,14 @@ public final class ObservableChain<B, C> extends Observable<C> {
         private ChainOwnedEvent() {
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.events.Event
+        @Override // com.oddlyspaced.calci.utilities.events.Event
         public Observer<A> add(Observer<A> observer) {
             Observer<A> result = super.add(observer);
             ObservableChain.this.updateShouldKeepAlive();
             return result;
         }
 
-        @Override // com.sparkappdesign.archimedes.utilities.events.Event
+        @Override // com.oddlyspaced.calci.utilities.events.Event
         public void remove(Observer<A> observer) {
             super.remove(observer);
             ObservableChain.this.updateShouldKeepAlive();
@@ -110,7 +110,7 @@ public final class ObservableChain<B, C> extends Observable<C> {
     public static final class BaseObserver<B, C> extends Observer<ObservableChange<B>> {
         private WeakableReference<ObservableChain<B, C>> mChain;
 
-        @Override // com.sparkappdesign.archimedes.utilities.events.Observer
+        @Override // com.oddlyspaced.calci.utilities.events.Observer
         public /* bridge */ /* synthetic */ void handle(Object obj) {
             handle((ObservableChange) ((ObservableChange) obj));
         }
@@ -136,7 +136,7 @@ public final class ObservableChain<B, C> extends Observable<C> {
     public static final class ChildObserver<B, C> extends Observer<ObservableChange<C>> {
         WeakReference<ObservableChain<B, C>> mChain;
 
-        @Override // com.sparkappdesign.archimedes.utilities.events.Observer
+        @Override // com.oddlyspaced.calci.utilities.events.Observer
         public /* bridge */ /* synthetic */ void handle(Object obj) {
             handle((ObservableChange) ((ObservableChange) obj));
         }

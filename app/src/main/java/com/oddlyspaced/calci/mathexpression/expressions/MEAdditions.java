@@ -1,11 +1,11 @@
-package com.sparkappdesign.archimedes.mathexpression.expressions;
+package com.oddlyspaced.calci.mathexpression.expressions;
 
-import com.sparkappdesign.archimedes.mathexpression.context.MEContext;
-import com.sparkappdesign.archimedes.mathexpression.numbers.MEReal;
-import com.sparkappdesign.archimedes.utilities.GeneralUtil;
-import com.sparkappdesign.archimedes.utilities.ListUtil;
-import com.sparkappdesign.archimedes.utilities.Merger;
-import com.sparkappdesign.archimedes.utilities.observables.ImmutableList;
+import com.oddlyspaced.calci.mathexpression.context.MEContext;
+import com.oddlyspaced.calci.mathexpression.numbers.MEReal;
+import com.oddlyspaced.calci.utilities.GeneralUtil;
+import com.oddlyspaced.calci.utilities.ListUtil;
+import com.oddlyspaced.calci.utilities.Merger;
+import com.oddlyspaced.calci.utilities.observables.ImmutableList;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -36,12 +36,12 @@ public class MEAdditions extends MEExpression {
         return new MEAdditions(newOperands);
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public ImmutableList<MEExpression> children() {
         return this.mOperands;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public MEAdditions copyWithChildren(Collection<? extends MEExpression> children) {
         if (GeneralUtil.equalOrBothNull(children(), children)) {
             return this;
@@ -51,7 +51,7 @@ public class MEAdditions extends MEExpression {
         return copy;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public MEExpression canonicalize() {
         ArrayList<MEExpression> terms = canonicalizedTermsIncludingNestedAdditions();
         if (shouldStop()) {
@@ -89,7 +89,7 @@ public class MEAdditions extends MEExpression {
                 return null;
             }
         }
-        ListUtil.mergeObjects(terms, new Merger<MEExpression>() { // from class: com.sparkappdesign.archimedes.mathexpression.expressions.MEAdditions.1
+        ListUtil.mergeObjects(terms, new Merger<MEExpression>() { // from class: com.oddlyspaced.calci.mathexpression.expressions.MEAdditions.1
             public MEExpression merge(MEExpression obj1, MEExpression obj2, AtomicBoolean merged, AtomicBoolean stop) {
                 stop.set(MEExpression.shouldStop());
                 return MEAdditions.this.tryMergeTerms(obj1, obj2, merged);
@@ -137,7 +137,7 @@ public class MEAdditions extends MEExpression {
         return coefficient;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public MEReal evaluateNumerically(MEReal value, MEVariable variable) {
         MEReal result = new MEReal(0.0d);
         Iterator<MEExpression> it = this.mOperands.iterator();
@@ -151,7 +151,7 @@ public class MEAdditions extends MEExpression {
         return result;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public double evaluateNumerically(double value, MEVariable variable) {
         double result = 0.0d;
         Iterator<MEExpression> it = this.mOperands.iterator();
@@ -165,7 +165,7 @@ public class MEAdditions extends MEExpression {
         return result;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public boolean equals(Object other) {
         if (this == other) {
             return true;
@@ -176,12 +176,12 @@ public class MEAdditions extends MEExpression {
         return false;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public int hashCode() {
         return ListUtil.hashCodeIgnoringOrder(this.mOperands);
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public String toString() {
         String string = "";
         boolean addOperator = false;

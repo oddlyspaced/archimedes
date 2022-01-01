@@ -1,13 +1,13 @@
-package com.sparkappdesign.archimedes.mathexpression.expressions;
+package com.oddlyspaced.calci.mathexpression.expressions;
 
-import com.sparkappdesign.archimedes.mathexpression.context.MEContext;
-import com.sparkappdesign.archimedes.mathexpression.context.MEIssue;
-import com.sparkappdesign.archimedes.mathexpression.enums.MEExpressionForm;
-import com.sparkappdesign.archimedes.mathexpression.numbers.MEInteger;
-import com.sparkappdesign.archimedes.mathexpression.numbers.MERational;
-import com.sparkappdesign.archimedes.mathexpression.numbers.MEReal;
-import com.sparkappdesign.archimedes.utilities.GeneralUtil;
-import com.sparkappdesign.archimedes.utilities.observables.ImmutableList;
+import com.oddlyspaced.calci.mathexpression.context.MEContext;
+import com.oddlyspaced.calci.mathexpression.context.MEIssue;
+import com.oddlyspaced.calci.mathexpression.enums.MEExpressionForm;
+import com.oddlyspaced.calci.mathexpression.numbers.MEInteger;
+import com.oddlyspaced.calci.mathexpression.numbers.MERational;
+import com.oddlyspaced.calci.mathexpression.numbers.MEReal;
+import com.oddlyspaced.calci.utilities.GeneralUtil;
+import com.oddlyspaced.calci.utilities.observables.ImmutableList;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -48,12 +48,12 @@ public class MEPower extends MEExpression {
         return powerWithBaseAndExponent(dividend, MEValue.minusOne());
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public ImmutableList<MEExpression> children() {
         return new ImmutableList<>(Arrays.asList(this.mBase, this.mExponent));
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public MEPower copyWithChildren(Collection<? extends MEExpression> children) {
         if (GeneralUtil.equalOrBothNull(children(), children)) {
             return this;
@@ -65,7 +65,7 @@ public class MEPower extends MEExpression {
         return copy;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public MEExpression canonicalize() {
         MEExpression base = this.mBase.canonicalize();
         if (shouldStop(base)) {
@@ -261,7 +261,7 @@ public class MEPower extends MEExpression {
         return new MEMultiplications(powerWithBaseAndExponent(multiplierValue.invert(), power.mExponent), powerWithBaseAndExponent(new MEMultiplications(multiplierValue, additions), power.mExponent)).canonicalize();
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public MEReal evaluateNumerically(MEReal value, MEVariable variable) {
         MEReal baseValue = this.mBase.evaluateNumerically(value, variable);
         if (shouldStop(baseValue)) {
@@ -274,7 +274,7 @@ public class MEPower extends MEExpression {
         return null;
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public double evaluateNumerically(double value, MEVariable variable) {
         double baseValue = this.mBase.evaluateNumerically(value, variable);
         if (Double.isInfinite(baseValue) || shouldStop()) {
@@ -287,12 +287,12 @@ public class MEPower extends MEExpression {
         return Math.pow(baseValue, exponentValue);
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public MEExpression invert() {
         return powerWithBaseAndExponent(this.mBase, this.mExponent.negate());
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public boolean equals(Object other) {
         if (this == other) {
             return true;
@@ -304,12 +304,12 @@ public class MEPower extends MEExpression {
         return GeneralUtil.equalOrBothNull(this.mBase, otherPower.mBase) && GeneralUtil.equalOrBothNull(this.mExponent, otherPower.mExponent);
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public int hashCode() {
         return GeneralUtil.hashCode(this.mBase) ^ GeneralUtil.hashCode(this.mExponent);
     }
 
-    @Override // com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression
+    @Override // com.oddlyspaced.calci.mathexpression.expressions.MEExpression
     public String toString() {
         if (this.mExponent.equals(new MEValue(1, 2))) {
             return "√" + descriptionForOperand(this.mBase);

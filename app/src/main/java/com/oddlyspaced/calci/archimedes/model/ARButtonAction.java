@@ -1,23 +1,23 @@
-package com.sparkappdesign.archimedes.archimedes.model;
+package com.oddlyspaced.calci.archimedes.model;
 
 import android.content.Context;
 import android.content.Intent;
-import com.sparkappdesign.archimedes.Help;
-import com.sparkappdesign.archimedes.Settings;
-import com.sparkappdesign.archimedes.mathtype.enums.MTInlineOperatorType;
-import com.sparkappdesign.archimedes.mathtype.enums.MTNumericCharacterType;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTElement;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTDivision;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTInlineOperator;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTLogarithm;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTNumericCharacter;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTParentheses;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTPower;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTRoot;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTText;
-import com.sparkappdesign.archimedes.mathtype.nodes.elements.MTVariable;
-import com.sparkappdesign.archimedes.mathtype.views.input.MTMessageType;
-import com.sparkappdesign.archimedes.utilities.responder.ResponderMessage;
+import com.oddlyspaced.calci.Help;
+import com.oddlyspaced.calci.Settings;
+import com.oddlyspaced.calci.mathtype.enums.MTInlineOperatorType;
+import com.oddlyspaced.calci.mathtype.enums.MTNumericCharacterType;
+import com.oddlyspaced.calci.mathtype.nodes.MTElement;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTDivision;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTInlineOperator;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTLogarithm;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTNumericCharacter;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTParentheses;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTPower;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTRoot;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTText;
+import com.oddlyspaced.calci.mathtype.nodes.elements.MTVariable;
+import com.oddlyspaced.calci.mathtype.views.input.MTMessageType;
+import com.oddlyspaced.calci.utilities.responder.ResponderMessage;
 import java.util.Arrays;
 import java.util.HashMap;
 /* loaded from: classes.dex */
@@ -112,7 +112,7 @@ public class ARButtonAction {
     }
 
     private static ARButtonAction insertMessageAction(Context context, String imageName, final MTElement element) {
-        return new ARButtonAction(context, imageName, false, new Runnable() { // from class: com.sparkappdesign.archimedes.archimedes.model.ARButtonAction.1
+        return new ARButtonAction(context, imageName, false, new Runnable() { // from class: com.oddlyspaced.calci.archimedes.model.ARButtonAction.1
             @Override // java.lang.Runnable
             public void run() {
                 HashMap<String, Object> messageContents = new HashMap<>();
@@ -123,7 +123,7 @@ public class ARButtonAction {
     }
 
     private static ARButtonAction genericMessageAction(Context context, String imageName, boolean autoRepeat, final String messageType) {
-        return new ARButtonAction(context, imageName, autoRepeat, new Runnable() { // from class: com.sparkappdesign.archimedes.archimedes.model.ARButtonAction.2
+        return new ARButtonAction(context, imageName, autoRepeat, new Runnable() { // from class: com.oddlyspaced.calci.archimedes.model.ARButtonAction.2
             @Override // java.lang.Runnable
             public void run() {
                 new ResponderMessage(messageType, null).send();
@@ -132,7 +132,7 @@ public class ARButtonAction {
     }
 
     private static ARButtonAction startActivityAction(final Context context, String imageName, final Class activityClass) {
-        return new ARButtonAction(context, imageName, false, new Runnable() { // from class: com.sparkappdesign.archimedes.archimedes.model.ARButtonAction.3
+        return new ARButtonAction(context, imageName, false, new Runnable() { // from class: com.oddlyspaced.calci.archimedes.model.ARButtonAction.3
             @Override // java.lang.Runnable
             public void run() {
                 context.startActivity(new Intent(context, activityClass));

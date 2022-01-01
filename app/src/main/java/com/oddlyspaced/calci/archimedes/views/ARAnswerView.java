@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.archimedes.views;
+package com.oddlyspaced.calci.archimedes.views;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -17,32 +17,32 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import com.sparkappdesign.archimedes.R;
-import com.sparkappdesign.archimedes.archimedes.enums.ARAnswerState;
-import com.sparkappdesign.archimedes.archimedes.enums.ARLineSetMode;
-import com.sparkappdesign.archimedes.archimedes.model.ARAnswer;
-import com.sparkappdesign.archimedes.archimedes.model.ARCalculation;
-import com.sparkappdesign.archimedes.archimedes.model.ARIssue;
-import com.sparkappdesign.archimedes.archimedes.model.ARSettings;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression;
-import com.sparkappdesign.archimedes.mathtype.enums.MTDigitGroupingStyle;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTString;
-import com.sparkappdesign.archimedes.mathtype.parsers.MTParser;
-import com.sparkappdesign.archimedes.mathtype.views.MTMathTypeView;
-import com.sparkappdesign.archimedes.mathtype.writers.MTWriter;
-import com.sparkappdesign.archimedes.utilities.GeneralUtil;
-import com.sparkappdesign.archimedes.utilities.RectUtil;
-import com.sparkappdesign.archimedes.utilities.Timer;
-import com.sparkappdesign.archimedes.utilities.TypefaceCache;
-import com.sparkappdesign.archimedes.utilities.events.Observer;
-import com.sparkappdesign.archimedes.utilities.events.ObserverType;
-import com.sparkappdesign.archimedes.utilities.observables.ImmutableList;
-import com.sparkappdesign.archimedes.utilities.observables.MutableObservable;
-import com.sparkappdesign.archimedes.utilities.observables.Observable;
-import com.sparkappdesign.archimedes.utilities.observables.ObservableChainLink;
-import com.sparkappdesign.archimedes.utilities.observables.ObservableChange;
-import com.sparkappdesign.archimedes.utilities.responder.Responder;
-import com.sparkappdesign.archimedes.utilities.responder.ResponderMessage;
+import com.oddlyspaced.calci.R;
+import com.oddlyspaced.calci.archimedes.enums.ARAnswerState;
+import com.oddlyspaced.calci.archimedes.enums.ARLineSetMode;
+import com.oddlyspaced.calci.archimedes.model.ARAnswer;
+import com.oddlyspaced.calci.archimedes.model.ARCalculation;
+import com.oddlyspaced.calci.archimedes.model.ARIssue;
+import com.oddlyspaced.calci.archimedes.model.ARSettings;
+import com.oddlyspaced.calci.mathexpression.expressions.MEExpression;
+import com.oddlyspaced.calci.mathtype.enums.MTDigitGroupingStyle;
+import com.oddlyspaced.calci.mathtype.nodes.MTString;
+import com.oddlyspaced.calci.mathtype.parsers.MTParser;
+import com.oddlyspaced.calci.mathtype.views.MTMathTypeView;
+import com.oddlyspaced.calci.mathtype.writers.MTWriter;
+import com.oddlyspaced.calci.utilities.GeneralUtil;
+import com.oddlyspaced.calci.utilities.RectUtil;
+import com.oddlyspaced.calci.utilities.Timer;
+import com.oddlyspaced.calci.utilities.TypefaceCache;
+import com.oddlyspaced.calci.utilities.events.Observer;
+import com.oddlyspaced.calci.utilities.events.ObserverType;
+import com.oddlyspaced.calci.utilities.observables.ImmutableList;
+import com.oddlyspaced.calci.utilities.observables.MutableObservable;
+import com.oddlyspaced.calci.utilities.observables.Observable;
+import com.oddlyspaced.calci.utilities.observables.ObservableChainLink;
+import com.oddlyspaced.calci.utilities.observables.ObservableChange;
+import com.oddlyspaced.calci.utilities.responder.Responder;
+import com.oddlyspaced.calci.utilities.responder.ResponderMessage;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -100,7 +100,7 @@ public class ARAnswerView extends ViewGroup implements Responder, ARLineSetViewD
                 answer.setHandler(new Handler(getContext().getMainLooper()));
                 this.mLineSetView.setLineSet(answer.getLines());
                 this.mSeparatorView.setText(getTitle(answer));
-                this.mStringEditedObserver = answer.getInputLines().getStringEditedEvent().add(new Observer<MTString>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARAnswerView.4
+                this.mStringEditedObserver = answer.getInputLines().getStringEditedEvent().add(new Observer<MTString>() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.4
                     public void handle(MTString string) {
                         ARAnswerView.this.handleInputStringsChanged();
                     }
@@ -129,7 +129,7 @@ public class ARAnswerView extends ViewGroup implements Responder, ARLineSetViewD
     public ARAnswerView(Context context) {
         super(context);
         this.mAnswer = new MutableObservable<>();
-        this.mSettingsChangedListener = new BroadcastReceiver() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARAnswerView.1
+        this.mSettingsChangedListener = new BroadcastReceiver() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.1
             @Override // android.content.BroadcastReceiver
             public void onReceive(Context context2, Intent intent) {
                 if (!ARAnswerView.this.mDeinitialized) {
@@ -138,7 +138,7 @@ public class ARAnswerView extends ViewGroup implements Responder, ARLineSetViewD
                 }
             }
         };
-        this.mShowSpinWheelRunnable = new Runnable() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARAnswerView.2
+        this.mShowSpinWheelRunnable = new Runnable() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.2
             @Override // java.lang.Runnable
             public void run() {
                 if (!ARAnswerView.this.mDeinitialized) {
@@ -146,7 +146,7 @@ public class ARAnswerView extends ViewGroup implements Responder, ARLineSetViewD
                 }
             }
         };
-        this.mRecalculateAnswerRunnable = new Runnable() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARAnswerView.3
+        this.mRecalculateAnswerRunnable = new Runnable() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.3
             @Override // java.lang.Runnable
             public void run() {
                 if (!ARAnswerView.this.mDeinitialized) {
@@ -167,62 +167,62 @@ public class ARAnswerView extends ViewGroup implements Responder, ARLineSetViewD
         this.mProgressBarContainer = container;
         this.mAnswer = new MutableObservable<>();
         this.mObservers = new ArrayList<>();
-        this.mObservers.add(this.mAnswer.chain(new ObservableChainLink<ARAnswer, ARAnswerState>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARAnswerView.6
+        this.mObservers.add(this.mAnswer.chain(new ObservableChainLink<ARAnswer, ARAnswerState>() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.6
             public Observable<ARAnswerState> get(ARAnswer answer) {
                 if (answer != null) {
                     return answer.getState();
                 }
                 return null;
             }
-        }).addObserver(new Observer<ObservableChange<ARAnswerState>>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARAnswerView.5
+        }).addObserver(new Observer<ObservableChange<ARAnswerState>>() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.5
             public void handle(ObservableChange<ARAnswerState> change) {
                 ARAnswerView.this.handleAnswerStateChanged();
             }
         }));
-        this.mObservers.add(this.mAnswer.chain(new ObservableChainLink<ARAnswer, Boolean>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARAnswerView.8
+        this.mObservers.add(this.mAnswer.chain(new ObservableChainLink<ARAnswer, Boolean>() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.8
             public Observable<Boolean> get(ARAnswer answer) {
                 if (answer != null) {
                     return answer.isPaused();
                 }
                 return null;
             }
-        }).addObserver(new Observer<ObservableChange<Boolean>>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARAnswerView.7
+        }).addObserver(new Observer<ObservableChange<Boolean>>() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.7
             public void handle(ObservableChange<Boolean> change) {
                 ARAnswerView.this.handlePausedChanged();
             }
         }));
-        this.mObservers.add(this.mAnswer.chain(new ObservableChainLink<ARAnswer, ImmutableList<ARIssue>>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARAnswerView.10
+        this.mObservers.add(this.mAnswer.chain(new ObservableChainLink<ARAnswer, ImmutableList<ARIssue>>() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.10
             public Observable<ImmutableList<ARIssue>> get(ARAnswer answer) {
                 if (answer != null) {
                     return answer.getIssues();
                 }
                 return null;
             }
-        }).addObserver(new Observer<ObservableChange<ImmutableList<ARIssue>>>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARAnswerView.9
+        }).addObserver(new Observer<ObservableChange<ImmutableList<ARIssue>>>() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.9
             public void handle(ObservableChange<ImmutableList<ARIssue>> change) {
                 ARAnswerView.this.handleIssuesChanged(change.getNewValue());
             }
         }));
-        this.mObservers.add(this.mAnswer.chain(new ObservableChainLink<ARAnswer, ImmutableList<MTString>>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARAnswerView.12
+        this.mObservers.add(this.mAnswer.chain(new ObservableChainLink<ARAnswer, ImmutableList<MTString>>() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.12
             public Observable<ImmutableList<MTString>> get(ARAnswer answer) {
                 if (answer != null) {
                     return answer.getInputLines().getStrings();
                 }
                 return null;
             }
-        }).addObserver(new Observer<ObservableChange<ImmutableList<MTString>>>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARAnswerView.11
+        }).addObserver(new Observer<ObservableChange<ImmutableList<MTString>>>() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.11
             public void handle(ObservableChange<ImmutableList<MTString>> change) {
                 ARAnswerView.this.handleInputStringsChanged();
             }
         }));
-        this.mObservers.add(this.mAnswer.chain(new ObservableChainLink<ARAnswer, ImmutableList<MEExpression>>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARAnswerView.14
+        this.mObservers.add(this.mAnswer.chain(new ObservableChainLink<ARAnswer, ImmutableList<MEExpression>>() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.14
             public Observable<ImmutableList<MEExpression>> get(ARAnswer answer) {
                 if (answer != null) {
                     return answer.getInputLines().getExpressions();
                 }
                 return null;
             }
-        }).addObserver(new Observer<ObservableChange<ImmutableList<MEExpression>>>() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARAnswerView.13
+        }).addObserver(new Observer<ObservableChange<ImmutableList<MEExpression>>>() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.13
             public void handle(ObservableChange<ImmutableList<MEExpression>> change) {
                 ARAnswerView.this.handleInputExpressionsChanged();
             }
@@ -234,7 +234,7 @@ public class ARAnswerView extends ViewGroup implements Responder, ARLineSetViewD
     private ARAnswerView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.mAnswer = new MutableObservable<>();
-        this.mSettingsChangedListener = new BroadcastReceiver() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARAnswerView.1
+        this.mSettingsChangedListener = new BroadcastReceiver() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.1
             @Override // android.content.BroadcastReceiver
             public void onReceive(Context context2, Intent intent) {
                 if (!ARAnswerView.this.mDeinitialized) {
@@ -243,7 +243,7 @@ public class ARAnswerView extends ViewGroup implements Responder, ARLineSetViewD
                 }
             }
         };
-        this.mShowSpinWheelRunnable = new Runnable() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARAnswerView.2
+        this.mShowSpinWheelRunnable = new Runnable() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.2
             @Override // java.lang.Runnable
             public void run() {
                 if (!ARAnswerView.this.mDeinitialized) {
@@ -251,7 +251,7 @@ public class ARAnswerView extends ViewGroup implements Responder, ARLineSetViewD
                 }
             }
         };
-        this.mRecalculateAnswerRunnable = new Runnable() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARAnswerView.3
+        this.mRecalculateAnswerRunnable = new Runnable() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.3
             @Override // java.lang.Runnable
             public void run() {
                 if (!ARAnswerView.this.mDeinitialized) {
@@ -264,7 +264,7 @@ public class ARAnswerView extends ViewGroup implements Responder, ARLineSetViewD
     private ARAnswerView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         this.mAnswer = new MutableObservable<>();
-        this.mSettingsChangedListener = new BroadcastReceiver() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARAnswerView.1
+        this.mSettingsChangedListener = new BroadcastReceiver() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.1
             @Override // android.content.BroadcastReceiver
             public void onReceive(Context context2, Intent intent) {
                 if (!ARAnswerView.this.mDeinitialized) {
@@ -273,7 +273,7 @@ public class ARAnswerView extends ViewGroup implements Responder, ARLineSetViewD
                 }
             }
         };
-        this.mShowSpinWheelRunnable = new Runnable() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARAnswerView.2
+        this.mShowSpinWheelRunnable = new Runnable() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.2
             @Override // java.lang.Runnable
             public void run() {
                 if (!ARAnswerView.this.mDeinitialized) {
@@ -281,7 +281,7 @@ public class ARAnswerView extends ViewGroup implements Responder, ARLineSetViewD
                 }
             }
         };
-        this.mRecalculateAnswerRunnable = new Runnable() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARAnswerView.3
+        this.mRecalculateAnswerRunnable = new Runnable() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.3
             @Override // java.lang.Runnable
             public void run() {
                 if (!ARAnswerView.this.mDeinitialized) {
@@ -350,7 +350,7 @@ public class ARAnswerView extends ViewGroup implements Responder, ARLineSetViewD
             this.mProgressBarContainer.setVisibility(4);
         } else if ((this.mActivityIndicatorTimer == null || this.mActivityIndicatorTimer.isCancelled()) && !this.mAnswer.getValue().isPaused().getValue().booleanValue()) {
             this.mActivityIndicatorTimer = new Timer();
-            this.mActivityIndicatorTimer.schedule(new TimerTask() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARAnswerView.15
+            this.mActivityIndicatorTimer.schedule(new TimerTask() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.15
                 @Override // java.util.TimerTask, java.lang.Runnable
                 public void run() {
                     ARAnswerView.this.post(ARAnswerView.this.mShowSpinWheelRunnable);
@@ -431,7 +431,7 @@ public class ARAnswerView extends ViewGroup implements Responder, ARLineSetViewD
             }
             long delay = GeneralUtil.constrainMin((this.mCalculation.getInputLines().getVariableCount() != 0 ? 1000 : RECALCULATION_DELAY_DEFAULT) - (SystemClock.uptimeMillis() - this.mLastEditTime), 0);
             this.mRecalculationTimer = new Timer();
-            this.mRecalculationTimer.schedule(new TimerTask() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARAnswerView.16
+            this.mRecalculationTimer.schedule(new TimerTask() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.16
                 @Override // java.util.TimerTask, java.lang.Runnable
                 public void run() {
                     ARAnswerView.this.post(ARAnswerView.this.mRecalculateAnswerRunnable);
@@ -474,7 +474,7 @@ public class ARAnswerView extends ViewGroup implements Responder, ARLineSetViewD
         this.mLineSetView.setAlpha(alpha);
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public Responder getAncestor() {
         ViewParent parent = getParent();
         if (parent instanceof Responder) {
@@ -483,47 +483,47 @@ public class ARAnswerView extends ViewGroup implements Responder, ARLineSetViewD
         return null;
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public boolean canHandleMessageType(String type) {
         return false;
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public boolean isChildAllowedToHandleMessage(Responder child, ResponderMessage message) {
         return true;
     }
 
-    @Override // com.sparkappdesign.archimedes.utilities.responder.Responder
+    @Override // com.oddlyspaced.calci.utilities.responder.Responder
     public void handleMessage(String type, HashMap<String, Object> contents) {
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARLineSetViewDelegate
+    @Override // com.oddlyspaced.calci.archimedes.views.ARLineSetViewDelegate
     public MTWriter writerForLineSetView(ARLineSetView lineSetView) {
         return ARSettings.sharedSettings(getContext()).defaultWriterForForm(getContext(), this.mAnswer.getValue().getForm());
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARLineSetViewDelegate
+    @Override // com.oddlyspaced.calci.archimedes.views.ARLineSetViewDelegate
     public MTParser parserForLineSetView(ARLineSetView lineSetView) {
         return null;
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARLineSetViewDelegate
+    @Override // com.oddlyspaced.calci.archimedes.views.ARLineSetViewDelegate
     public long parsingDelayForLineSetView(ARLineSetView lineSetView, long defaultDelay) {
         return defaultDelay;
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARLineSetViewDelegate
+    @Override // com.oddlyspaced.calci.archimedes.views.ARLineSetViewDelegate
     public long writingDelayForLineSetView(ARLineSetView lineSetView, long defaultDelay) {
         return defaultDelay;
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARViewGroup
+    @Override // com.oddlyspaced.calci.archimedes.views.ARViewGroup
     public RectF finalBoundsForChildAtIndex(int index) {
         PointF size = ((ARView) getChildAt(index)).finalSize();
         return RectUtil.create(0.0f, (float) this.mSeparatorView.getHeight(), size.x, size.y);
     }
 
-    @Override // com.sparkappdesign.archimedes.archimedes.views.ARView
+    @Override // com.oddlyspaced.calci.archimedes.views.ARView
     public PointF finalSize() {
         PointF finalSize = this.mLineSetView.finalSize();
         finalSize.y += (float) this.mSeparatorView.getHeight();
@@ -544,7 +544,7 @@ public class ARAnswerView extends ViewGroup implements Responder, ARLineSetViewD
             this.mTextView.setTextSize(0, getResources().getDimension(R.dimen.paused_font_size));
             this.mTextView.setTextColor(context.getResources().getColor(R.color.tint_dark));
             this.mTextView.setText("PAUSED");
-            this.mTextView.setOnClickListener(new View.OnClickListener() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARAnswerView.ARPausedLabel.1
+            this.mTextView.setOnClickListener(new View.OnClickListener() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.ARPausedLabel.1
                 @Override // android.view.View.OnClickListener
                 public void onClick(View v) {
                     ARAnswerView.this.handleTap();
@@ -596,7 +596,7 @@ public class ARAnswerView extends ViewGroup implements Responder, ARLineSetViewD
             ARAnswerView.this = r5;
             this.mProgressBar.setIndeterminate(true);
             this.mProgressBar.getIndeterminateDrawable().setColorFilter(-1, PorterDuff.Mode.SRC_ATOP);
-            this.mProgressBar.setOnClickListener(new View.OnClickListener() { // from class: com.sparkappdesign.archimedes.archimedes.views.ARAnswerView.ARProgressBarContainer.1
+            this.mProgressBar.setOnClickListener(new View.OnClickListener() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.ARProgressBarContainer.1
                 @Override // android.view.View.OnClickListener
                 public void onClick(View v) {
                     ARAnswerView.this.handleTap();

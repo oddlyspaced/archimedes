@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.mathtype.views;
+package com.oddlyspaced.calci.mathtype.views;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -10,22 +10,22 @@ import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.view.animation.LinearInterpolator;
-import com.sparkappdesign.archimedes.R;
-import com.sparkappdesign.archimedes.mathtype.enums.MTAlignmentType;
-import com.sparkappdesign.archimedes.mathtype.enums.MTDigitGroupingStyle;
-import com.sparkappdesign.archimedes.mathtype.measures.MTAlignment;
-import com.sparkappdesign.archimedes.mathtype.measures.MTGlyphMeasures;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasureContext;
-import com.sparkappdesign.archimedes.mathtype.measures.MTMeasures;
-import com.sparkappdesign.archimedes.mathtype.measures.font.MTFont;
-import com.sparkappdesign.archimedes.mathtype.measures.font.MTFontMyriadProLight;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTElement;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTNode;
-import com.sparkappdesign.archimedes.mathtype.nodes.MTString;
-import com.sparkappdesign.archimedes.mathtype.views.selection.MTSelectionDrawable;
-import com.sparkappdesign.archimedes.utilities.GeneralUtil;
-import com.sparkappdesign.archimedes.utilities.PointUtil;
-import com.sparkappdesign.archimedes.utilities.TypefaceCache;
+import com.oddlyspaced.calci.R;
+import com.oddlyspaced.calci.mathtype.enums.MTAlignmentType;
+import com.oddlyspaced.calci.mathtype.enums.MTDigitGroupingStyle;
+import com.oddlyspaced.calci.mathtype.measures.MTAlignment;
+import com.oddlyspaced.calci.mathtype.measures.MTGlyphMeasures;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasureContext;
+import com.oddlyspaced.calci.mathtype.measures.MTMeasures;
+import com.oddlyspaced.calci.mathtype.measures.font.MTFont;
+import com.oddlyspaced.calci.mathtype.measures.font.MTFontMyriadProLight;
+import com.oddlyspaced.calci.mathtype.nodes.MTElement;
+import com.oddlyspaced.calci.mathtype.nodes.MTNode;
+import com.oddlyspaced.calci.mathtype.nodes.MTString;
+import com.oddlyspaced.calci.mathtype.views.selection.MTSelectionDrawable;
+import com.oddlyspaced.calci.utilities.GeneralUtil;
+import com.oddlyspaced.calci.utilities.PointUtil;
+import com.oddlyspaced.calci.utilities.TypefaceCache;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -360,7 +360,7 @@ public class MTMathTypeDrawable extends Drawable {
         this.mAnimator = ValueAnimator.ofFloat(0.0f, 1.0f);
         this.mAnimator.setInterpolator(this.mInterpolator);
         this.mAnimator.setDuration(duration);
-        this.mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: com.sparkappdesign.archimedes.mathtype.views.MTMathTypeDrawable.1
+        this.mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: com.oddlyspaced.calci.mathtype.views.MTMathTypeDrawable.1
             @Override // android.animation.ValueAnimator.AnimatorUpdateListener
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
                 MTMathTypeDrawable.this.updateDrawablesForAnimationFraction(valueAnimator.getAnimatedFraction());

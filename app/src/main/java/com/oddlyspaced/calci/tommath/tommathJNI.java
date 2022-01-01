@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.tommath;
+package com.oddlyspaced.calci.tommath;
 /* loaded from: classes.dex */
 public class tommathJNI {
     public static final native int C_MP_DIGIT_BIT_get();

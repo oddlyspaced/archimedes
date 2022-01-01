@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes;
+package com.oddlyspaced.calci;
 
 import android.app.Activity;
 import android.os.Build;

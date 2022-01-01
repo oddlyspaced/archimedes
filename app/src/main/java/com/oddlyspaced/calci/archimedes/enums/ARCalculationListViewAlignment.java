@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.archimedes.enums;
+package com.oddlyspaced.calci.archimedes.enums;
 /* loaded from: classes.dex */
 public enum ARCalculationListViewAlignment {
     Bottom,

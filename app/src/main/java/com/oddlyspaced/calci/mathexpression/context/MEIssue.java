@@ -1,6 +1,6 @@
-package com.sparkappdesign.archimedes.mathexpression.context;
+package com.oddlyspaced.calci.mathexpression.context;
 
-import com.sparkappdesign.archimedes.mathexpression.enums.MEIssueType;
+import com.oddlyspaced.calci.mathexpression.enums.MEIssueType;
 import java.util.HashMap;
 /* loaded from: classes.dex */
 public class MEIssue {

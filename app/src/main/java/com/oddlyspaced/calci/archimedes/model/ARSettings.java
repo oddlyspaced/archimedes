@@ -1,19 +1,19 @@
-package com.sparkappdesign.archimedes.archimedes.model;
+package com.oddlyspaced.calci.archimedes.model;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import com.sparkappdesign.archimedes.mathexpression.context.MEContext;
-import com.sparkappdesign.archimedes.mathexpression.enums.MEAngleUnitType;
-import com.sparkappdesign.archimedes.mathexpression.enums.MEExpressionForm;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEQuantity;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEUnit;
-import com.sparkappdesign.archimedes.mathtype.enums.MTExponentFormat;
-import com.sparkappdesign.archimedes.mathtype.enums.MTNumberFormat;
-import com.sparkappdesign.archimedes.mathtype.parsers.MTParser;
-import com.sparkappdesign.archimedes.mathtype.writers.MTNumberFormatter;
-import com.sparkappdesign.archimedes.mathtype.writers.MTWriter;
+import com.oddlyspaced.calci.mathexpression.context.MEContext;
+import com.oddlyspaced.calci.mathexpression.enums.MEAngleUnitType;
+import com.oddlyspaced.calci.mathexpression.enums.MEExpressionForm;
+import com.oddlyspaced.calci.mathexpression.expressions.MEExpression;
+import com.oddlyspaced.calci.mathexpression.expressions.MEQuantity;
+import com.oddlyspaced.calci.mathexpression.expressions.MEUnit;
+import com.oddlyspaced.calci.mathtype.enums.MTExponentFormat;
+import com.oddlyspaced.calci.mathtype.enums.MTNumberFormat;
+import com.oddlyspaced.calci.mathtype.parsers.MTParser;
+import com.oddlyspaced.calci.mathtype.writers.MTNumberFormatter;
+import com.oddlyspaced.calci.mathtype.writers.MTWriter;
 import java.util.HashMap;
 /* loaded from: classes.dex */
 public class ARSettings {

@@ -1,12 +1,12 @@
-package com.sparkappdesign.archimedes.mathexpression.solvers;
+package com.oddlyspaced.calci.mathexpression.solvers;
 
-import com.sparkappdesign.archimedes.mathexpression.context.MEContext;
-import com.sparkappdesign.archimedes.mathexpression.context.MEIssue;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEAdditions;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEMultiplications;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEPower;
-import com.sparkappdesign.archimedes.mathexpression.expressions.MEValue;
+import com.oddlyspaced.calci.mathexpression.context.MEContext;
+import com.oddlyspaced.calci.mathexpression.context.MEIssue;
+import com.oddlyspaced.calci.mathexpression.expressions.MEAdditions;
+import com.oddlyspaced.calci.mathexpression.expressions.MEExpression;
+import com.oddlyspaced.calci.mathexpression.expressions.MEMultiplications;
+import com.oddlyspaced.calci.mathexpression.expressions.MEPower;
+import com.oddlyspaced.calci.mathexpression.expressions.MEValue;
 import java.util.HashSet;
 /* loaded from: classes.dex */
 public class MEExactRootFinder {

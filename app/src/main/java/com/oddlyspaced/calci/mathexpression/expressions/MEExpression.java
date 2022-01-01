@@ -1,10 +1,10 @@
-package com.sparkappdesign.archimedes.mathexpression.expressions;
+package com.oddlyspaced.calci.mathexpression.expressions;
 
-import com.sparkappdesign.archimedes.mathexpression.context.MEContext;
-import com.sparkappdesign.archimedes.mathexpression.context.MEIssue;
-import com.sparkappdesign.archimedes.mathexpression.numbers.MEReal;
-import com.sparkappdesign.archimedes.utilities.Transformation;
-import com.sparkappdesign.archimedes.utilities.observables.ImmutableList;
+import com.oddlyspaced.calci.mathexpression.context.MEContext;
+import com.oddlyspaced.calci.mathexpression.context.MEIssue;
+import com.oddlyspaced.calci.mathexpression.numbers.MEReal;
+import com.oddlyspaced.calci.utilities.Transformation;
+import com.oddlyspaced.calci.utilities.observables.ImmutableList;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -91,7 +91,7 @@ public abstract class MEExpression {
     }
 
     public MEExpression substituteExpression(final MEExpression pattern, final MEExpression substitute) {
-        return expressionWithTreeTransformation(new Transformation<MEExpression>() { // from class: com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression.1
+        return expressionWithTreeTransformation(new Transformation<MEExpression>() { // from class: com.oddlyspaced.calci.mathexpression.expressions.MEExpression.1
             public MEExpression transform(MEExpression expression) {
                 return expression.equals(pattern) ? substitute : expression;
             }
@@ -116,7 +116,7 @@ public abstract class MEExpression {
     public MEExpression quantityOfUnit() {
         MEExpression unit = partWithUnit();
         if (unit != null) {
-            return unit.expressionWithTreeTransformation(new Transformation<MEExpression>() { // from class: com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression.2
+            return unit.expressionWithTreeTransformation(new Transformation<MEExpression>() { // from class: com.oddlyspaced.calci.mathexpression.expressions.MEExpression.2
                 public MEExpression transform(MEExpression expression) {
                     return expression instanceof MEUnit ? ((MEUnit) expression).getQuantity() : expression;
                 }
@@ -157,7 +157,7 @@ public abstract class MEExpression {
             sourceQuantity = targetQuantity;
             isSourceQuantityImplicit = true;
         }
-        if (sourceQuantity.equals(targetQuantity) && (sourceUnit = sourceQuantity.expressionWithTreeTransformation(new Transformation<MEExpression>() { // from class: com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression.3
+        if (sourceQuantity.equals(targetQuantity) && (sourceUnit = sourceQuantity.expressionWithTreeTransformation(new Transformation<MEExpression>() { // from class: com.oddlyspaced.calci.mathexpression.expressions.MEExpression.3
             public MEExpression transform(MEExpression input) {
                 MEExpression defaultUnit = MEContext.getCurrent().getDefaultUnits().get(input);
                 return defaultUnit != null ? defaultUnit : input;
@@ -205,7 +205,7 @@ public abstract class MEExpression {
     }
 
     public MEExpression convertUnitsToBase() {
-        return expressionWithTreeTransformation(new Transformation<MEExpression>() { // from class: com.sparkappdesign.archimedes.mathexpression.expressions.MEExpression.4
+        return expressionWithTreeTransformation(new Transformation<MEExpression>() { // from class: com.oddlyspaced.calci.mathexpression.expressions.MEExpression.4
             public MEExpression transform(MEExpression input) {
                 return input instanceof MEUnit ? ((MEUnit) input).getUnitExpressedInBaseUnit() : input;
             }

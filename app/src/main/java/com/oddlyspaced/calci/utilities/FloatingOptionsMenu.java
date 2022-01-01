@@ -1,4 +1,4 @@
-package com.sparkappdesign.archimedes.utilities;
+package com.oddlyspaced.calci.utilities;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -14,7 +14,7 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
-import com.sparkappdesign.archimedes.R;
+import com.oddlyspaced.calci.R;
 import java.util.ArrayList;
 import java.util.Iterator;
 /* loaded from: classes.dex */
@@ -27,7 +27,7 @@ public class FloatingOptionsMenu extends CardView {
     private ArrayList<Option> mOptions = new ArrayList<>();
     private PointF mPosition = new PointF();
     private final float FONT_SIZE = getResources().getDimension(R.dimen.floating_options_menu_font_size);
-    private final Runnable show = new Runnable() { // from class: com.sparkappdesign.archimedes.utilities.FloatingOptionsMenu.2
+    private final Runnable show = new Runnable() { // from class: com.oddlyspaced.calci.utilities.FloatingOptionsMenu.2
         @Override // java.lang.Runnable
         public void run() {
             FloatingOptionsMenu.this.requestLayout();
@@ -54,7 +54,7 @@ public class FloatingOptionsMenu extends CardView {
         button.setTypeface(TypefaceCache.getMyriadProBold(getContext()), 1);
         button.setBackground(buttonBackground);
         button.setLayoutParams(BUTTON_LAYOUT_PARAMS);
-        button.setOnClickListener(new View.OnClickListener() { // from class: com.sparkappdesign.archimedes.utilities.FloatingOptionsMenu.1
+        button.setOnClickListener(new View.OnClickListener() { // from class: com.oddlyspaced.calci.utilities.FloatingOptionsMenu.1
             @Override // android.view.View.OnClickListener
             public void onClick(View button2) {
                 runnable.run();
@@ -118,13 +118,13 @@ public class FloatingOptionsMenu extends CardView {
         if (this.mAnimator == null || !this.mAnimator.isRunning()) {
             this.mAnimator = ValueAnimator.ofFloat(from, to);
             this.mAnimator.setDuration(this.mAnimator.isRunning() ? computeRemainingTime() : DEFAULT_ANIMATION_DURATION);
-            this.mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: com.sparkappdesign.archimedes.utilities.FloatingOptionsMenu.3
+            this.mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: com.oddlyspaced.calci.utilities.FloatingOptionsMenu.3
                 @Override // android.animation.ValueAnimator.AnimatorUpdateListener
                 public void onAnimationUpdate(ValueAnimator valueAnimator) {
                     FloatingOptionsMenu.this.setAlpha(((Float) valueAnimator.getAnimatedValue()).floatValue());
                 }
             });
-            this.mAnimator.addListener(new AnimatorListenerAdapter() { // from class: com.sparkappdesign.archimedes.utilities.FloatingOptionsMenu.4
+            this.mAnimator.addListener(new AnimatorListenerAdapter() { // from class: com.oddlyspaced.calci.utilities.FloatingOptionsMenu.4
                 @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
                 public void onAnimationStart(Animator animation) {
                     if (to > 0.0f) {
