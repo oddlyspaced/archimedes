@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="editing_font_size">38dp</dimen>
+    <dimen name="error_font_size">14dp</dimen>
+    <dimen name="floating_options_menu_font_size">14dp</dimen>
+    <dimen name="hint_font_size">11dp</dimen>
+    <dimen name="hint_tap_margin">41.7dp</dimen>
+    <dimen name="paused_font_size">14dp</dimen>
+    <dimen name="regular_font_size">27dp</dimen>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="auto_scroll_view_animation_duration">750</integer>
+    <integer name="autoscroll_refresh_interval">16</integer>
+    <integer name="mathtype_animation_duration">150</integer>
+    <integer name="stackview_animation_duration">300</integer>
+</resources>
