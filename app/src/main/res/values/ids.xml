@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="archimedes_button_pad" type="id" />
+    <item name="archimedes_calculation_list_view" type="id" />
+</resources>
