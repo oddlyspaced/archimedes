@@ -17,14 +17,12 @@ public final class ObservableList<E> extends MutableObservable<ImmutableList<E>>
     }
 
     public void setValue(Collection<? extends E> newValue) {
-        // TODO
-//        setValue((ObservableList<E>) new ImmutableList(newValue));
+        setValue(new ImmutableList(newValue));
     }
 
     private ImmutableList<E> setValueWithoutCopy(List<E> newValue) {
         ImmutableList<E> newValueImmutable = new ImmutableList<>(newValue, false);
-        // TODO
-//        setValue((ObservableList<E>) newValueImmutable);
+        setValue(newValueImmutable);
         return newValueImmutable;
     }
 
