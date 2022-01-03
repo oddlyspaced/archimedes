@@ -147,7 +147,7 @@ public class MTNumberFormatter {
     }
 
     private void writeElements(String numberString, MTString string) {
-        MTElement element;
+        MTElement element = null;
         String numberString2 = numberString.toUpperCase();
         for (int i = 0; i < numberString2.length(); i++) {
             char chr = numberString2.charAt(i);

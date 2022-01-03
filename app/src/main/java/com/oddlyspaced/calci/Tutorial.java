@@ -4,16 +4,18 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
 /* loaded from: classes.dex */
 public class Tutorial extends FragmentActivity {
     @Override // android.support.v4.app.FragmentActivity, android.app.Activity
@@ -83,7 +85,8 @@ public class Tutorial extends FragmentActivity {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public TutorialPagerAdapter(FragmentManager fragmentManager) {
             super(fragmentManager);
-            Tutorial.this = r1;
+            // TODO
+//            Tutorial.this = r1;
         }
 
         @Override // android.support.v4.app.FragmentStatePagerAdapter

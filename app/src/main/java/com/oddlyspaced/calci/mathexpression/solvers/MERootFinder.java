@@ -85,7 +85,8 @@ public class MERootFinder {
                     MEContext.pushContext(context, new Runnable() { // from class: com.oddlyspaced.calci.mathexpression.solvers.MERootFinder.2
                         @Override // java.lang.Runnable
                         public void run() {
-                            MEExpression result = MEExpression.this.substituteExpression(variable, solution3).canonicalize();
+                            // TODO
+                            MEExpression result = solution3.substituteExpression(variable, solution3).canonicalize();
                             MEValue value = result instanceof MEValue ? (MEValue) result : null;
                             isValid.set(value != null && value.absolute().isLessThanValue(new MEValue(context.getTau())));
                         }

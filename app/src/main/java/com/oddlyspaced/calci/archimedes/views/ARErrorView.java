@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.TextView;
+
 import com.oddlyspaced.calci.R;
 import com.oddlyspaced.calci.archimedes.model.ARIssue;
 import com.oddlyspaced.calci.utilities.TypefaceCache;

@@ -10,6 +10,7 @@ import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.TextView;
+
 import com.oddlyspaced.calci.R;
 import com.oddlyspaced.calci.utilities.GeneralUtil;
 import com.oddlyspaced.calci.utilities.TypefaceCache;

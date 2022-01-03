@@ -4,12 +4,14 @@ import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.PointF;
 import android.graphics.RectF;
-import android.support.v4.widget.ExploreByTouchHelper;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.animation.DecelerateInterpolator;
+
+import androidx.customview.widget.ExploreByTouchHelper;
+
 import com.oddlyspaced.calci.R;
 import com.oddlyspaced.calci.utilities.GeneralUtil;
 import com.oddlyspaced.calci.utilities.RectUtil;
@@ -68,6 +70,7 @@ public class ARStackView extends ViewGroup implements Responder, ARViewGroup {
         int parentWidth = View.MeasureSpec.getSize(widthMeasureSpec);
         int targetHeight = this.mSpacing;
         for (int i = 0; i < getChildCount(); i++) {
+            // TODO
             getChildAt(i).measure(View.MeasureSpec.makeMeasureSpec(parentWidth, ExploreByTouchHelper.INVALID_ID), View.MeasureSpec.makeMeasureSpec(0, 0));
             targetHeight += getChildAt(i).getMeasuredHeight() + this.mSpacing;
         }

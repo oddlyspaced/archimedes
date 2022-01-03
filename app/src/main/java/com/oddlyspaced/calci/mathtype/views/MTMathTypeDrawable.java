@@ -10,6 +10,7 @@ import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.view.animation.LinearInterpolator;
+
 import com.oddlyspaced.calci.R;
 import com.oddlyspaced.calci.mathtype.enums.MTAlignmentType;
 import com.oddlyspaced.calci.mathtype.enums.MTDigitGroupingStyle;

@@ -9,7 +9,6 @@ import android.graphics.PorterDuff;
 import android.graphics.RectF;
 import android.os.Handler;
 import android.os.SystemClock;
-import android.support.v4.widget.ExploreByTouchHelper;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -17,6 +16,9 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import androidx.customview.widget.ExploreByTouchHelper;
+
 import com.oddlyspaced.calci.R;
 import com.oddlyspaced.calci.archimedes.enums.ARAnswerState;
 import com.oddlyspaced.calci.archimedes.enums.ARLineSetMode;
@@ -539,7 +541,8 @@ public class ARAnswerView extends ViewGroup implements Responder, ARLineSetViewD
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ARPausedLabel(Context context) {
             super(context);
-            ARAnswerView.this = r5;
+            // TODO
+//            ARAnswerView.this = r5;
             this.mTextView.setTypeface(TypefaceCache.getMyriadProLight(getContext()));
             this.mTextView.setTextSize(0, getResources().getDimension(R.dimen.paused_font_size));
             this.mTextView.setTextColor(context.getResources().getColor(R.color.tint_dark));
@@ -556,13 +559,15 @@ public class ARAnswerView extends ViewGroup implements Responder, ARLineSetViewD
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         private ARPausedLabel(Context context, AttributeSet attrs) {
             super(context, attrs);
-            ARAnswerView.this = r4;
+            // TODO
+//            ARAnswerView.this = r4;
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         private ARPausedLabel(Context context, AttributeSet attrs, int defStyle) {
             super(context, attrs, defStyle);
-            ARAnswerView.this = r4;
+            // TODO
+//            ARAnswerView.this = r4;
         }
 
         @Override // android.view.View
@@ -593,7 +598,8 @@ public class ARAnswerView extends ViewGroup implements Responder, ARLineSetViewD
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ARProgressBarContainer(Context context) {
             super(context);
-            ARAnswerView.this = r5;
+            // TODO
+//            ARAnswerView.this = r5;
             this.mProgressBar.setIndeterminate(true);
             this.mProgressBar.getIndeterminateDrawable().setColorFilter(-1, PorterDuff.Mode.SRC_ATOP);
             this.mProgressBar.setOnClickListener(new View.OnClickListener() { // from class: com.oddlyspaced.calci.archimedes.views.ARAnswerView.ARProgressBarContainer.1
@@ -608,13 +614,15 @@ public class ARAnswerView extends ViewGroup implements Responder, ARLineSetViewD
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         private ARProgressBarContainer(Context context, AttributeSet attrs) {
             super(context, attrs);
-            ARAnswerView.this = r5;
+            // TODO
+//            ARAnswerView.this = r5;
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         private ARProgressBarContainer(Context context, AttributeSet attrs, int defStyle) {
             super(context, attrs, defStyle);
-            ARAnswerView.this = r5;
+            // TODO
+//            ARAnswerView.this = r5;
         }
 
         @Override // android.view.View

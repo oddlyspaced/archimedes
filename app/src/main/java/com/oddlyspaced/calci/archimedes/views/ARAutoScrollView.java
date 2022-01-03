@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewParent;
 import android.widget.ScrollView;
 import android.widget.Scroller;
+
 import com.oddlyspaced.calci.R;
 import com.oddlyspaced.calci.archimedes.enums.ARScrollPriority;
 import com.oddlyspaced.calci.archimedes.enums.ARScrollState;

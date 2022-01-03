@@ -110,10 +110,10 @@ public final class ObservableChain<B, C> extends Observable<C> {
     public static final class BaseObserver<B, C> extends Observer<ObservableChange<B>> {
         private WeakableReference<ObservableChain<B, C>> mChain;
 
-        @Override // com.oddlyspaced.calci.utilities.events.Observer
-        public /* bridge */ /* synthetic */ void handle(Object obj) {
-            handle((ObservableChange) ((ObservableChange) obj));
-        }
+//        @Override // com.oddlyspaced.calci.utilities.events.Observer
+//        public void handle(ObservableChange<B> obj) {
+//            handle((ObservableChange) obj);
+//        }
 
         BaseObserver(ObservableChain<B, C> chain) {
             this.mChain = new WeakableReference<>(chain);
@@ -136,10 +136,10 @@ public final class ObservableChain<B, C> extends Observable<C> {
     public static final class ChildObserver<B, C> extends Observer<ObservableChange<C>> {
         WeakReference<ObservableChain<B, C>> mChain;
 
-        @Override // com.oddlyspaced.calci.utilities.events.Observer
-        public /* bridge */ /* synthetic */ void handle(Object obj) {
-            handle((ObservableChange) ((ObservableChange) obj));
-        }
+//        @Override // com.oddlyspaced.calci.utilities.events.Observer
+//        public /* bridge */ /* synthetic */ void handle(ObservableChange<C> obj) {
+//            handle((ObservableChange) ((ObservableChange) obj));
+//        }
 
         ChildObserver(ObservableChain<B, C> chain) {
             this.mChain = new WeakReference<>(chain);

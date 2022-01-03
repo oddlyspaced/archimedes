@@ -73,7 +73,7 @@ public class MEAdditions extends MEExpression {
         }
         if (!units.isEmpty()) {
             ArrayList<MEExpression> unitSet = new ArrayList<>(units);
-            MEUnit targetUnit = unitSet.size() == 1 ? unitSet.get(0) : MEContext.getCurrent().getDefaultUnits().get(unitSet.get(0).quantityOfUnit());
+            MEUnit targetUnit = unitSet.size() == 1 ? (MEUnit) unitSet.get(0) : MEContext.getCurrent().getDefaultUnits().get(unitSet.get(0).quantityOfUnit());
             if (targetUnit != null) {
                 ArrayList<MEExpression> newTerms = new ArrayList<>();
                 Iterator<MEExpression> it2 = terms.iterator();

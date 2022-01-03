@@ -69,7 +69,8 @@ public abstract class Observable<T> {
     }
 
     public final <E> ObserverType addObserver(ListObserver<E> observer) {
-        observer.attachTo(this);
+        // TODO
+//        observer.attachTo(this);
         return observer;
     }
 

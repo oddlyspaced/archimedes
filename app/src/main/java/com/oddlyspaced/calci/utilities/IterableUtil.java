@@ -22,7 +22,7 @@ public final class IterableUtil {
                     /* JADX WARN: Type inference failed for: r0v1, types: [T, java.lang.Object] */
                     @Override // java.util.Iterator
                     public T next() {
-                        return listIterator.previous();
+                        return (T) listIterator.previous();
                     }
 
                     @Override // java.util.Iterator

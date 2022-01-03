@@ -8,13 +8,16 @@ import android.graphics.Color;
 import android.graphics.PointF;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.v7.widget.CardView;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+
+import androidx.cardview.widget.CardView;
+
 import com.oddlyspaced.calci.R;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 /* loaded from: classes.dex */
@@ -215,7 +218,8 @@ public class FloatingOptionsMenu extends CardView {
         Runnable mRunnable;
 
         Option(String name, Runnable runnable, Button button) {
-            FloatingOptionsMenu.this = this$0;
+            // TODO
+//            FloatingOptionsMenu.this = this$0;
             this.mName = name;
             this.mRunnable = runnable;
             this.mButton = button;

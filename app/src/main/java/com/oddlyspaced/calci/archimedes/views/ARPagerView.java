@@ -20,6 +20,7 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.ViewTreeObserver;
 import android.widget.OverScroller;
+
 import com.oddlyspaced.calci.R;
 import com.oddlyspaced.calci.utilities.FloatingOptionsMenu;
 import com.oddlyspaced.calci.utilities.GeneralUtil;
@@ -333,11 +334,12 @@ public class ARPagerView extends ViewGroup implements Responder, ARViewGroup {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ARPagerContentView(Context context) {
             super(context);
-            ARPagerView.this = r4;
-            Iterator it = r4.mPages.iterator();
-            while (it.hasNext()) {
-                addView(((ARPagerPage) it.next()).getView());
-            }
+            // TODO
+//            ARPagerView.this = r4;
+//            Iterator it = r4.mPages.iterator();
+//            while (it.hasNext()) {
+//                addView(((ARPagerPage) it.next()).getView());
+//            }
             getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() { // from class: com.oddlyspaced.calci.archimedes.views.ARPagerView.ARPagerContentView.1
                 @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
                 public void onGlobalLayout() {
@@ -351,13 +353,15 @@ public class ARPagerView extends ViewGroup implements Responder, ARViewGroup {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         private ARPagerContentView(Context context, AttributeSet attrs) {
             super(context, attrs);
-            ARPagerView.this = r1;
+            // TODO
+//            ARPagerView.this = r1;
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         private ARPagerContentView(Context context, AttributeSet attrs, int defStyle) {
             super(context, attrs, defStyle);
-            ARPagerView.this = r1;
+            // TODO
+//            ARPagerView.this = r1;
         }
 
         @Override // android.view.View
@@ -622,7 +626,8 @@ public class ARPagerView extends ViewGroup implements Responder, ARViewGroup {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ARRotatedHintView(Context context, int rotation) {
             super(context);
-            ARPagerView.this = r3;
+            // TODO
+//            ARPagerView.this = r3;
             this.mRotation = rotation;
             this.mPaint.setAntiAlias(true);
         }
@@ -630,19 +635,22 @@ public class ARPagerView extends ViewGroup implements Responder, ARViewGroup {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         private ARRotatedHintView(Context context) {
             super(context);
-            ARPagerView.this = r3;
+            // TODO
+//            ARPagerView.this = r3;
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         private ARRotatedHintView(Context context, AttributeSet attrs) {
             super(context, attrs);
-            ARPagerView.this = r3;
+            // TODO
+//            ARPagerView.this = r3;
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         private ARRotatedHintView(Context context, AttributeSet attrs, int defStyle) {
             super(context, attrs, defStyle);
-            ARPagerView.this = r3;
+            // TODO
+//            ARPagerView.this = r3;
         }
 
         @Override // android.view.View

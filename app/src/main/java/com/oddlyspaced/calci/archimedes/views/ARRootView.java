@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.oddlyspaced.calci.R;
 import com.oddlyspaced.calci.archimedes.enums.ARButtonPadType;
 /* loaded from: classes.dex */
@@ -50,9 +51,9 @@ public class ARRootView extends ViewGroup {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         int parentWidth = View.MeasureSpec.getSize(widthMeasureSpec);
         int parentHeight = View.MeasureSpec.getSize(heightMeasureSpec);
-        int childWidthMeasureSpec = View.MeasureSpec.makeMeasureSpec(parentWidth, 1073741824);
-        this.mButtonPad.measure(childWidthMeasureSpec, View.MeasureSpec.makeMeasureSpec(0, 0));
-        int remainingHeightMeasureSpec = View.MeasureSpec.makeMeasureSpec(parentHeight - this.mButtonPad.getMeasuredHeight(), 1073741824);
+        int childWidthMeasureSpec = View.MeasureSpec.makeMeasureSpec(parentWidth, MeasureSpec.EXACTLY);
+        this.mButtonPad.measure(childWidthMeasureSpec, View.MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED));
+        int remainingHeightMeasureSpec = View.MeasureSpec.makeMeasureSpec(parentHeight - this.mButtonPad.getMeasuredHeight(), MeasureSpec.EXACTLY);
         this.mCalculationListView.measure(childWidthMeasureSpec, remainingHeightMeasureSpec);
         this.mOverlayView.measure(childWidthMeasureSpec, remainingHeightMeasureSpec);
         setMeasuredDimension(parentWidth, parentHeight);

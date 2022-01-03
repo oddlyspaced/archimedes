@@ -61,7 +61,8 @@ public class MTWriter {
         MTString mString;
 
         MTOperatorRange() {
-            MTWriter.this = this$0;
+            // TODO
+//            MTWriter.this = this$0;
         }
     }
 

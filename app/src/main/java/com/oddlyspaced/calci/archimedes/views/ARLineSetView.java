@@ -7,11 +7,13 @@ import android.content.IntentFilter;
 import android.graphics.PointF;
 import android.graphics.RectF;
 import android.os.SystemClock;
-import android.support.v4.widget.ExploreByTouchHelper;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
+
+import androidx.customview.widget.ExploreByTouchHelper;
+
 import com.oddlyspaced.calci.R;
 import com.oddlyspaced.calci.archimedes.enums.ARLineSetMode;
 import com.oddlyspaced.calci.archimedes.model.ARIssue;
@@ -121,7 +123,8 @@ public class ARLineSetView extends ViewGroup implements Responder, MTMathTypeVie
 
     public void setExtraIssues(ImmutableList<ARIssue> extraIssues) {
         if (this.mExtraIssues != null) {
-            this.mExtraIssues.setValue((ObservableList<ARIssue>) extraIssues);
+            // TODO
+//            this.mExtraIssues.setValue((ObservableList<ARIssue>) extraIssues);
         } else {
             this.mExtraIssues = new ObservableList<>(extraIssues);
         }
@@ -202,7 +205,7 @@ public class ARLineSetView extends ViewGroup implements Responder, MTMathTypeVie
         errorView.setVisibility(4);
         addView(errorView);
         this.mErrorView = errorView;
-        Observable<C> chain = this.mLineSet.chain(new ObservableChainLink<ARLineSet, ImmutableList<MTString>>() { // from class: com.oddlyspaced.calci.archimedes.views.ARLineSetView.5
+        Observable<ImmutableList<MTString>> chain = this.mLineSet.chain(new ObservableChainLink<ARLineSet, ImmutableList<MTString>>() { // from class: com.oddlyspaced.calci.archimedes.views.ARLineSetView.5
             public Observable<ImmutableList<MTString>> get(ARLineSet lineSet) {
                 if (lineSet != null) {
                     return lineSet.getStrings();
@@ -265,8 +268,9 @@ public class ARLineSetView extends ViewGroup implements Responder, MTMathTypeVie
     @Override // android.view.View
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         int parentWidth = View.MeasureSpec.getSize(widthMeasureSpec);
+        // TODO
         this.mStackView.measure(View.MeasureSpec.makeMeasureSpec(parentWidth, ExploreByTouchHelper.INVALID_ID), View.MeasureSpec.makeMeasureSpec(0, 0));
-        this.mErrorView.measure(View.MeasureSpec.makeMeasureSpec(parentWidth, 1073741824), View.MeasureSpec.makeMeasureSpec(this.mStackView.getMeasuredHeight(), 1073741824));
+        this.mErrorView.measure(View.MeasureSpec.makeMeasureSpec(parentWidth, MeasureSpec.EXACTLY), View.MeasureSpec.makeMeasureSpec(this.mStackView.getMeasuredHeight(), 1073741824));
         setMeasuredDimension(parentWidth, this.mStackView.getMeasuredHeight());
     }
 

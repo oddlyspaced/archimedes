@@ -130,9 +130,9 @@ public class ARLineSet implements Serializable {
             return false;
         }
         if (this.mStrings.getValue() != null) {
-            Iterator<E> it = this.mStrings.getValue().iterator();
+            Iterator<MTString> it = this.mStrings.getValue().iterator();
             while (it.hasNext()) {
-                if (((MTString) it.next()).isNotEmpty()) {
+                if ((it.next()).isNotEmpty()) {
                     return false;
                 }
             }

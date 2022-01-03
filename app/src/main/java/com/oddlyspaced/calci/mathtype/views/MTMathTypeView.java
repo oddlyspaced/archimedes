@@ -24,6 +24,7 @@ import android.view.ViewParent;
 import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 import android.widget.OverScroller;
+
 import com.oddlyspaced.calci.R;
 import com.oddlyspaced.calci.archimedes.views.AROverlayDelegate;
 import com.oddlyspaced.calci.archimedes.views.AROverlayView;
@@ -428,7 +429,7 @@ public class MTMathTypeView extends View implements Responder, AROverlayDelegate
 
     public MTMathTypeView(Context context) {
         super(context);
-        setLayerType(2, null);
+        setLayerType(View.LAYER_TYPE_HARDWARE, null);
         this.mMathTypeDrawable = new MTMathTypeDrawable(context);
         this.mSelectionDrawable = new MTSelectionDrawable(context, this.mMathTypeDrawable);
         this.mMathTypeDrawable.setCallback(this);
@@ -757,7 +758,7 @@ public class MTMathTypeView extends View implements Responder, AROverlayDelegate
         RectF measuresBounds = this.mMathTypeDrawable.getMeasures().getAbsoluteBounds();
         float gapRight = (absoluteViewBounds.right - MTMathTypeDrawable.HORIZONTAL_CONTENT_PADDING) - measuresBounds.right;
         float gapLeft = (measuresBounds.left - absoluteViewBounds.left) - MTMathTypeDrawable.HORIZONTAL_CONTENT_PADDING;
-        final float dx = 0.0f;
+        float dx = 0.0f;
         if (gapRight > 0.0f && gapLeft < 0.0f) {
             dx = -gapRight;
         } else if (gapRight < 0.0f && gapLeft > 0.0f) {
@@ -776,10 +777,11 @@ public class MTMathTypeView extends View implements Responder, AROverlayDelegate
         this.mAnimator = ValueAnimator.ofFloat(0.0f, 1.0f);
         this.mAnimator.setInterpolator(this.mInterpolator);
         this.mAnimator.setDuration(remainingTime);
+        float finalDx = dx;
         this.mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: com.oddlyspaced.calci.mathtype.views.MTMathTypeView.4
             @Override // android.animation.ValueAnimator.AnimatorUpdateListener
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                MTMathTypeView.this.scrollTo(startX + ((int) (valueAnimator.getAnimatedFraction() * dx)), startY);
+                MTMathTypeView.this.scrollTo(startX + ((int) (valueAnimator.getAnimatedFraction() * finalDx)), startY);
             }
         });
         this.mAnimator.start();
@@ -838,7 +840,8 @@ public class MTMathTypeView extends View implements Responder, AROverlayDelegate
     /* loaded from: classes.dex */
     public class AutoScrollTask extends TimerTask {
         private AutoScrollTask() {
-            MTMathTypeView.this = r1;
+            // TODO
+//            MTMathTypeView.this = r1;
         }
 
         @Override // java.util.TimerTask, java.lang.Runnable
@@ -1069,7 +1072,8 @@ public class MTMathTypeView extends View implements Responder, AROverlayDelegate
     /* loaded from: classes.dex */
     public class MTCursorInterpolator implements Interpolator {
         private MTCursorInterpolator() {
-            MTMathTypeView.this = r1;
+            // TODO
+//            MTMathTypeView.this = r1;
         }
 
         @Override // android.animation.TimeInterpolator
@@ -1134,7 +1138,7 @@ public class MTMathTypeView extends View implements Responder, AROverlayDelegate
         if ((this.mSelection != null ? this.mSelection : MTSelection.selectionWithEntireString(getString())).getString() != null) {
             MTString string = new MTString();
             this.mSelection.getString().copyElementsInRangeToString(this.mSelection.getRange(), string, 0);
-            ClipboardManager clipboard = (ClipboardManager) getContext().getSystemService("clipboard");
+            ClipboardManager clipboard = (ClipboardManager) getContext().getSystemService(Context.CLIPBOARD_SERVICE);
             File file = new File(getContext().getFilesDir(), "CopiedArchimedesEquation.ser");
             try {
                 ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(file));

@@ -11,14 +11,10 @@ public abstract class ValueObserver<T> implements ObserverType {
     /* JADX INFO: Access modifiers changed from: package-private */
     public final void attachTo(Observable<T> observable) {
         remove();
-        this.mObserver = observable.getDidChange().add(new Observer<ObservableChange<T>>() { // from class: com.oddlyspaced.calci.utilities.observables.ValueObserver.1
-            @Override // com.oddlyspaced.calci.utilities.events.Observer
-            public /* bridge */ /* synthetic */ void handle(Object obj) {
-                handle((ObservableChange) ((ObservableChange) obj));
-            }
-
-            public void handle(ObservableChange<T> change) {
-                ValueObserver.this.handle(change.mNewValue);
+        this.mObserver = observable.getDidChange().add(new Observer<ObservableChange<T>>() {
+            @Override // from class: com.oddlyspaced.calci.utilities.observables.ValueObserver.1
+            public void handle(ObservableChange<T> obj) {
+                handle(obj);
             }
         });
     }

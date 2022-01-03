@@ -8,11 +8,13 @@ import android.graphics.PointF;
 import android.graphics.RectF;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.support.v4.widget.ExploreByTouchHelper;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
+
+import androidx.customview.widget.ExploreByTouchHelper;
+
 import com.oddlyspaced.calci.R;
 import com.oddlyspaced.calci.archimedes.enums.ARCalculationViewStyle;
 import com.oddlyspaced.calci.archimedes.enums.ARScrollPriority;
@@ -247,7 +249,7 @@ public class ARCalculationView extends ViewGroup implements Responder, ARLineSet
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         int parentWidth = View.MeasureSpec.getSize(widthMeasureSpec);
         int childWidthMeasureSpec = View.MeasureSpec.makeMeasureSpec(parentWidth, ExploreByTouchHelper.INVALID_ID);
-        int childHeightMeasureSpec = View.MeasureSpec.makeMeasureSpec(0, 0);
+        int childHeightMeasureSpec = View.MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED);
         this.mInputLinesView.measure(childWidthMeasureSpec, childHeightMeasureSpec);
         this.mAnswersPagerView.measure(childWidthMeasureSpec, childHeightMeasureSpec);
         setMeasuredDimension(parentWidth, this.mInputLinesView.getMeasuredHeight() + this.mAnswersPagerView.getMeasuredHeight());
@@ -393,11 +395,13 @@ public class ARCalculationView extends ViewGroup implements Responder, ARLineSet
             if (this.mActiveMathTypeView.getSelection() != null) {
                 if (this.mInputLinesView.isEditable() && this.mCalculation.getValue().getInputLines().getStrings().getValue().size() == 1) {
                     ImmutableList strings = this.mCalculation.getValue().getInputLines().getStrings().getValue();
-                    setSelection(MTSelection.cursorAtEndOfString(strings.get(strings.size() - 1)), false);
+                    // TODO
+                    setSelection(MTSelection.cursorAtEndOfString((MTString) strings.get(strings.size() - 1)), false);
                 }
             } else if (this.mInputLinesView.isEditable() && this.mCalculation.getValue().getInputLines().getStrings().getValue().size() == 1) {
                 ImmutableList strings2 = this.mCalculation.getValue().getInputLines().getStrings().getValue();
-                setSelection(MTSelection.cursorAtEndOfString(strings2.get(strings2.size() - 1)), false);
+                // TODO
+                setSelection(MTSelection.cursorAtEndOfString((MTString) strings2.get(strings2.size() - 1)), false);
                 HashMap<String, Object> messageContents = new HashMap<>();
                 messageContents.put("Element to insert", element.copy());
                 new ResponderMessage(MTMessageType.INSERT_ELEMENT, messageContents).send();

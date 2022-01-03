@@ -8,6 +8,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
 import com.oddlyspaced.calci.R;
 import com.oddlyspaced.calci.archimedes.enums.ARButtonPadType;
 import com.oddlyspaced.calci.archimedes.model.ARButtonAction;
@@ -22,7 +23,8 @@ public class ARButtonPad extends ViewGroup {
         @Override // android.content.BroadcastReceiver
         public void onReceive(Context context, Intent intent) {
             ARButtonPad.this.removeAllViews();
-            switch (AnonymousClass2.$SwitchMap$com$sparkappdesign$archimedes$archimedes$enums$ARButtonPadType[ARButtonPad.this.mType.ordinal()]) {
+            // TODO
+            switch (ARButtonPadType.Main.ordinal()){
                 case 1:
                     ARButtonPad.this.createMainButtonPad(context);
                     return;

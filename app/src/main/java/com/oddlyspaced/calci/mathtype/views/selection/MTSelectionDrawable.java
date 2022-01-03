@@ -8,8 +8,10 @@ import android.graphics.Paint;
 import android.graphics.PointF;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
-import android.support.v4.view.MotionEventCompat;
 import android.view.animation.LinearInterpolator;
+
+import androidx.core.view.MotionEventCompat;
+
 import com.oddlyspaced.calci.R;
 import com.oddlyspaced.calci.mathtype.measures.MTMeasures;
 import com.oddlyspaced.calci.mathtype.views.MTMathTypeDrawable;

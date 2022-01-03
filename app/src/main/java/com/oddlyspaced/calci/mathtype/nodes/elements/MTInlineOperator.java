@@ -1,7 +1,8 @@
 package com.oddlyspaced.calci.mathtype.nodes.elements;
 
-import android.support.v4.util.TimeUtils;
-import android.support.v4.widget.ViewDragHelper;
+import androidx.core.util.TimeUtils;
+import androidx.customview.widget.ViewDragHelper;
+
 import com.oddlyspaced.calci.mathtype.enums.MTInlineOperatorType;
 import com.oddlyspaced.calci.mathtype.measures.MTCommonMeasures;
 import com.oddlyspaced.calci.mathtype.measures.MTMeasureContext;

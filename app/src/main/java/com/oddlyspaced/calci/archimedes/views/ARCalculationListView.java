@@ -7,6 +7,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
+
 import com.oddlyspaced.calci.R;
 import com.oddlyspaced.calci.archimedes.enums.ARCalculationListViewAlignment;
 import com.oddlyspaced.calci.archimedes.enums.ARScrollPriority;
@@ -227,7 +228,7 @@ public class ARCalculationListView extends ViewGroup implements Responder {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         int parentWidth = View.MeasureSpec.getSize(widthMeasureSpec);
         int parentHeight = View.MeasureSpec.getSize(heightMeasureSpec);
-        this.mAutoScrollView.measure(View.MeasureSpec.makeMeasureSpec(parentWidth, 1073741824), View.MeasureSpec.makeMeasureSpec(parentHeight, 1073741824));
+        this.mAutoScrollView.measure(View.MeasureSpec.makeMeasureSpec(parentWidth, MeasureSpec.EXACTLY), View.MeasureSpec.makeMeasureSpec(parentHeight, MeasureSpec.EXACTLY));
         setMeasuredDimension(this.mAutoScrollView.getMeasuredWidth(), this.mAutoScrollView.getMeasuredHeight());
     }
 

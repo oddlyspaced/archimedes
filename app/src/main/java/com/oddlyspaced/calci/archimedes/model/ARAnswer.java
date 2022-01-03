@@ -162,7 +162,7 @@ public class ARAnswer implements ARObserverDelegate {
         if (!this.mCalculationQueue.isShutdown()) {
             cancelCalculationOperations();
             ArrayList<MEExpression> input = resolvedInputExpressions();
-            final ARCalculationOperation operation = null;
+            ARCalculationOperation operation = null;
             if (this.mCalculation.mDelegate != null) {
                 operation = this.mCalculation.mDelegate.createCalculationOperation(this.mCalculation, this, input);
             }
@@ -170,11 +170,12 @@ public class ARAnswer implements ARObserverDelegate {
                 operation = new ARCalculationOperation(input, this.mForm);
             }
             operation.setHandler(this.mHandler);
+            ARCalculationOperation finalOperation = operation;
             operation.setCompletionRunnable(new Runnable() { // from class: com.oddlyspaced.calci.archimedes.model.ARAnswer.3
                 @Override // java.lang.Runnable
                 public void run() {
-                    if (!operation.isCancelled() && operation == ARAnswer.this.mCalculationOperation) {
-                        ARAnswer.this.updateAnswerWithExpressions(operation.getAnswerExpressions(), operation.getIssues());
+                    if (!finalOperation.isCancelled() && finalOperation == ARAnswer.this.mCalculationOperation) {
+                        ARAnswer.this.updateAnswerWithExpressions(finalOperation.getAnswerExpressions(), finalOperation.getIssues());
                     }
                 }
             });
