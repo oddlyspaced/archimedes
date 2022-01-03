@@ -3,19 +3,61 @@
     <PreferenceCategory android:title="Calculation">
         <PreferenceScreen android:title="Number Format">
             <PreferenceCategory android:title="Number Format">
-                <ListPreference android:entries="@array/basic_format_entries" android:title="Basic Format" android:key="basic_format" android:defaultValue="automatic" android:entryValues="@array/basic_format_values"/>
-                <ListPreference android:entries="@array/exponent_format_entries" android:title="Exponent Format" android:key="exponent_format" android:defaultValue="e_notation" android:entryValues="@array/exponent_format_values"/>
-                <ListPreference android:entries="@array/decimal_places_entries" android:title="Decimal Places" android:key="decimal_places" android:summary="@string/decimal_places_summary" android:defaultValue="6" android:entryValues="@array/decimal_places_values"/>
-                <SwitchPreference android:title="Rounding" android:key="rounding" android:summary="@string/rounding_summary" android:defaultValue="true"/>
-                <SwitchPreference android:title="Leading 0 Before Point" android:key="leading_zero_before_point" android:defaultValue="false"/>
+                <ListPreference
+                    android:entries="@array/basic_format_entries"
+                    android:title="Basic Format"
+                    android:key="basic_format"
+                    android:defaultValue="automatic"
+                    android:entryValues="@array/basic_format_values" />
+                <ListPreference
+                    android:entries="@array/exponent_format_entries"
+                    android:title="Exponent Format"
+                    android:key="exponent_format"
+                    android:defaultValue="e_notation"
+                    android:entryValues="@array/exponent_format_values" />
+                <ListPreference
+                    android:entries="@array/decimal_places_entries"
+                    android:title="Decimal Places"
+                    android:key="decimal_places"
+                    android:summary="@string/decimal_places_summary"
+                    android:defaultValue="6"
+                    android:entryValues="@array/decimal_places_values" />
+                <SwitchPreference
+                    android:title="Rounding"
+                    android:key="rounding"
+                    android:summary="@string/rounding_summary"
+                    android:defaultValue="true" />
+                <SwitchPreference
+                    android:title="Leading 0 Before Point"
+                    android:key="leading_zero_before_point"
+                    android:defaultValue="false" />
             </PreferenceCategory>
         </PreferenceScreen>
-        <ListPreference android:entries="@array/default_angle_unit_entries" android:title="Default Angle Unit" android:key="default_angle_unit" android:defaultValue="degrees" android:entryValues="@array/default_angle_unit_values"/>
+        <ListPreference
+            android:entries="@array/default_angle_unit_entries"
+            android:title="Default Angle Unit"
+            android:key="default_angle_unit"
+            android:defaultValue="degrees"
+            android:entryValues="@array/default_angle_unit_values" />
     </PreferenceCategory>
     <PreferenceCategory android:title="Interaction">
-        <SwitchPreference android:title="Auto Insert Ans" android:key="auto_insert_ans" android:defaultValue="true"/>
-        <SwitchPreference android:title="Keep Answer In View" android:key="keep_answer_in_view" android:defaultValue="true"/>
-        <SwitchPreference android:title="Keyboard Clicks" android:key="keyboard_clicks" android:defaultValue="true"/>
-        <ListPreference android:entries="@array/tablet_portrait_keypad_entries" android:title="Tablet Portrait Keypad" android:key="tablet_portrait_keypad" android:defaultValue="full" android:entryValues="@array/tablet_portrait_keypad_values"/>
+        <SwitchPreference
+            android:title="Auto Insert Ans"
+            android:key="auto_insert_ans"
+            android:defaultValue="true" />
+        <SwitchPreference
+            android:title="Keep Answer In View"
+            android:key="keep_answer_in_view"
+            android:defaultValue="true" />
+        <SwitchPreference
+            android:title="Keyboard Clicks"
+            android:key="keyboard_clicks"
+            android:defaultValue="true" />
+        <ListPreference
+            android:entries="@array/tablet_portrait_keypad_entries"
+            android:title="Tablet Portrait Keypad"
+            android:key="tablet_portrait_keypad"
+            android:defaultValue="full"
+            android:entryValues="@array/tablet_portrait_keypad_values" />
     </PreferenceCategory>
 </PreferenceScreen>

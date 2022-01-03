@@ -1,23 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:background="#f7f7f7" android:layout_width="match_parent" android:layout_height="match_parent">
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <ImageView android:layout_width="104dp" android:layout_height="wrap_content" android:layout_marginTop="84dp" android:layout_marginBottom="12dp" android:src="@drawable/logo_archimedes" android:adjustViewBounds="true"/>
-        <TextView android:id="@+id/version_name" style="@style/HelpTitle"/>
-        <TextView android:id="@+id/help_subtitle_part_1" android:layout_marginBottom="0dp" android:text="@string/help_subtitle_part_1" style="@style/HelpSubtitle"/>
-        <TextView android:id="@+id/help_subtitle_part_2" android:text="@string/help_subtitle_part_2" style="@style/HelpSubtitle"/>
-        <Button android:id="@+id/tutorial_button" android:layout_marginTop="8dp" android:layout_marginBottom="3dp" android:text="Quick Tutorial" style="@style/HelpButton"/>
-        <Button android:id="@+id/power_tips_button" android:layout_marginTop="3dp" android:layout_marginBottom="10dp" android:text="Power Tips" style="@style/HelpButton"/>
-        <TextView android:id="@+id/help_support" android:text="Support" style="@style/HelpTitle"/>
-        <TextView android:id="@+id/help_support_subtitle_part_1" android:layout_marginBottom="0dp" android:text="@string/help_support_subtitle_part_1" style="@style/HelpSubtitle"/>
-        <TextView android:id="@+id/help_support_subtitle_part_2" android:layout_marginBottom="0dp" android:text="@string/help_support_subtitle_part_2" style="@style/HelpSubtitle"/>
-        <Button android:id="@+id/email" android:layout_marginBottom="10dp" android:text="android@archimedescalculator.com" style="@style/HelpButton"/>
-        <TextView android:id="@+id/help_share" android:text="Share" style="@style/HelpTitle"/>
-        <TextView android:id="@+id/help_share_subtitle" android:text="@string/help_share_subtitle" style="@style/HelpSubtitle"/>
-        <Button android:id="@+id/rate_review" android:layout_marginTop="6dp" android:layout_marginBottom="3dp" android:text="Rate/Review" style="@style/HelpButton"/>
-        <Button android:id="@+id/share" android:layout_marginTop="3dp" android:layout_marginBottom="20dp" android:text="Share" style="@style/HelpButton"/>
-        <TextView android:textSize="12dp" android:textStyle="bold" android:textColor="#bfbfbf" android:id="@+id/help_legal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2dp" android:text="Attribution &amp; Legal"/>
-        <TextView android:textSize="10dp" android:textColor="#bfbfbf" android:id="@+id/help_legal_subtitle_part_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/help_legal_subtitle_part_1"/>
-        <TextView android:textSize="10dp" android:textColor="#bfbfbf" android:id="@+id/help_legal_subtitle_part_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/help_legal_subtitle_part_2"/>
-        <Button android:textSize="10dp" android:id="@+id/legal" android:layout_marginBottom="10dp" android:minHeight="20dp" android:text="archimedescalculator.com/android/legal/" style="@style/HelpButton"/>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#f7f7f7"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="84dp"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/logo_archimedes"
+            android:adjustViewBounds="true" />
+
+        <TextView
+            android:id="@+id/version_name"
+            style="@style/HelpTitle" />
+
+        <TextView
+            android:id="@+id/help_subtitle_part_1"
+            android:layout_marginBottom="0dp"
+            android:text="@string/help_subtitle_part_1"
+            style="@style/HelpSubtitle" />
+
+        <TextView
+            android:id="@+id/help_subtitle_part_2"
+            android:text="@string/help_subtitle_part_2"
+            style="@style/HelpSubtitle" />
+
+        <Button
+            android:id="@+id/tutorial_button"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="3dp"
+            android:text="Quick Tutorial"
+            style="@style/HelpButton" />
+
+        <Button
+            android:id="@+id/power_tips_button"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="10dp"
+            android:text="Power Tips"
+            style="@style/HelpButton" />
+
+        <TextView
+            android:id="@+id/help_support"
+            android:text="Support"
+            style="@style/HelpTitle" />
+
+        <TextView
+            android:id="@+id/help_support_subtitle_part_1"
+            android:layout_marginBottom="0dp"
+            android:text="@string/help_support_subtitle_part_1"
+            style="@style/HelpSubtitle" />
+
+        <TextView
+            android:id="@+id/help_support_subtitle_part_2"
+            android:layout_marginBottom="0dp"
+            android:text="@string/help_support_subtitle_part_2"
+            style="@style/HelpSubtitle" />
+
+        <Button
+            android:id="@+id/email"
+            android:layout_marginBottom="10dp"
+            android:text="android@archimedescalculator.com"
+            style="@style/HelpButton" />
+
+        <TextView
+            android:id="@+id/help_share"
+            android:text="Share"
+            style="@style/HelpTitle" />
+
+        <TextView
+            android:id="@+id/help_share_subtitle"
+            android:text="@string/help_share_subtitle"
+            style="@style/HelpSubtitle" />
+
+        <Button
+            android:id="@+id/rate_review"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="3dp"
+            android:text="Rate/Review"
+            style="@style/HelpButton" />
+
+        <Button
+            android:id="@+id/share"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="20dp"
+            android:text="Share"
+            style="@style/HelpButton" />
+
+        <TextView
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:textColor="#bfbfbf"
+            android:id="@+id/help_legal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:text="Attribution &amp; Legal" />
+
+        <TextView
+            android:textSize="10dp"
+            android:textColor="#bfbfbf"
+            android:id="@+id/help_legal_subtitle_part_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/help_legal_subtitle_part_1" />
+
+        <TextView
+            android:textSize="10dp"
+            android:textColor="#bfbfbf"
+            android:id="@+id/help_legal_subtitle_part_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/help_legal_subtitle_part_2" />
+
+        <Button
+            android:textSize="10dp"
+            android:id="@+id/legal"
+            android:layout_marginBottom="10dp"
+            android:minHeight="20dp"
+            android:text="archimedescalculator.com/android/legal/"
+            style="@style/HelpButton" />
     </LinearLayout>
 </ScrollView>

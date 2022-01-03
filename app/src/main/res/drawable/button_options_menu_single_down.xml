@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<inset xmlns:android="http://schemas.android.com/apk/res/android" android:insetLeft="0px" android:insetRight="0dp" android:insetTop="0dp" android:insetBottom="0dp">
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="0px"
+    android:insetRight="0dp"
+    android:insetTop="0dp"
+    android:insetBottom="0dp">
     <shape android:shape="rectangle">
-        <corners android:topLeftRadius="@dimen/floating_options_menu_corner_radius" android:topRightRadius="@dimen/floating_options_menu_corner_radius" android:bottomLeftRadius="@dimen/floating_options_menu_corner_radius" android:bottomRightRadius="@dimen/floating_options_menu_corner_radius"/>
-        <solid android:color="#adadad"/>
-        <padding android:left="@dimen/floating_options_menu_horizontal_padding" android:top="@dimen/floating_options_menu_vertical_padding" android:right="@dimen/floating_options_menu_horizontal_padding" android:bottom="@dimen/floating_options_menu_vertical_padding"/>
+        <corners
+            android:topLeftRadius="@dimen/floating_options_menu_corner_radius"
+            android:topRightRadius="@dimen/floating_options_menu_corner_radius"
+            android:bottomLeftRadius="@dimen/floating_options_menu_corner_radius"
+            android:bottomRightRadius="@dimen/floating_options_menu_corner_radius" />
+        <solid android:color="#adadad" />
+        <padding
+            android:left="@dimen/floating_options_menu_horizontal_padding"
+            android:top="@dimen/floating_options_menu_vertical_padding"
+            android:right="@dimen/floating_options_menu_horizontal_padding"
+            android:bottom="@dimen/floating_options_menu_vertical_padding" />
     </shape>
 </inset>
